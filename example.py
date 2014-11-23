@@ -1,5 +1,5 @@
 from render.scholarwiki import Renderer
-#from render.xml import Renderer
+#from render.xml import Renderer  # useful for adding new constructs
 from plasTeX.TeX import TeX
 
 # Instantiate a TeX processor and parse the input text
