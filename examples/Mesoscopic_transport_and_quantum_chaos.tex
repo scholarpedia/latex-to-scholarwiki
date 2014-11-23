@@ -1,0 +1,2626 @@
+\documentclass[a4paper,10pt]{article}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\rmd}{{\rm d}}
+\newcommand{\EF}{E_{\scriptscriptstyle F}}
+\newcommand{\kf}{k_{\scriptscriptstyle F}}
+\newcommand{\kb}{k_{\scriptscriptstyle B}}
+\newcommand{\vf}{v_{\scriptscriptstyle F}}
+\newcommand{\bsM}{{\bf \scriptscriptstyle M}}
+\newcommand{\lf}{\lambda_{\scriptscriptstyle F}}
+\newcommand{\lt}{l_{\scriptscriptstyle T}}
+\newcommand{\taut}{\tau_{\scriptscriptstyle T}}
+\newcommand{\ET}{\tau_{\scriptscriptstyle E}}
+
+\newcommand{\figwidth}{\linewidth}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\barbr}{\bar {\mathbf r}}
+\newcommand{\barbarbr}{\bar{\bar {\mathbf r}}}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\SC}{\mathcal{S}}
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\nin}{\noindent}
+\newcommand{\VT}{V_{\rm T}}
+\newcommand{\kF}{k_{\rm F}}
+
+\def\bepsilon{\bar{\varepsilon}}
+\def\bbepsilon{\bar {\bar{\varepsilon}}}
+\def\bk{\bar{k}}
+\def\bbk{\bar {\bar{k}}}
+\def\ba{\bar{a}}
+\def\bba{\bar {\bar{a}}}
+\def\bl{\bar{l}}
+\def\bbl{\bar {\bar{l}}}
+\def\btheta{\bar {\theta}}
+\def\by{\bar y}
+\def\tepsilon{\varepsilon^{(\mathrm{t})}}
+\def\Me{M_{\rm e}}
+\def\coola{\mbox{\Fontauri A}} % the fancy font for the little a matrix elements
+\def\r]{\right]}
+\def\l[{\left[}
+\def\mgc{\tilde{m}} % the "magic" index
+\def\hbj{\hat{\mbox{\bf \j}}}
+
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bel}{\begin{eqnletter}}
+\newcommand{\eel}{\end{eqnletter}}
+\newcommand{\LD}{L_{\rm d}}
+\newcommand{\dlk}{\Delta k}
+\newcommand{\dlB}{\Delta B}
+\newcommand{\dlT}{\delta T}
+\newcommand{\dlR}{\delta R}
+\newcommand{\dlL}{\delta L}
+\newcommand{\gcl}{\gamma_{\rm cl}}
+\newcommand{\alc}{\alpha_{\rm cl}}
+\newcommand{\sttp}{s(\theta,\theta^{\prime} )}
+\newcommand{\uttp}{u(\theta,\theta^{\prime} )}
+\newcommand{\uttpt}{u({\tilde \theta},{\tilde \theta}^{\prime} )}
+
+\newcommand{\disp}{\displaystyle}
+
+\newcommand{\drho}{{\rho^{\rm osc}}}
+\newcommand{\dosc}{{d^{\rm osc}}}
+\newcommand{\Dosc}{{D^{\rm osc}}}
+\newcommand{\nosc}{{n^{\rm osc}}}
+\newcommand{\Nosc}{{N^{\rm osc}}}
+\newcommand{\oosc}{{\omega^{\rm osc}}}
+\newcommand{\Oosc}{{\Omega^{\rm osc}}}
+\newcommand{\dg}{{g^{\rm osc}}}
+
+\newcommand{\Gsc}{G_E^{\text sc}}
+\newcommand{\cl}{\chi_{\scriptscriptstyle L}}
+\newcommand{\cgc}{\chi^{\rm \scriptscriptstyle GC}}
+\newcommand{\chit}{\chi^{\rm \scriptscriptstyle (t)}}
+
+\newcommand{\gs}{{\sf g_s}}
+\newcommand{\Hch}{\hat{\cal H}}
+\newcommand{\AtM}{{\tilde{\cal A}}_M}
+\newcommand{\hM}{\hat M}
+
+\newcommand{\A}{{\cal A}}
+\newcommand{\C}{{\cal C}}
+\newcommand{\G}{{\cal G}}
+
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bp}{{\bf p}}
+\newcommand{\bq}{{\bf q}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\brp}{{\bf r}^{\prime}}
+\newcommand{\hV}{{\hat V}}
+
+\newcommand{\smeq}{\! \! = \!}
+\newcommand{\smneq}{\! \! \neq \!}
+
+
+\usepackage[lmargin=2cm,rmargin=2cm,tmargin=2cm,bmargin=2cm]{geometry}
+\usepackage{amssymb, amsmath, graphicx, url}
+\DeclareMathOperator{\tr}{tr}
+
+
+\title{Mesoscopic transport and quantum chaos}
+
+\author{Rodolfo~A.~Jalabert
+  \\ \vspace{-0.3cm}\\ 
+    {\small Institut de Physique et Chimie des Mat{\'e}riaux de Strasbourg,  	UMR 7504, CNRS-UdS,}\\ {\small 23 rue du Loess, BP 43, 67034 Strasbourg
+    Cedex 2, France}}
+
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\nin The field of Quantum Chaos, addressing the quantum manifestations of an underlying classically chaotic dynamics, was developed in the early eighties, mainly from a theoretical perspective. Few experimental systems were initially recognized to exhibit the versatility of being sensitive, at the same time, to their classical and quantum dynamics. Rydberg atoms \cite{Shep12} provided the main testing ground of Quantum Chaos concepts until the early nineties, marked by the development of microwave billiards \cite{Stoc10}, ultra-cold atoms in optical lattices \cite{Raiz11}, and low-temperature transport in mesoscopic semiconductor structures. The mesoscopic regime is attained in small condensed matter systems at sufficiently low temperatures for the electrons to propagate coherently across the sample. The quantum coherence of electrons, together with the ballistic motion characteristic of ultra-clean microstructures, motivated the proposal \cite{Jal90} of mesocopic systems as a very special laboratory for performing measurements 
+and testing the theoretical ideas of Quantum Chaos. Experimental realizations \cite{Mar92} and many important developments, reviewed in this article, followed from such a connection. 
+
+
+\section{Introduction}
+
+\subsection{Mesoscopic Physics}
+
+{\bf Refs.~\cite{LesHou94,Datta,Imry}}
+
+\subsubsection{Quantum coherence}
+
+The mesoscopic regime is defined by the quantum coherence of the one-electron wave-functions across the sample. In a condensed matter environment the coherence is, however, only partial, and not that of an ideal isolated quantum system. The one-electron wave-functions are well-defined over a distance $L_{\Phi}$ (the {\it phase-coherence length}) which is larger than the typical size ($a$) of the microstructure, but not infinite. Using the concept of one-electron wave-functions supposes to be away of the case of strongly correlated systems, and thus the description is actually that of weakly interacting Landau quasiparticles moving in a self-consistent field. The finite value of $L_{\Phi}$ arises from the residual Coulomb interaction (responsible for the quasiparticle lifetime), as well as from other inelastic events (coupling to the degrees of freedom of an external environment, electron-phonon scattering, etc).   
+
+\subsubsection{Quantum transport}
+
+{\bf Refs.~\cite{landauer87,buttiker88,CBrev,buttiker93}}
+
+\nin Electronic transport, carrying an electrical current $I$, is established when a microstructure is connected to two or more electrodes (labeled by $i$) where electrostatic potentials $V_i$ are applied. The corresponding electrochemical potentials are $\mu_i = e V_i$, with $e$ the electron charge (see Fig.~\ref{fig:intro} for a sketch of the generic case of a two-probe setup). The Landauer-B\"uttiker description of quantum transport is that of a scattering process for phase-coherent electrons traversing the microstructure in their journey between the electrodes \cite{Land70,Butt86}. When the time-independent (DC) potential difference $V=V_1-V_2$ is sufficiently small, only electrons at the Fermi level of the electrodes contribute to transport, the device operates in the linear-response regime close to equilibrium, and the linear conductance (in short: the {\it conductance}) 
+
+\be
+G = \left(\frac{\partial I(V)}{\partial V}\right)_{V=0} \ ,
+\ee 
+
+\nin characterizes the electronic transport. For larger $V$, the device operates  in the far-from-equilibrium non-linear regime, characterized by the differential conductance $G(V)=\partial I(V)/\partial V$. The linear regime is conceptually simpler than the non-linear one, since the knowledge of the actual electric field distribution is not required for the calculation of the conductance. It is therefore in the linear regime that the connection with Quantum Chaos has primarily been explored. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{intro}}
+\caption{Typical ballistic cavity coupled to reservoirs 
+characterized by electrochemical potentials $\mu_1$ and $\mu_2$.}
+\label{fig:intro}
+\end{figure}
+
+\nin When the microstructure is well-connected to the electrodes, the electron-electron interactions are not determinant, and the mean-filed description of linear transport results in a single-particle approach. Contrariwise, when the microstructure is weakly connected to the electrodes (i.e. through tunnel barriers) the single electron charging effects become important and transport may be Coulomb blocked. The electron island thereby defined can be described through the so-called constant interaction model, reducing the transport problem to a single-particle one with an additional charging energy that separates the occupied and unoccupied levels of the microstructure. These two limiting situations, of almost open and almost closed microstructures, are the ones where the connection to Quantum Chaos has been further developed. But the theoretical tools used in each case are specific to the problem on hand.
+
+\subsubsection{Disordered systems}
+
+{\bf Refs.~\cite{LeeRam,ChSm,ALWrev,WashWebb,AkkerMonta}}
+
+\nin Mesoscopic Physics was initially focused on disordered
+metals, where the classical motion of electrons can be thought as a 
+random walk between the impurities. The phase-coherence
+in the multiple scattering of electrons gives rise to 
+corrections to the classical (Drude) conductance. The
+most studied quantum interference phenomena in disordered
+metals are the {\em Aharanov-Bohm oscillations} of the 
+conductance in multiply connected geometries, the
+{\em weak-localization} effect (a decrease in the 
+average conductance around zero magnetic field), and the
+{\em universal conductance fluctuations} (reproducible
+fluctuations in the conductance versus magnetic field
+or Fermi energy with a root-mean-square of the order
+$e^2/h$, independent of the average conductance). 
+A perturbative treatment of disorder, followed by an
+average over impurity configurations, has provided 
+the calculational tool leading to the understanding 
+of these phenomena. The small parameter of the perturbation is 
+$(\kf l)^{-1}$, with $\kf=2\pi/\lf$ the Fermi wave-vector, $\lf$ the Fermi wave-length, and $l$ the {\em elastic mean-free-path} ({\it i.e.}
+the typical distance traveled by the electron between
+successive collisions with the impurities). Mesoscopic 
+disordered conductors are then characterized by
+$\lf \ll l \ll a \ll L_{\Phi}$.
+
+\subsubsection{Ballistic systems}
+
+{\bf Refs.~\cite{BvHra,Davies98,Bird03}}
+
+\nin It is primarily in a ``second generation" of mesoscopic systems,
+semiconductor microstructures, that the connection with Quantum Chaos has been developed. Extremely pure semiconductor ($GaAs/AlGaAs$) heterostructures make it possible to create a two-dimensional electron gas (2DEG) by freezing in the quantum ground state the motion perpendicular to the interface. Given the crystalline order of the interface and the fact that the dopants are away from the plane of the carriers, an electron can travel a long distance before its initial momentum is randomized. This typical distance, the {\em transport mean-free-path} $\lt$, is generally larger than the elastic mean-free-path (since the small-angle elastic scattering is not effective in changing the momentum direction). The constant improvement in fabrication techniques results in the achievement of progressively larger $\lt$, attaining nowadays values as large as $45 \ \mu m$ \cite{trameanfreepath}. 
+
+\nin Various fabrication techniques have been developed to produce a lateral confinement of the 2DEG and define one-dimensional (quantum wires) and zero-dimensional (quantum boxes or cavities) structures. Micron and sub-micron spatial resolutions allow to define, at the level of the 2DEG, mesoscopic structures smaller than the transport mean-free-path, paving the way to the {\em ballistic} regime. When $a \ll \lt$ the classical motion of the two-dimensional electrons is given by the collisions with the walls defining the cavity (as sketched in Fig.~\ref{fig:intro}), with a very small lateral deflection due to the smooth impurity potential. The ideal case of no disorder, characterized by an infinite $\lt$, is referred to as the {\em clean} limit. By changing the shape of a clean cavity it is possible to go from integrable to chaotic dynamics, and then study the consequences of this transition at the quantum level. Experimentally realizable ballistic mesoscopic systems always have a finite value of $\lt$, and this fact has to be kept in mind when Quantum Chaos studies are undertaken. 
+
+\nin The usual electronic surface densities in $GaAs/AlGaAs$ 2DEG are $n_{\rm S}=1-3\!\times\!10^{11}$ $cm^{-2}$, leading to $\lf = 40-70 nm$. For typical microstructures $a=0.5-3 \mu m$. Thus $\lf \ll a$, implying that the devices operate far away from the extreme quantum limit, and the semiclassical approximation (presented in Sec.~\ref{sec:sdqttbc}) for the electron motion inside the cavity provides a good description.  
+
+\subsubsection{Mesoscopic samples as "doubly open" quantum systems}
+
+Electrons in a mesoscopic setup are typically described by the Hamiltonian
+  
+\begin{equation}
+\hat H = \hat H_{\rm s} + \hat H_{\rm d} + \hat H_{\rm l} + 
+\hat H_{\rm s-l} + \hat H_{\rm s-env} \ .
+\end{equation} 
+\begin{itemize}
+
+\item $\hat H_{\rm s} = \frac{\mathbf{\hat p}^2}{2\Me} + U(\hat{\br})$ is the one-particle Hamiltonian describing electrons within the sample.
+
+\item $\Me$ is the effective electron mass. 
+
+\item $\hat{\mathbf{p}}$ is the momentum operator. 
+
+\item $\hat{\mathbf{r}}$ is the position operator. 
+
+\item $U(\br)$ is the electrostatic energy arising from the imposed confining potential and the resulting self-consistent mean-field potential. 
+
+\item $\hat H_{\rm d}$ represents the electrostatic disorder arising from the impurities near or within the sample (assumed to be frozen, {\em i.e.} without dynamics).
+
+\item $\hat H_{\rm l}$ is the Hamiltonian of disorder-free semi-infinite leads, taken as an idealization of the electrodes.
+
+\item $\hat H_{\rm s-l}$ represents the coupling between the system and the leads.
+
+\item $\hat H_{\rm s-env}$ represents the coupling to the electronic environment, given mainly by the residual electron-electron interaction and the phonon bath.   
+
+\end{itemize}
+
+\nin As in standard open quantum systems, the coupling to the environment results in decoherence and dissipation. In addition, the coupling to the leads allows for particle exchange with the reservoirs resulting in electronic transport across the sample.
+
+\subsubsection{Quantum Chaos and Mesoscopic Physics}
+\label{subsub:QCaMS}
+
+The fruitful connection between Quantum Chaos and Mesoscopic Physics is restricted to the observables that are accessible in the laboratory. Since the conductance is given by electron scattering, the Quantum Chaos issues accessible through mesoscopic transport are those of quantum chaotic scattering \cite{Gaspard}. Other central questions of Quantum Chaos, like for instance the link between the (short range) statistical properties of the spectrum of a quantum system with the nature of the underlying classical dynamics \cite{BGS84,Ullm14} cannot, in general, be addressed in the mesoscopic regime. This is due to the fact that from the experimental viewpoint it is rare to have access to single-particle energies, since the level spacing $\Delta$ is typically smaller than the thermal broadening $k_B T$ or the level-width resulting from the coupling to the electrodes. 
+
+\nin It is important keep in mind that Mesocopic systems are not fully coherent (finite $L_{\Phi}/a$), nor clean (finite $\lt/a$), and do not operate in the semiclassical limit (finite $\kf a$). Therefore, Mesoscopic Physics is not an ideal laboratory for Quantum Chaos. The imperfect nature of this relationship is an essential ingredient of its interest. Mesoscopic systems are extremely useful to study the interplay between the quantum and classical worlds, and at the same time Quantum Chaos studies can be used to test fundamental questions of Condensed Matter Physics, like disorder, decoherence, dissipation and many-body effects. 
+
+\subsubsection{Summary of characteristic lengths}
+
+\begin{itemize}
+
+\item $a$ is the typical size of the structure.
+
+\item $L_{\rm d}$ is the distance between the entrance and exit leads
+
+\item $W$ is the width of the leads.
+
+\item $\lf$ is the {\it Fermi wave-length} of electrons within the structure.
+
+\item $L_{\Phi}$ is the {\it phase-coherence length} - distance over which the one-particle wave-functions keep their quantum coherence (determined by $\hat H_{\rm s-env}$).
+
+\item $l$ is the {\it elastic mean-free-path} - distance between two collisions with impurities (determined by the density and the typical strength of the impurities associated to $\hat H_{\rm d}$).
+
+\item $\lt$ is the {\it transport mean-free-path} - distance traveled before an initial electron momentum is randomized (determined by the spatial structure of $\hat H_{\rm d}$).
+
+\end{itemize}
+
+
+\subsection{Geometry dependent transport in ballistic microstructures}
+
+\subsubsection{Quenching of the Hall effect}
+
+The relevance of classical electron trajectories in quantum transport was first hinted in analyzing the experimental measurements of the Hall effect in restricted geometries. While the Hall resistance in a 2DEG is simply proportional to the applied transverse magnetic field, in the geometry defined by two narrow ($\sim 100 \ nm$) ballistic wires, crossing at right angles, there appeared important departures from the standard Hall effect \cite{Rouk}. At low temperatures ($T=4.1$ K) and weak fields ($B \lesssim 100$ mT), the Hall resistance could be suppressed (quenched), enhanced, or even negative, depending on the details of the geometry. 
+
+\nin The effect of geometry on transport was demonstrated by purposely designing different crosses where the ballistic electrons were scattered off the corresponding confining potentials \cite{Ford89}. The inversion of the Hall effect was explained by the bouncing of electrons into the "wrong" probe (see Fig.~\ref{fig:Ford}). This picture was supported by simulations where the transmission coefficients of the cross were identified with the probabilities obtained by a random sampling of classical trajectories \cite{BvH88}.  
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{Ford}}
+\caption{
+(Top) Electron micrographs of the following devices: (1) a widened cross, (2) a widened cross with a central dot, (3) a cross with narrow probes, and (4) a "normal" (nominally perfect) cross. Main figure: Hall resistance versus magnetic field for a sample consisting of devices (1) and (4), for several values of the gate voltage $V_{\rm g}$ controlling the channel width and the electron density. The solid and dotted lines are for the widened and normal crosses, respectively. The trace offset vertically by 5 kQ shows corresponding results for a different, nominally identical, sample. Upper inset: The electron paths for the widened cross. Lower inset: A gate-voltage sweep showing that Hall resistance has the "wrong" sign for all values of $V_{\rm g}$. (Adapted from Ref. \protect\cite{Ford89}, copyright 1989, American Physical Society.)
+}
+\label{fig:Ford}
+\end{figure}
+
+\nin Quantum mechanical descriptions addressing the quenching of the Hall effect pointed to the collimation of the electrons as they enter the cross region \cite{BarSto89}. In this view, the adiabatic widening of the wires near the junction resulted in modes with high longitudinal momentum that were preferentially populated, inducing to the quenching of the Hall effect. Such a quantum description was in line with the relevance of geometry and classical trajectories, since in a semiclassical description, collimation corresponds to electron trajectories continuing straight ahead with a small angular spread.
+
+\subsubsection{Conductance fluctuations in the ballistic regime}
+
+For temperatures $T \lesssim 100$ mK the quenching of the Hall effect was still observable, but the Hall resistance exhibited fluctuations as a function of the external magnetic field or the gate voltage defining the cross geometry \cite{Ford88}. Such fluctuations were reproducible under the cycling of the control parameter, similarly to the conductance fluctuations of disordered mesoscopic systems.
+
+\nin The purely classical approaches describing electronic transport at Helium temperatures could not account for the fluctuations encountered at ultra-low temperatures. Thus, the ballistic conductance fluctuations were proposed as arising from the quantum interference between the multiple paths that electrons can undertake to traverse the microstructure \cite{Jal90}. In a semiclassical approach these paths are classical trajectories, which might have a chaotic character in a sufficiently complex geometry. Such a connection provides the link between ballistic conductance fluctuations and quantum chaotic scattering.
+
+\medskip
+
+\subsection{The scattering approach to the conductance}
+
+{\bf Refs.~\cite{Imry86,buttiker88,buttiker93,revha,LesHouSt,jalabert00,mello04}}
+
+\subsubsection{The basic components: sample, leads and reservoirs}
+
+In the scattering (Landauer-B\"uttiker) approach to quantum transport, the resistance arises from the elastic scattering that electrons suffer while traversing a mesoscopic structure connected to electrodes with fixed electrochemical potentials $\mu_i$ that do not vary while giving and accepting electrons. In this idealized view the mesosocpic {\it sample} (microstructure) is connected to {\it reservoirs} (electrodes and measuring devices) through {\it leads} (ideal contacts). The role of the reservoirs is crucial for dealing with an infinite total system and a continuous spectrum.   
+
+\nin The simplest setup is the two-probe configuration of Fig.~\ref{fig:intro}, within a two-dimensional space spanned by vectors $\br=(x,y)$, operating in the linear regime with an applied voltage $V$ which is very small ($\mu_1\!-\!\mu_2=eV \ll \mu_1$). The multi-probe case \cite{Butt86} does not pose new fundamental problems, but the theoretical description becomes more complicated since a matrix of conductance coefficients must be introduced. Even though the scattering theory is applicable to an arbitrary number of spatial dimensions, the restriction to $f=2$ degrees of freedom is motivated in view of the application to 2DEG and for the simplicity of the notation. The restriction to the linear regime is a crucial approximation within the scattering approach. Going beyond the linear regime posses considerable difficulty due to the necessity to describe the self-consistent electrostatic potential resulting from the imposed voltages and the electron-electron interactions in the sample \cite{christen1996a}. 
+
+\subsubsection{Reservoir and lead states}
+
+A scattering approach is built from asymptotically free quantum states, which in the case of quantum transport are those of the reservoir and the leads. The electrons in the reservoirs have the dispersion relation of a free electron gas 
+\begin{equation}
+\varepsilon=\frac{\hbar^2 k^{2}}{2\Me} \ .
+\end{equation}
+\begin{itemize}
+
+\item $k$ is the magnitude of the two-dimensional wave-vector. 
+
+\item $\Me$ is the effective electron mass. 
+
+\end{itemize}
+The contacts between the reservoir and the sample are idealized as semi-infinite, quasi-one dimensional, disorder-free leads providing the set of asymptotic states necessary for the scattering description. Taking the $x$-direction as the longitudinal one, the incoming $(-)$ and outgoing $(+)$ {\it modes} in lead 1 (left) and 2 (right) with energy $\varepsilon$ are, respectively,
+\begin{subequations}
+\label{allleadst} 
+\begin{equation}
+\varphi_{1,\varepsilon,a}^{(\mp)}(\br)  =  
+\frac{c}{\sqrt{k_{a}}} \ \exp{[\pm i k_{a}^\mp x]}
+\ \phi_{a}(y) \ , \quad x <  \ 0 \ ,
+\end{equation}
+\begin{equation}
+\varphi_{2,\varepsilon,a}^{(\mp)}(\br)  =  
+\frac{c}{\sqrt{k_{a}}} \ \exp{[\mp i k_{a}^\mp x]} 
+\ \phi_{a}(y) \ , \quad x >  \ 0 \ .
+\end{equation}
+\end{subequations}
+\begin{itemize}
+
+\item $\varepsilon=\varepsilon^{(\mathrm{t})}_a + \varepsilon^{(\mathrm{l})}_a$ \ .
+
+\item $\varepsilon^{(\mathrm{t})}_a$ is the quantized energy of the $a$\textsuperscript{th} transverse {\it channel} with wave-function $\phi_{a}(y)$.
+
+\item $\varepsilon^{(\mathrm{l})}_a = \hbar^2 k^{2}_{a}/2\Me$ is the longitudinal energy. 
+
+\item The lowest modes satisfying $k_{a}^2 > 0$ are propagating ($N$ in each lead), the modes with $k_{a}^2 < 0$ are evanescent. 
+
+\item $k_{a}$ is the longitudinal wave-vector ($k_{a} > 0$ is always chosen for the propagating modes). 
+
+\item $v_{a}=\hbar k_{a}/\Me$ is the longitudinal velocity for the propagating modes.
+
+\item $k_{a}^\mp$ stands for an infinitesimal negative (positive) imaginary part given to $k_a$ for incoming (outgoing) modes.
+ 
+
+\item $c=\sqrt{\Me/2\pi \hbar^2}$ is a normalization constant. 
+
+\end{itemize}
+
+\nin The choice of $c$ corresponds, {\it up to a numerical factor}, to the widely used unit-flux normalization condition. The current 
+density, per spin and unit energy, in the $x$-direction associated with the 
+right (left)-moving mode $1(2),\varepsilon,a$ is $\pm e/h |\phi_{a}(y)|^2$. The electrical current, per spin and unit energy, is $\pm e/h$. The overall signs result from the convention of taking as positive the current of 
+positive charges moving from left to right.
+
+\nin Any separable confining potential in the leads can be treated, provided that $k_a$ is taken as $x$-dependent. The restriction to confining potentials that are $x$-independent in the asymptotic regions simplifies the description. Furthermore, the choice of a hard wall confinement in the $y$ direction (by taking leads of width $W$), leads to the transverse energies 
+\begin{equation}\label{eq:transverse_energy_lead}
+\varepsilon^{(\mathrm{t})}_a = 
+\frac{\hbar^2q_a^2 }{2\Me}\ \ ,
+\end{equation}
+and channel wave functions
+\begin{equation}
+\label{eq:phi_transv}
+\phi_{a}(y) = \frac{1}{\sqrt{W}} 
+\sin{\left[q_a(y-W)\right]} \ .
+\end{equation}
+\begin{itemize}
+
+\item $q_a=\pi a/2W$ is the transverse wave-vector satisfying $k_a=\sqrt{k^2-q_a^2}$ \ .
+
+\end{itemize}
+
+\subsubsection{Scattering states and scattering matrix}
+
+Once a quantum coherent scatterer (of linear extension $L_{\rm d}$ in the $x$ direction) is placed at the coordinate origin, the incoming modes 
+$\varphi_{1(2),\varepsilon,a}^{(-)}$ give rise to {\it outgoing scattering states} (defined for all $x$) that in the asymptotic regions are, respectively,
+
+\begin{subequations}\label{allscats}
+ % ref the whole group by \eqref{allscats}; ref single eq. by e.g. \eqref{scatst1}
+\begin{align}
+\Psi_{1,\varepsilon,a}^{(+)}(\br) 
+&= 
+\left\lbrace 
+\begin{array}{ll}
+\varphi_{1,\varepsilon,a}^{(-)}(\br) + \sum_{b=1}^{N} r_{ba} \, \varphi_{1,\varepsilon,b}^{(+)}(\br),
+ & x \ll -L_{\rm d}/2 \\
+\sum_{b=1}^{N} t_{ba} \, \varphi_{2,\varepsilon,b}^{(+)}(\br), & x \gg L_{\rm d}/2  
+\end{array} 
+\right. \label{scatst1} 
+\\
+\Psi_{2,\varepsilon,a}^{(+)}(\br) 
+&= 
+\left\lbrace 
+\begin{array}{ll}
+\varphi_{2,\varepsilon,a}^{(-)}(\br) + \sum_{b=1}^{N} r^{\prime}_{ba} \, 
+\varphi_{2,\varepsilon,b}^{(+)}(\br), & x \gg L_{\rm d}/2 \\
+\sum_{b=1}^{N} t^{\prime}_{ba} \, \varphi_{1,\varepsilon,b}^{(+)}(\br), & x \ll -L_{\rm d}/2 
+\end{array} 
+\right. \label{scatst2} 
+\end{align}
+\end{subequations}
+
+\nin The $N \times N$ matrices $r$ ($r'$) and $t$ ($t'$) characterize, respectively, the reflection and transmission matrices from lead $1\ (2)$.  The normalization chosen for the modes (\ref{allleadst}) ensures that the outgoing scattering states constitute an orthonormal basis verifying
+\begin{equation}
+\label{state_norm}
+\int \dif {\br} \ \Psi_{l,\varepsilon,a}^{(+)*}(\br) \
+\Psi_{\bar{l},\bar{\varepsilon},\bar{a}}^{(+)}(\br) = 
+\delta_{l \bar{l}} \ \delta(\varepsilon-\bar{\varepsilon}) \ 
+\delta_{a \bar{a}} \ .
+\end{equation}
+
+\nin The $2N \! \times \! 2N$ scattering matrix $S$, relating 
+incoming and outgoing modes, is given by
+%
+\begin{equation}
+\label{eq:scatt_mat}
+S = \left( \begin{array}{cc}
+r & t' \\
+t & r'
+\end{array} \right) \, .
+\end{equation}
+
+\nin Current conservation dictates that the incoming and outgoing electron fluxes should be equal, implying that $S$ is a unitary matrix ($S S^{\dagger} = I$). In terms of the total transmission ($T=\sum_{a,b}|t_{ba}|^2$) and reflection ($R=\sum_{a,b}|r_{ba}|^2$) coefficients, the unitarity condition is expressed as $T+R=N$.  
+Also, unitarity dictates that $T\!=\!T'$ and $R\!=\!R'$. 
+In the absence of magnetic fields, the time-reversal symmetry implies that $S$ is a symmetric matrix ($S^{\mathrm{T}}=S$).
+For simplicity the energy dependence of the various components of the 
+scattering matrix is not explicitly written. 
+
+\nin The special cases of spatially symmetric cavities (up-down or right-left) result in matrices $S$ presenting additional symmetries, with a block structure \cite{BaMe96}.
+
+\subsubsection{Current-density and electrical current}
+
+The current-density operator is defined as  
+\begin{equation}
+\hbj(\br)=\frac{e}{2\Me}\left[\hat{\mathbf{p}}\,
+\delta(\hat{\br}-\br)+\delta(\hat{\br}-\br)\hat{\mathbf{p}}\right] \ .
+\end{equation}
+
+\nin The matrix elements of the $x$-component of $\hbj(\br)$ in the basis of the scattering states read 
+
+\begin{equation}\label{j0matrix}
+\l[j^{x}(\br)\r]_{\ba a}^{\bl l}(\bar{\varepsilon},\varepsilon)=
+\frac{e\hbar}{2i\Me}
+\l[
+\Psi_{\bar{l},\bar{\varepsilon},\bar{a}}^{(+)*}(\br) 
+\ \frac{\partial}{\partial x}\Psi_{l,\varepsilon,a}^{(+)}(\br) -
+\Psi_{l,\varepsilon,a}^{(+)}(\br) \ \frac{\partial}{\partial x}\Psi_{\bar{l},
+\bar{\varepsilon},\bar{a}}^{(+)*}(\br) 
+\r].
+\end{equation}
+%
+The diagonal matrix element represents the 
+current-density per spin and unit energy associated with the state $\Psi_{l,\varepsilon,a}^{(+)}$. 
+For a given incoming lead $l$ and energy $\varepsilon$ it is useful to define an $N \times N$ current operator ${\cal I}_{l,\varepsilon}$ whose matrix elements in the subspace of scattering states $l,\varepsilon$ are 
+\begin{equation}
+\l[{\cal I}_{l,\varepsilon}\r]_{\ba a} = \int_{{\cal S}_x}\,\dif\,y\,
+\l[j^{x}(\br)\r]_{\ba a}^{l l}(\varepsilon,\varepsilon) \ .
+\end{equation}
+% 
+Current conservation implies that the definition is independent of the cross section ${\cal S}_x$ chosen for the integration over the transverse coordinate. Given the one-to-one correspondence between incoming modes and outgoing scattering states. The current matrix elements (involving scattering states) can be identified with those of $t^\dagger t$ (involving lead modes), through 
+\begin{equation}
+\label{tt_vs_I}
+\left[{\cal I}_{1,\varepsilon}\right]_{\ba a}=\frac{e}{h}\left[t^{\dagger}t\right]_{\ba a}.
+\end{equation}
+%
+The diagonal matrix element $\l[{\cal I}_{1,\varepsilon}\r]_{a a}$
+is the current (per spin and unit energy) associated with the scattering state $1,\varepsilon,a$
+\begin{equation}
+\label{eq:I0state}
+I_{1,\varepsilon,a} = 
+\frac{e}{h} \sum_{b=1}^{N} |t_{ba}|^2
+= \frac{e}{h} 
+\left(1-\sum_{b=1}^{N} |r_{ba}|^2\right) \ .
+\end{equation}
+%
+The total current from left to right can be written as
+\begin{equation}
+\label{eq:I0}
+I_1 = \int_{\mu_2}^{\mu_1} \dif \varepsilon \sum_{a=1}^{N} 2\pi\hbar v_{a} \rho_{a}(\varepsilon) \ I_{1,\varepsilon,a} 
+\end{equation}
+
+%  
+\begin{itemize}
+
+\item $\rho_{a}(\varepsilon)=(\pi \hbar v_a)^{-1}$ the 
+one-dimensional density of lead modes (including the spin degeneracy factor).  
+
+\end{itemize}
+
+\subsubsection{Conductance is transmission}
+\label{subsub:cit}
+
+In the linear-response regime the energy integral in \eqref{eq:I0} is dominated by the contribution at the Fermi energy of the reservoirs 
+$\varepsilon_{\rm F} \simeq \mu_1,\mu_2$. The two-probe Landauer-B\"uttiker formula for the linear conductance reads
+  
+\begin{equation}
+\label{eq:Lan}
+G = \frac{{I}_1}{V} = \frac{2 e^2}{h} \ T = G_0 \ g \ .
+\end{equation}  
+
+\begin{itemize}
+
+\item $T = \sum_{a,b}T_{ba} = \mathrm{Tr}[t^\dagger t]$ is the transmission coefficient. 
+
+\item  $T_{ba} = |t_{ba}|^2$  is the transmission coefficient between modes $a$ and $b$.
+
+\item The trace is taken over the incoming, right-moving modes $a$, the sum over $b$ corresponds to the outgoing, right-moving modes. 
+
+\item $G_0 = 2 e^2/h$ is the quantum of conductance.
+
+\item The dimensionless conductance $g$ is equal, in the two-probe case, to transmission coefficient.
+
+\end{itemize}
+
+\nin The remarkably simple-looking form of the Landauer-B\"uttiker formula
+(\ref{eq:Lan}) hides some subtle issues that are thoroughly discussed in the corresponding literature of Mesoscopic Phyiscis \cite{Imry86}. Prominent among them are the contact resistance (responsible for the non-zero resistance of perfectly transmitting samples) and the energy dissipation mechanisms (taking place in the reservoirs).  
+
+\nin The above-sketched counting argument leading to Eq.~(\ref{eq:Lan}) can be put on a rigorous framework by using the the linear response formalism of the conductivity (Kubo formula) within a wave-guide geometry \cite{FishLee,Szafer}. The extension to finite
+magnetic fields \cite{BarSto89b,Shepard,NSB}
+presents some subtleties, but the final form is 
+still the simple-looking Eq.~(\ref{eq:Lan}).
+
+\subsubsection{Shot noise}
+
+{\bf Refs.~\cite{Blanter00}}
+
+\nin The DC linear conductance involves stationary quantum states and therefore it does not account for time-dependent processes present in the transport problem. Time-dependent current fluctuations caused by the discreteness of the electronic charge, known as shot noise, have a zero-frequency power spectrum given by
+
+\be
+P = 4 \int_{0}^{\infty} \dif \tau \left\langle 
+\delta I_1(\tau+\tau_0) \ \delta I_1(\tau) \right\rangle \ .
+\ee
+
+\begin{itemize}
+
+\item The fluctuations are taken with respect to the stationary value $I_1$ of the current. 
+
+\item The average is taken with respect to the initial time $\tau_0$. 
+
+\end{itemize}
+
+\nin Uncorrelated carriers are characterized by
+
+\be
+P = P_{\rm Poisson} = 2e I_1 = g P_0 \ .
+\ee
+
+\begin{itemize}
+
+\item $P_0 = 2e \ G_0 V$ \ .
+
+\item $V$ is the applied voltage. 
+
+\end{itemize}
+
+\nin When the electrons arrive from reservoirs containing degenerate electron gases, the correlations in the electron transmission imposed by the Pauli principle result in \cite{Buttiker}
+
+\be
+P=P_{0} \ \mathrm{Tr}[tt^{\dagger}({\bf 1}-tt^{\dagger})] \ ,
+\label{eq:shotnoise}
+\ee 
+ 
+\nin which is in general smaller than $P_{\rm Poisson}$. Despite their similar structure, Eq.~\eqref{eq:shotnoise} for the shot noise contains temporal information not present in the expression \eqref{eq:Lan} of the conductance. 
+   
+\subsubsection{Polar decomposition of the scattering matrix}
+
+{\bf Refs.~\cite{St}}
+
+\nin The scattering matrix $S$ (see Eq.~\ref{eq:scatt_mat}), when studied within a random-matrix approach (presented in Sec.~\ref{sec:RMT}) is conveniently parametrized in the so-called polar decomposition as  
+
+\begin{equation}
+S = \left( \begin{array}{cc}
+u_{3}		& \ 0	\\
+0		& \ u_{4}
+\end{array} \right)
+\left( \begin{array}{cc}
+-{\cal R}	& \hspace{0.5cm} {\cal T}	\\
+{\cal T}	& \hspace{0.5cm} {\cal R}
+\end{array} \right)
+\left( \begin{array}{cc}
+u_{1}	& \ 0	\\
+0	& \ u_{2}
+\end{array} \right) \ .
+\label{eq:Spol}
+\end{equation}
+
+\begin{itemize}
+
+\item $u_{l}$ ($l=1,\ldots,4)$ are $N \! \times \! N$ unitary
+matrices.
+
+\item ${\cal R}$ is a diagonal matrix with non-zero elements ${\cal R}_n = \left[\lambda_n/(1+\lambda_n)\right]^{1/2}$ \ . 
+
+\item $r^{\dagger} r = u_{1}^{\dagger} {\cal R}^2 u_{1}$, and then ${\cal R}_n^2$ are called {\it reflection eigenvalues}.
+
+\item ${\cal T}$ is a diagonal matrix with non-zero elements ${\cal T}_n = \left[1/(1+\lambda_n)\right]^{1/2}$ \ .
+
+\item $t^{\dagger} t = u_{1}^{\dagger} {\cal T}^2 u_{1}$, and then ${\cal T}_n^2$ are called {\it transmission eigenvalues}.
+
+\item $\lambda_n$ are real positive parameters.
+
+\end{itemize}
+
+\nin In the {\it unitary} case without symmetries the matrix $S$ has $4N^{2}$ independent real parameters, and the polar decomposition (\ref{eq:Spol}) is not unique since it introduces $N$ extra parameters. In the {\it orthogonal} case, the time-reversal and spin rotation symmetries dictate that $S^{\mathrm{T}}=S$. Thus, $u_{3} = u_{1}^{\rm T}$ and $u_{4} = u_{2}^{\rm T}$. The number of independent parameters in the polar decomposition is then reduced to $2N^{2}+N$ ($N^{2}$ parameters for each of the two $N \! \times \! N$ unitary matrices and the $N$ parameters $\lambda_n$). In the {\it symplectic} case where the spin degeneracy is broken (for instance by spin-orbit scattering in the sample) and no magnetic field is applied, the size of $S$ has to be doubled in order to account for the spin indices. The matrices $u_{3}$ and $u_{4}$ are also given \cite{mellopichard} in terms of $u_{1}$ and $u_{3}$, and the $\lambda_n$ parameters have a twofold (Kramers) degeneracy.
+
+\nin The transmission coefficient is given by the sum of the transmission eigenvalues 
+\begin{equation}
+T = \sum_{n=1}^{N} \ {\cal T}_n^2 \, .
+\label{eq:geigen}
+\end{equation} 
+
+\subsubsection{Transmission eigenmodes and scattering eigenstates}
+
+\nin The transmission eigenvectors (of the matrices $t^\dagger t$ and 
+$t^{\prime \dagger} t^{\prime}$) are given by the matrices $u_{1}$ and $u_{2}$. Similarly, the {\it transmission eigenmodes} are of the form
+%
+\begin{subequations}
+\label{allleadsteigen} 
+\begin{align}
+\varrho_{1,\varepsilon,n}^{(-)}(\br) &=
+\sum_{a=1}^{N} \left[u_{1}\right]_{n a}^{*} \
+\varphi_{1,\varepsilon,a}^{(-)}(\br)
+ \ , \quad x <  \ 0 \ ,
+\\
+\varrho_{2,\varepsilon,n}^{(-)}(\br) &=
+\sum_{a=1}^{N} \left[u_{2}\right]_{n a}^{*} \
+\varphi_{2,\varepsilon,a}^{(-)}(\br)
+\ , \quad x >  \ 0 \ .
+\end{align}
+\end{subequations}
+
+\nin In the same way as the incoming modes \eqref{allleadst} generate the outgoing scattering states \eqref{allscats}, the transmission eigenmodes \eqref{allleadsteigen} give rise to 
+{\it scattering eigenstates} $\chi_{l,\varepsilon,n}$ that are eigenfunctions of the current 
+operator ${\cal I}_{l,\varepsilon}$.  
+The latter can be written as linear combinations of the scattering states
+%
+\begin{equation}
+\label{psi_magic1}
+\chi^{(+)}_{l,\varepsilon,n}(\br)=\sum_a\, c^{(n)}_{l,\varepsilon,a}\,\Psi^{(+)}_{l,\varepsilon,a}(\br) \ .
+\end{equation}
+%
+The coefficient $c^{(n)}_{1(2),\varepsilon,a}$ coincides with the matrix element 
+$\left[u_{1(2)}\right]_{na}^{*}$ of Eq.\ \eqref{allleadsteigen} up to an overall $n$-dependent phase.
+
+\subsubsection{Scattering amplitudes in terms of the Green function}
+
+The formal theory of scattering adapted to a wave-guide (lead) geometry allows to relate the retarded Green function $\mathcal{G}(\br,\bar{\br},\varepsilon)$ to the matrix elements of $S$ . Writing the spectral decomposition of $\mathcal{G}$ in this basis of the scattering states leads to transmission and reflection amplitudes between modes $a$ and $b$ given by \cite{FishLee}
+\begin{subequations}
+\label{allTRAMs}
+\begin{eqnarray}
+\hspace{1.0cm}
+t_{ba} & = & i\hbar(v_{a}v_{b})^{1/2} \ 
+\exp{\left[-i(k_b^{+} x - k_a^{+} {\bar x})\right]}
+\int_{\SC_{x}} \dif y \int_{\SC_{\bar x}} \dif \by \ \phi_{b}^{*}(y) \ 
+\mathcal{G}(\br,\bar{\br},\varepsilon)
+\ \phi_{a}({\bar y}) \ ,
+\label{eq:TRAM0} \\
+\hspace{1.0cm} r_{ba} & = & -\delta_{ab} \
+\exp{\left[i(k_b^{+} x + k_a^{+} {\bar x})\right]} \exp{\left[ik_b^{+}|x-{\bar x}|\right]}
+\nonumber \\
+\displaystyle
+& + &  i \hbar(v_{a}v_{b})^{1/2}
+\ \exp{\left[-i(k_b^{+} x + k_a^{+} {\bar x})\right]} 
+\int_{\SC_{x}} \dif y \int_{\SC_{\bar x}} 
+\dif {\bar y} \ \phi_{b}^{*}(y) \ 
+\mathcal{G}(\br,\bar{\br},\varepsilon)
+\ \phi_{a}({\bar y})
+\ .
+\label{eq:TRAM1}
+\end{eqnarray}
+\end{subequations}
+%
+The integrations take place at transverse cross sections ${\cal S}_{\bar x}$ on the left lead and ${\cal S}_x$ on the right (left) lead for the transmission (reflection) amplitudes. The physical observables are obtained from the transmission and reflection coefficients ($T_{ba}=|t_{ba}|^2$ and $R_{ba}=|r_{ba}|^2$) between modes,
+which, by current conservation, do not depend on the choice of the transverse cross sections. Expressing the scattering amplitudes in terms of 
+Green functions is extremely useful for analytical
+and numerical computations. Diagrammatic perturbation
+theory, as well as semiclassical expansions, are built
+on Green functions. 
+
+\subsection{Chaotic scattering} 
+
+{\bf Refs.~\cite{LesHouSm,tel,Gaspard}}
+
+\subsubsection{Transient chaos}
+
+The study of a physical system from the Quantum Chaos point of
+view usually starts with the analysis of its classical dynamics. In the case of mesoscopic transport the classical scattering problem has to be considered. The concept of chaos, developed for closed systems and related to the long-time properties of the trajectories, has to be re-examined in open systems since the trajectories exit the scattering region after a finite amount of
+time. 
+
+\nin The {\it transient chaos} of a scattering problem is characterized
+by the infinite set of trajectories which stay forever in the scattering
+region. This set is constituted by the periodic unstable
+orbits of the scattering region (the {\it strange repeller}) and
+their stable manifold (the trajectories that converge to the
+previous ones in the infinite-time limit). Chaotic scattering
+is obtained when the dynamics in the neighborhood of the repeller
+is chaotic in the usual sense, and this set has a fractal 
+dimension in the space of classical trajectories. When an 
+incoming particle enters the scattering region, it approaches
+the strange repeller, bounces around close to this set for a 
+while and it is eventually ejected from the scattering region 
+(if it did not have the right initial conditions to be trapped). 
+
+\subsubsection{Time-delay function}
+
+Fixing a point $y$ at the entrance of a cavity (like the one of 
+Fig.~\ref{fig:intro}), and varying the injection angle $\theta$ with which the classical trajectories impinge, allows to define the 
+time-delay function $\tau_y(\theta)$ as the time that the trajectory with initial conditions ($y$,$\theta$) spends inside the cavity. Similarly, the function $\tau_{\theta}(y)$ is defined if the fixed and scanned variables are switched. In the case of a chaotic cavity the curve $\tau_y(\theta)$  has a fractal character (see Fig.~\ref{fig:gaspard_3disk_tdf}). The infinitely trapped trajectories give the divergences of $\tau_y(\theta)$ and determine the self-similar structure. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=0.7\linewidth]{gaspard_3disk_tdf}}
+\caption{Time-delay function for the three-disk problem. (From Ref. \protect\cite{Gas89}, copyright 1990, American Institute of Physics.)}
+\label{fig:gaspard_3disk_tdf}
+\end{figure}
+
+\subsubsection{Escape rate}
+\label{subsub:er}
+
+The rate at which particles escape from the scattering region
+($\gamma$) results from a balance between the rate in which
+nearby trajectories diverge away from the repeller (characterized
+by its largest Lyapunov exponent $\lambda$) and the rate at
+which the chaotic escaping trajectories are folded back into the
+scattering region (depending on the density of the repeller,
+that is measured by its fractal dimension $d$). If particles are injected at random in the scattering region, the survival probability at time $\tau$ will be $P(\tau)=e^{-\gamma \tau}$, with $\gamma=\lambda(1-d)$
+\cite{Gas89}. The {\em escape rate} may be interpreted
+as the inverse of the typical time spent by the particles in
+the scattering region.
+
+\subsubsection{Length-distribution in billiards}
+\label{subsub:ldib}
+
+In ideal billiards the potential is completely flat within the sample. Thus, the total length $L$ of a trajectory inside the cavity (from entrance to exit) and the corresponding time $\tau$ are simply related by $L =  v \tau$, where $v$ is the constant velocity of the scattering particles. As shown in Fig.~\ref{fig:distr}.a, the length-distribution (equivalent to the distribution of escape times) for a cavity with the shape of a stadium follows an exponential law (solid line) $P(L)=e^{-\gcl L}$ (with $\gcl=\gamma/v$). Such a distribution is independent on the chosen set of initial conditions for sampling the trajectories. The numerically obtained curve $P(L)$ becomes ragged for large $L$, due to the finite number of trajectories taken into account in the simulation. The exponential law sets in very fast, after a length corresponding to a few bounces. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{distr}}
+\caption{Classical distributions of length [(a),(c)] and effective area [(b),(d)] for the stadium (solid lines) and rectangular (dashed lines) billiards. In the stadium [(a),(b)] both distributions are close to exponential, after a short transient region, and they are very different from the distributions for the rectangle, which show power-law behavior. A double-logarithmic scale is used in [(c),(d)] to compare the distributions for the square with different power-laws (indicated by dotted lines). The area distribution for the square in panel (b) is cutoff already for very small values of the effective area, and the corresponding power-law is visible in panel (c) by blowing up the interval of small values of $\Theta/A$. In panels (c) and (d) the dash-dotted lines are, respectively, the two-particle distributions of length and area-differences for pairs of trajectories starting with the same angle. Unlike the chaotic case, the two-particle distributions, that determine the conductance fluctuations, do not factorize as the product of two one-particle distributions. $L_{\rm d}$ denotes the direct length between the leads and $A$ is the area of the cavity. (From Ref. \protect\cite{Chaost}, copyright 1993, American Institute of Physics.)}
+\label{fig:distr}
+\end{figure}
+
+\nin The appearance of a single scale characterizing the length-distribution is a consequence of ergodic motion over the whole energy surface while in the scattering region \cite{Bau91}. The value of the escape rate can be estimated from general arguments of ergodicity
+in the case of chaotic cavities with small openings, where the
+typical trajectory bounces around many times before it escapes
+\cite{Jen91}. Assuming that the instantaneous distribution of
+trajectories is uniform on the energy surface, the escape rate
+is simply given by $\gamma=F/{\cal A}$, where $F$ is the flux through
+the holes (equal to the size of the holes times $v/\pi$, the factor
+of $\pi$ comes from integration over the departing angles), ${\cal A}$
+is the area of the two-dimensional scattering domain. In the case
+of small holes this simple estimate reproduces remarkably well 
+the escape rates obtained from the numerical determination of
+the survival probability using classical trajectories.
+
+\nin In the integrable case, the particle moves over only that part
+of the energy surface allowed by the conserved quantities, and there is not  a single scale for the length-distribution. In situations with multiple scales power-law distributions are observed \cite{Bau91,Mac92,Lai92}. For the case of a rectangular cavity, an approximate $L^{-3}$ dependence for the length-distribution is obtained (dashed lines in Figs.~\ref{fig:distr}.a and \ref{fig:distr}.c). For integrable cavities, the length-distribution depends on the chosen set of initial conditions for sampling the trajectories. In the case of Fig.~\ref{fig:distr} a uniform distribution of $y$ along the entrance lead and a $\cos{\theta}$ weighted angular distribution as initial conditions (consistently with the classical limit of the quantum problem) have been used. Not all integrable systems are alike concerning the length distribution, as circular billiards exhibit an exponential decay over same range of lengths \cite{Leg90,Lin93}. It should be kept in mind that the long tails of the length-distributions are in general irrelevant from the point of view of quantum transport, in view of the physical cutoffs discussed in Sec.~\ref{subsub:QCaMS}.
+
+\subsubsection{Effective area distribution}
+
+The effect of a magnetic field perpendicular to the plane of electrons on quantum transport depends on the area accumulated by the classical scattering trajectories. Scattering trajectories are open, and therefore do not have a well defined enclosed area. Instead, the {\it effective area} of a trajectory $s$ can be defined from the circulation of the vector potential : 
+
+\be
+\Theta_s = \frac{2 \pi}{B} \int_{\C_s} \bA \cdot \bf{\dif r} \ .
+\label{eq:ea}
+\ee
+\begin{itemize}
+
+\item $\bA$ is the vector potential defining the magnetic field 
+$\bB=B \bf{\hat z}$ \ .
+
+\item $\C_s$ is the path followed by the trajectory inside the cavity.
+
+\end{itemize} 
+
+\nin If $s$ were a closed trajectory, $\Theta_s$ would be equal
+to $2\pi$ times the enclosed area. Unlike the scattering time, $\Theta_s$ can be positive or negative. For a chaotic dynamics the distribution of effective areas depends on a single scale, similarly to the case of the length-distribution. Numerical calculations and analytic arguments  \cite{Ber86,Jal90,Mac92,RamLech} yield a distribution 
+
+\be
+N(\Theta) \propto \exp{(-\alc |\Theta|)} \ ,
+\label{eq:efardis}
+\ee
+
+\nin where the parameter $\alc$ can be interpreted as the inverse of the
+typical area enclosed by a scattering trajectory. Fig.~\ref{fig:distr}.$b$ presents the distribution $N(\Theta)$ (only for positive $\Theta$, solid line) obtained from the simulation of classical trajectories in a stadium cavity, in good agreement with the proposed distribution.
+Exploiting the ergodicity of the chaotic dynamics in the scattering domain, and assuming that the area is accumulated in a random-walk fashion, the parameter $\alc$ can be related to the escape rate and the typical length scale of the cavity \cite{Jen91,Dor91}. 
+
+\nin Scattering trajectories yield an effective area which is not
+gauge-invariant. However, the large (in absolute value) 
+effective areas are associated with long trajectories that
+bounce many times, which are constituted by many loops
+and two extreme ``legs" in and out of the cavity. The dominant
+contribution comes from the loops, which is gauge-invariant. Changing the gauge in the numerical simulations modifies the distribution for small $\Theta$, but not the exponent $\alc$ governing the
+distribution of large $\Theta$.
+
+\nin In the integrable case the effective area distributions are typically power-laws. For a rectangular cavity, the area distribution (dashed in Fig.~\ref{fig:distr}.d) exhibits an approximate $\Theta^{-1/2}$
+dependence.
+
+\section{Semiclassical description of ballistic transport}
+\label{sec:sdqttbc}
+
+{\bf Refs.~\cite{Chaost,revha,LesHouSt,csf,jalabert00}}
+
+\subsection{Quantum interference in clean cavities}
+\label{sub:qibc}
+
+The conductance fluctuations are the trademark of the mesoscopic regime, and the magnetic field appears as the main tuning parameter. The study of conductance fluctuations and other interference phenomena, like weak-localization and shot noise, is usually done by a combination of quantum numerical calculations and semiclassical expansions. 
+
+\nin Quantum mechanical calculations based on the recursive Green function method \cite{LeeFish} allow to extract the transmission coefficient for a given electrostatic potential defining the quantum dot. Such a potential results from the imposed gate potential, the additional short or long-range disorder, and the self-consistent screening. This detailed information is however rather difficult extract for the quantum dots used in quantum transport measurements \cite{Nixon90,Stopa}. 
+
+\nin Therefore in quantum chaos studies the crude approximation of a clean billiard with hard walls and a flat potential inside is usually made. This choice is the simplest for numerical and analytic calculations, and allows to treat the case of a classical dynamics that exhibits hard chaos. The applicability of this approximation to the experimentally achievable micro-cavities depends on the fabrication details \cite{Chaos,Taylor97,Sachrajda98}. Simulations of clean quantum dots show that both, hard and soft electrostatic confinement, could be encountered (see Fig.~\ref{fig:potprof}).
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+%\centerline{\includegraphics[width=\linewidth]{preview}}
+\centerline{\includegraphics[width=0.7\linewidth]{preview_comp}}
+\caption{
+Transmission coefficient for the cavity shown in the inset of panel (a) as a function of the wave-vector $k$ [(a) and (b)] or magnetic field $B$ [(c)]. The straight solid line is the classical transmission, the fluctuating solid line is the quantum transmission $T_{qm}$, and the dashed (dotted) line is the smoothed $T_{qm}$ at zero magnetic field (a magnetic field  such that $BA/ \Phi_{0}\!=\!0.25$). $k_{\rm c}$ and $B_{\rm c}$ are, respectively, the momentum and magnetic-field correlation lengths. $W$ is the width of the leads, $A$ is the area of the cavity and $\Phi_{0}=hc/e$ is the flux quantum. (From Ref. \protect\cite{Chaost}, copyright 1993, American Institute of Physics.)
+}
+\label{fig:preview}
+\end{figure}
+
+
+\nin Fig.~\ref{fig:preview} shows the transmission coefficient
+of an asymmetric cavity as a function of the incoming flux
+$kW/\pi$ ($\mu_1=\hbar^2 k^2/2m$, the integer part of $kW/\pi$
+is the number of propagating channels). The overall behavior
+of the transmitted flux is a linear increase with $k$. The classical limit of the semiclassical approximation, corresponding to the neglect of
+quantum interference, reproduces the slope of this secular
+behavior, which is noted as ``classical". 
+
+\nin Superimposed to the secular behavior, there are fine-structure
+fluctuations characteristic of the cavity under study. These
+{\it conductance fluctuations}, analogous to those of disordered
+metals, also appear when the Fermi energy is fixed and the
+magnetic field is used as a tuning parameter. The conductance
+fluctuations are characterized by their magnitude, $\langle(\dlT)^2\rangle$, and the correlation scale as a function of 
+wave-vector $\Delta k_c$ (or magnetic field $\Delta B_c$). The numerical results indicate that these characteristic scales do not change when going into the semiclassical limit of large $k$. 
+
+\nin The secular behavior (dashed line) lies below the classical value
+of the transmission coefficient, due to mode effects from confinement 
+in the leads. The above defined classical limit only reproduces
+the slope of the large-$k$ smoothed transmission coefficient, but
+the shift $\langle \delta T \rangle$ does not disappear in the large-$k$ limit. The presence of a weak magnetic field tends to decrease such an offset, yielding a secular behavior (dotted line) that runs higher than in the $B\!=\!0$ case. This is the {\it weak-localization effect} for 
+ballistic cavities \cite{Bar93}. The reason for choosing an asymmetric cavity is that the ballistic weak-localization effect is strongly dependent on the spatial symmetries of the cavity \cite{BaMe96}.
+
+\nin The numerical results of Fig.~\ref{fig:preview} show that the conductance fluctuations and the weak-localization effect, first discussed in the context of disordered mesoscopic conductors, are also present
+in ballistic mesoscopic cavities. The differences among these two types of mesoscopic systems call for a rethinking of the appropriate definition of averages, as well as the concept of universality, in the ballistic regime. 
+
+\subsection{Semiclassical scattering amplitudes}
+\label{subsec:sta}
+
+\subsubsection{Semiclassical Green function}
+
+{\bf Refs.~\cite{Ozor-88,gutz_ra,gutz_book,brack_book,Stoe_99,Haak_01}}
+
+\nin The Green function is the Laplace transform of the propagator. The Van Vleck expression for the latter, together with a stationary-phase
+integration on the time variable, leads to the semiclassical 
+approximation for the Green function
+
+\be
+\hspace{0.6cm} 
+\mathcal{G}(\br,\barbr,\varepsilon) = 
+\frac{2\pi}{(2\pi i\hbar)^{(f+1)/2}} \sum_{s(\barbr,\br)} \sqrt {D_{s}} \ \exp{\left[\frac{i}{\hbar}S_{s}(\br,\barbr,\varepsilon)-
+i \frac{\pi}{2}\nu _{s}\right]} \ .
+\label{eq:gfgutz}
+\ee
+
+\begin{itemize}
+
+\item $f$ is the number of degrees of freedom (dimensions of the configuration space). 
+
+\item $s(\barbr,\br)$ stands for the classical trajectories going from 
+$\barbr$ to $\br$ with energy $\varepsilon$ \ .
+
+\item $S_{s}=\int_{\C_s} \bp \cdot \bf{\rm d}\bq$ is the action integral along the path $\C_s$ (in the case of billiards without magnetic field $S_{s} = \hbar k L_{s}$, where $L_{s}$ is the trajectory length).
+  
+\item $D_{s}$ describes the evolution of the classical probability and can be expressed as a determinant of second derivatives of the action. 
+
+\item $\nu_s$ is the Maslov index counting the number of constant-energy conjugate points along the trajectory $s$, as well as the phase acquired at the bounces with hard walls.
+
+\end{itemize}
+
+\nin The interesting case for low dimensional transport is that of $f\!=\!2$. For cavities connected to leads
+
+\be
+D_{s}=\frac{\Me}{v \ |\cos{\theta}|} \
+\left| \left(\frac{\partial {\bar \theta}}{\partial y}\right)_{\bar y} \right| \ .
+\ee
+ 
+\begin{itemize}
+
+\item 
+${\bar \theta}$ and $\theta$ are, respectively, the incoming and outgoing angles of the trajectory $s$ with the $x$-axis.  
+\end{itemize}
+
+\subsubsection{Semiclassical transmission amplitudes}
+\label{subsub:sta}
+
+The transmission amplitudes determining the conductance of a cavity 
+(like the ones in Figs.~\ref{fig:intro} and \ref{fig:preview}) through
+Eq.~(\ref{eq:Lan}) admit a semiclassical form, which is obtained by inserting the semiclassical Green function (\ref{eq:gfgutz}) into Eq.~(\ref{allTRAMs}), and then performing the ${\bar y}$ and $y$ integrals through two successive stationary-phase approximations. In the case of hard-wall leads, the stationary points ${\bar y}_0$ and $y_0$ are, respectively, given by
+
+\be
+\left(\frac{\partial S}{\partial {\bar y}} \right)_{y} = 
+- \frac{\hat{a} \hbar \pi}{W} \ , \hspace{0.5cm} \hat{a}=\pm a \ ;
+ \hspace{1cm}
+\left(\frac{\partial S}{\partial y} \right)_{\bar y} = 
+- \frac{\hat{b} \hbar \pi}{W} \ , \hspace{0.5cm} \hat{b}=\pm b \ .
+\label{eq:stphcon}
+\ee
+
+\nin The dominant trajectories are those where the initial and final transverse momentum equal, respectively, the momentum of the corresponding transverse wave-function. The semiclassical expression for the transmission
+amplitude can then be cast as \cite{Jal90}
+
+\be
+t_{ba}=-\frac{\sqrt{2\pi i\hbar}}{2W} \sum_{\hat{a}=\pm a} \sum_{\hat{b}=\pm b}
+\sum_{s(\hat{b},\hat{a})} {\rm sgn}(\hat{a}\hat{b}) \ \sqrt
+{\tilde{D}_{s}} \ \exp{\left(\frac{i}{\hbar}\tilde{S}_{s}(\hat{b},\hat{a};E)
+-i \frac{\pi}{2}{\tilde\nu}_{s}\right)} \ .
+\label{eq:semiclass}
+\ee
+
+\begin{itemize}
+
+\item $s(\hat{b},\hat{a})$ stands for the classical trajectories, of energy $\varepsilon$, with entering and exiting angles $\theta_{\hat{a}}$ and $\theta_{\hat{b}}$ such that $\sin\theta_{\hat{a}}\!=\!
+\hat{a}\pi/ kW$ and $\sin\theta_{\hat{b}} = \hat{b}\pi/ kW$, respectively. 
+ 
+\item $\tilde{S}(\hat{b},\hat{a};E)=S(y_{0},{\bar y}_{0};\varepsilon)+
+(\hbar\pi\hat{a}/W) {\bar y}_{0} - (\hbar\pi\hat{b}/W) y_{0}$ is the reduced action (in the case of billiards without magnetic field 
+$\tilde{S}=\hbar k \tilde{L}$, with 
+$\tilde{L}=L+k {\bar y}_{0} \sin\theta_{\hat{a}} -k y_{0} \sin\theta_{\hat{b}}$) \ .
+  
+\item For billiards $\tilde{D}_{s}=\frac{1}{\Me v\cos{\theta}} \left|
+\left(\frac{\partial {\bar y}}{\partial \theta}\right)_{\bar \theta}\right|$ \ . 
+
+\item $\tilde{\nu} = \nu + 
+%H\left(\left(\partial {\bar \theta}/\partial {\bar y}\right)_{y}\right) +
+H((\partial {\bar \theta}/\partial {\bar y})_{y}) +
+H\left(\left(\partial \theta/\partial y\right)_{\bar \theta}\right)$, where $H$ is the Heaviside step function. 
+
+\end{itemize}
+
+\subsubsection{Semiclassical reflection amplitudes}
+\label{subsub:sra}
+
+For the semiclassical reflection amplitude (\ref{eq:TRAM1}) there are two kinds of trajectories contributing to $G(y,{\bar y};\varepsilon)$; those that penetrate into the cavity and those which go directly from ${\bar y}$ to $y$ staying on the cross section of the lead. It is only trajectories of the first kind which contribute to the semiclassical reflection amplitude given in terms of trajectories leaving and returning to the cross section at the left lead, with appropriate quantized angles. The trajectories of the second kind merely cancel the term $\delta_{ba}$.
+
+\subsubsection{Convergence and generalizations of the semiclassical expansions}
+\label{subsub:cgse}
+
+The semiclassical transmission amplitude (\ref{eq:semiclass}) is, for an
+open system, the analogous of the Gutzwiller trace formula for the
+density of states of a closed system \cite{gutz_tracefor}. Both are expressed as a sum over isolated classical trajectories, allowing to establish the connection between classical and quantum properties. The main difference between the scattering and energy-level problems, at the semiclassical level, is that the trace formula involves the sum over periodic orbits while the transmission amplitude is given by open trajectories that go across the scattering region. In chaotic systems the number of trajectories connecting two given points grows exponentially with the trajectory length. In open systems the trajectories can escape the scattering region, therefore their proliferation is much weaker than in the close case (although still exponential). Therefore, the convergence of semiclassical propagators in chaotic scattering will not encounter the difficulties of the trace formula. From the quantum point of view, since the Gutzwiller trace formula aims to reproduce a delta-function spectrum, it can be conditionally convergent at most. However, the quantum transmission amplitude is a smooth function of the Fermi energy (away from the thresholds at the opening of new modes), thus the semiclassical sum can be absolutely convergent (depending on the value of the fractal dimension $d$ of the strange repeller governing the chaotic scattering \cite{Jen94}). 
+Moreover, when applied to mesoscopic systems, the semiclassical expansions should be truncated by the physical cutoffs discussed in Sec.~\ref{subsub:QCaMS}.
+
+\nin Chaotic scattering problems have been studied by Miller \cite{Mil74} in the context of molecular collisions in terms of the semiclassical propagator in the momentum representation. In such case the relevant sum is over classical trajectories with fixed incident and outgoing momenta. 
+Eq.~\eqref{eq:semiclass} is a mixed position-momentum representation of the Green function, and it can be adapted to handle finite magnetic fields, soft walls in the leads \cite{Bar91}, and tunneling in the cavities \cite{ingold}. 
+
+\nin For direct trajectories that traverse the cavity without collisions with the walls, or in cases where the dynamics of the cavity is integrable, the classical trajectories are not isolated and only one of the two stationary-phase integrations leading to \eqref{eq:semiclass} can be performed. The corresponding semiclassical expressions of the  transmission amplitudes are sums over {\em families of trajectories} \cite{paul} (in analogy with the Berry-Tabor formula for the density of states of integrable systems \cite{ber76}). 
+
+\nin The the numerical evaluation of the semiclassical transmission amplitudes can be addressed once the classical trajectories are characterized. Such a difficult task has been carried out for simple geometries like that of a circular scattering domain \cite{LinJen}, where short trajectory \cite{ishio95} and diffraction \cite{schwi96} effects have been highlighted. The semiclassical approach can be generalized to include diffraction effects in the transmission and reflection amplitudes \cite{vattay}, through ``ghost paths", or diffractive trajectories (like reflections off the mouth of an exiting lead). These effects are particularly important in the extreme quantum limit of $N\!=1\!$. 
+
+\subsection{Transmission coefficients, average values, and fluctuations}
+
+\subsubsection{Transmission coefficients}
+
+Transmission coefficients between two modes are obtained from the magnitude squared of the corresponding transmission amplitudes. Thus, in a semiclassical approach, they are given by sums over {\it pairs} of trajectories. Focusing in the case of billiards, it is convenient to scale out the energy (or wave-vector) dependence and write the transmission coefficient between modes $a$ and $b$ as
+
+\be
+T_{ba}(k) = \frac{1}{2} \left(\frac{\pi}{kW}\right) 
+\sum_{{\hat a},{\tilde a}=\pm a} \ 
+\sum_{{\hat b},{\tilde b}=\pm b} \ \sum_{s({\hat a},{\hat b})} \ \sum_{u({\tilde a},{\tilde b})} 
+F_{s,u}(k) \ .
+\label{eq:scT}
+\ee
+
+\begin{itemize}
+
+\item $F_{s,u}(k) = \sqrt{\tilde{A}_{s} \tilde{A}_{u}}
+\exp{[i k (\tilde{L}_{s}-\tilde{L}_{u})+i \pi \phi_{s,u} ]}$ \ .
+ 
+\item $s({\hat a},{\hat b})$ labels the paths with extreme angles $\theta_{\bar a}$ and ${\theta_{\bar b}}$ \ .
+
+\item $u({\tilde a},{\tilde b})$ labels the paths with extreme angles $\theta_{\tilde a}$ and ${\theta_{\tilde b}}$ \ .
+
+\item $\tilde{A}_{s}=(\hbar k/W) \tilde{D}_{s}$ is a geometrical factor, independent on energy.
+  
+\item $\phi_{s,u}=(\tilde{\nu}_{u}-\tilde{\nu}_{s})/2+\hat{a}+\hat{b}+
+{\tilde a}+{\tilde b}$ \ .
+
+\end{itemize}
+
+\subsubsection{Wave-vector and energy averaged values}
+
+The expression of the transmission probability (\ref{eq:scT}) is valid in the large-$k$ semiclassical limit, and therefore some kind of average has to be defined in order to relate it with the highly structured curve of the transmission coefficient in Fig.~\ref{fig:preview}. In a ballistic system, the ensemble average is not relevant since a single cavity is at stake. The appropriate average is over wave-vector (or energy), defined for an arbitrarily observable
+$O(k)$ as
+
+\be
+\langle O \rangle =
+\lim_{q \rightarrow \infty} \frac{1}{q} \int_{q_c}^{q_c+q} \dif k \ O (k) \ ,
+\hspace{1cm}  \frac{q_c W}{\pi} \gg 1 \ .
+\label{eq:avgk}
+\ee
+
+\nin This average is particularly suited for analytical calculations, since it provides a rigorous treatment of the $k$-dependent transmission coefficients, but it is not appropriate for dealing with experimental or numerical results, where only a finite $k$-range is accessible. In practice, an average over many quasi-periods of the function $T(k)$, yields   results consistent with (\ref{eq:avgk}). This approach is usually adopted in quantum chaos studies by performing a local energy average \cite{Blu88}.  At the experimental level, the average of the transmission coefficient over a finite energy-range yields the finite-temperature conductance.
+
+\subsubsection{Transmission probability}
+
+The secular behavior of the transmission coefficient is linearly increasing with $k$ (outgoing flux proportional to the incoming flux). The transmission probability is then defined by the average of $T(k)/k$, 
+
+\be
+{\cal T} = \left\langle \frac{\pi}{kW} \ T(k) \right\rangle  \ .
+\label{eq:tbar0}
+\ee
+
+\nin In the large $k$-limit the modes are closely spaced in angle, and
+the sums over modes can be converted into integrals over angles:
+$\sum_{a}^{N} \sum_{{\hat a}=\pm a} \rightarrow (kW/\pi) 
+\int_{-1}^{1} \dif(\sin{\hat {\theta}})$. Thus, the only $k$-dependence remains in the phase factors. Exchanging the angle-integrals with the $k$-average,
+
+\be
+{\cal T} = \frac{1}{2} \int_{-1}^{1} \dif(\sin{\btheta})
+\int_{-1}^{1} \dif(\sin{\theta})  
+\ \sum_{\btheta^{\prime}=\pm \btheta} \ \sum_{\theta^{\prime}=\pm \theta}
+\ \sum_{s(\btheta,\theta)} \ \sum_{u(\btheta^{\prime},\theta^{\prime})}
+\sqrt{\tilde{A}_{s} \tilde{A}_{u}} \ \langle
+\exp{[i k (\tilde{L}_{s}-\tilde{L}_{u})+i \pi \phi_{s,u} ]} \rangle \ .
+\label{eq:classT0}
+\ee
+
+\nin The evaluation of the average leads to 
+$k (\tilde{L}_{s}\!-\!\tilde{L}_{u})+ \pi \phi_{s,u} = 0$. In the absence of symmetries, such a relation is only possible if $s\!=\!u$. Quantum interference is therefore absent in the resulting {\it diagonal} term. Changing variables, from the outgoing angle $\theta$
+to the initial position $\by$, results in
+
+\be
+{\cal T} = \frac{1}{2} \int_{-1}^{1} \dif(\sin{\btheta})
+\int_{0}^{W} \frac{\dif\by}{W} \ f(\by,\btheta) \ .
+\label{eq:classT}
+\ee
+
+\begin{itemize}
+
+\item $f(\by,\btheta)\!=\!1$ if the trajectory with initial conditions $(\by,\btheta)$ is transmitted.
+ 
+\item $f(\by,\btheta)\!=\!0$ if the trajectory with initial conditions $(\by,\btheta)$ is reflected.
+
+\end{itemize}
+
+\nin The expression \eqref{eq:classT} is a purely classical one, with the intuitive interpretation of a transmission probability. ${\cal T}$ can also be obtained from a Boltzmann equation approach \cite{Bar91}. The transmission probability is experimentally relevant when the temperature is high enough to kill the interference effects, and thus it has been used to 
+understand the early experiments on transport in ballistic junctions at
+Helium temperatures \cite{Rouk,Ford89,BvH88}.
+
+\nin The numerical implementation of Eq.~(\ref{eq:classT}) is easily done by sampling the classical trajectories with random choices of the
+initial position and initial angles (with a weight of 
+$\cos{\btheta}$). This purely classical procedure yields values of ${\cal T}$ which are
+consistent with the slope of the quantum numerical results (see Fig.~\ref{fig:preview}).
+
+\subsubsection{Transmission shift and fluctuations}
+\label{subsubsec:tsaf}
+
+The secular (smoothed) behavior of the $T(k)$ (dashed line in Fig.~\ref{fig:preview}) is characterized by the slope ${\cal T}$ of its asymptote  and the transmission shift, defined by the average
+
+\be
+\langle \dlT \rangle = \left\langle \left(T(k) - \left(\frac{kW}{\pi}\right) 
+{\cal T} \right) \right\rangle \ .
+\label{eq:kappa}
+\ee
+
+\nin The fluctuations with respect to the secular behavior are 
+
+\be
+\delta T(k) =  T(k) - \left(\frac{kW}{\pi} {\cal T} + \langle \dlT \rangle \right)  \ .
+\label{eq:dlTdef}
+\ee
+
+\nin The data in Fig.~\ref{fig:preview} presents the striking feature that the typical size of the fluctuations $\delta T(k)$ is of order 1 independently of the $k$-interval. These conductance fluctuations are considered in \ref{subsec:cf} from a semiclassical approach \cite{Jal90} based on the semiclassical treatment of the $S$-matrix fluctuations 
+as a function of energy, introduced by Gutzwiller \cite{Gutz83}, and later developed \cite{Blu88,Gas89}. The dependence of $\langle \dlT \rangle$ on magnetic field amounts to the ballistic weak-localization effect, treated in \ref{subsec:wl}. 
+
+\subsection{Conductance fluctuations}
+\label{subsec:cf}
+
+\subsubsection{Wave-vector dependent conductance fluctuations and power spectrum}
+
+The conductance fluctuations can be studied through the correlation function of the transmission 
+
+\be
+C_k( \dlk ) = \sum_{a,b}^{N} \sum_{a^{\prime},b^{\prime}}^{N} 
+C_{k,bab^{\prime}a^{\prime}}( \dlk ) \ .
+\label{eq:Cdef}
+\ee
+
+\begin{itemize}
+
+\item $C_{k,bab^{\prime}a^{\prime}}( \dlk ) =
+\langle \dlT_{ba}(k+\dlk) \dlT_{b^{\prime}a^{\prime}}(k) \rangle$ \ .
+
+\end{itemize}
+
+\nin The correlation function is characterized by the typical size 
+$C_k(0)$ of the conductance fluctuations and the correlation length $\dlk_c$ giving the scale for the decay in the variable $\dlk$. The Fourier power spectrum
+
+\be
+\widehat{C}_k(x) = \int \dif (\dlk) C_k(\dlk) e^{ix \dlk} 
+\label{eq:Chatdef}
+\ee
+
+\nin is particularly useful in order to separate the different length scales appearing in the conductance fluctuations.
+
+\subsubsection{Semiclassical approach to the correlation length of the conductance fluctuations}
+\label{subsubsec:cf}
+
+The semiclassical expression for $C_{k,bab^{\prime}a^{\prime}}(\dlk)$  involves sums over terms depending on four trajectories, say $s({\hat a},{\hat b})$, $u({\tilde a},{\tilde b})$,
+$s^{\prime}({\hat a}^{\prime},{\hat b}^{\prime})$, 
+$u^{\prime}({\tilde a}^{\prime},{\tilde b}^{\prime})$. The terms with
+$s=u$ and $s^{\prime}=u^{\prime}$ are excluded due to the subtraction of the average values. $C_k( \dlk )$ results from the sum of a large number of terms that, in general, have very different phases. A special case is that of the diagonal terms defined by ${\hat a}={\hat a}^{\prime}$, 
+${\tilde a}={\tilde a}^{\prime}$, ${\hat b}={\tilde b}$,
+${\tilde b}={\tilde b}^{\prime}$, $s=s^{\prime}$, and $u=u^{\prime}$. Keeping only these terms leads to the so-called {\it diagonal approximation} $C_k^D(\dlk)$. Such an approximation is not justified for the calculation of $C_k(0)$ since only represent a small fraction of the total number of terms contributes. In Sec.~\ref{subsubsec:loopcon} it is discussed an approximate way of incorporating  the contributions of the off-diagonal terms.   
+
+\nin Assuming that the correlation length of $C_k^D(\dlk)$ is the same as that of $C_k(\dlk)$, it is useful to write the semiclassical expression of the former after converting the sums over modes into integrals
+
+\be
+\hspace{0.6cm} C_k^D(\dlk) = \frac{1}{4}
+\int_{-1}^{1} \dif(\sin\btheta)\int_{-1}^{1} \dif(\sin\theta)
+\ \sum_{\btheta^{\prime}=\pm \btheta} \ \sum_{\theta^{\prime}=\pm \theta}
+\ \sum_{s(\btheta,\theta)} \ 
+\sum_{u(\btheta^{\prime},\theta^{\prime})}\!{^{^{\prime}}} 
+\tilde{A}_s \tilde{A}_u
+\exp{\left[i \dlk (L_s - L_u)\right]} \ .
+\label{eq:Cdsc2}
+\ee
+
+\begin{itemize}
+
+\item The ``prime" in the summation over trajectories indicates that the terms $s\!=\!u$ are excluded.
+
+\end{itemize}
+
+\nin The Fourier power spectrum of the diagonal component verifies
+
+\be
+\widehat{C}_k^D (x) \propto \int_{0}^{\infty}\! \dif L \:P(L+x) P(L) \ .
+\label{eq:Chatchaos1}
+\ee
+
+\begin{itemize}
+
+\item $P(L) = \frac{1}{4}
+\int_{-1}^{1} d(\sin\theta)\int_{-1}^{1} d(\sin\theta^{\prime})
+\sum_{\uttp}  \tilde{A}_u \delta(L - \tilde{L}_u)$ is the classical distribution of lengths $L$.
+
+\item The trajectories are supposed to be uniformly distributed in the sine of the angle.
+
+\item The angular constraints linking trajectories $u$ and $s$ are neglected.
+
+\item The constraint $u \neq s$ is ignored due to the 
+proliferation of long paths.
+
+\item $x$ is taken positive.
+
+\end{itemize}
+
+\nin As discussed in \ref{subsub:ldib}, for chaotic billiards,
+the distribution of lengths is exponential for large $L$, while there may be deviations at small $L$. Using the exponential form for all lengths, 
+
+\be
+\widehat{C}_k^D (x) \propto e^{-\gcl x } \qquad \ , \qquad
+C_k^D (\dlk) = \frac{C_k^D(0)}{1 + (\dlk/ \gcl)^2} \ .
+\label{eq:Chatchaos2}
+\ee
+
+\nin For billiards the $k$-correlation length $k_{\rm c}=\gcl$ is $k$-independent, implying that the conductance fluctuations persist (and remain invariant) in the large-$k$ limit. In generic chaotic systems, the energy-correlation functions can be obtained from a semiclassical analysis and an energy-average over intervals small in the classical scale (such that the trajectories are unchanged) but large in the quantum scale (containing many oscillations of the transmission coefficient) leading to \cite{Blu88} 
+
+\be
+C_E^D (\Delta E) = \frac{C_E^D(0)}{1 + (\Delta E/(\hbar \gamma)^2} \ .
+\label{eq:ecf}
+\ee
+
+\nin The conductance fluctuations are thus on a scale $E_{\rm c}=\hbar \gamma$ that is much larger than the level spacing $\Delta$. Due to the wide openings of the cavity, transport occurs in the regime of {\it overlapping resonances}. This regime has been extensively studied in 
+Nuclear Physics, in the context of compound nuclei, characterized by the Ericson fluctuations \cite{Eric60}, also described by \eqref{eq:ecf}.
+The photoexcitation cross sections of rubidium Rydberg states in crossed, electric and magnetic fields, provide another physical example characterized by the Ericson regime \cite{Madr05}. One-dimensional models of chaotic scattering obtained as an open variant of the kicked rotator exhibiting transmission fluctuations, with a quantum correlation length which is well described by the numerically computed classical escape rates \cite{borguar}.
+
+\subsubsection{Semiclassical approach to the magnetic filed correlation length for chaotic cavities}
+\label{subsubsec:cfmfc}
+
+\nin The conductance fluctuations as a function of the magnetic field are relevant from the experimental point of view, since an external field is a very useful control variable. The magnetic filed correlation function is
+defined as an average over $k$
+
+\be
+C_B( \dlB ) = \langle \dlT (k,B+\dlB) \ \dlT (k,B) \rangle \ .
+\label{eq:CBdef}
+\ee
+
+\nin In analyzing experimental or numerical data, averages over finite $k$ or $B$-intervals (small enough not to modify the classical 
+dynamics) are generally used. 
+
+\nin The derivation of the magnetic field correlation length \cite{Jal90}
+follows similar lines as in the case of the $k$-correlation length. The diagonal term $C_B^D( \dlB )$ is selected from the general expression \eqref{eq:CBdef} containing four-trajectory sums, under the expectation that for a chaotic cavity only one characteristic scale appears in the correlation function.  Assuming $\dlB$ small enough not to significantly change the classical trajectories, and considering the pairing $s\!=\!s'$, $u\!=\!u'$, leads to the action differences $[ S_s(B+\dlB) - S_u(B+\dlB) + S_s(B) - S_u(B) ]/ \hbar = (\Theta_s - \Theta_u) \dlB/ \Phi_0$ and then 
+
+\be
+\hspace{0.6cm} C_B^D(\dlB) = \frac{1}{4}
+\int_{-1}^{1} \dif (\sin\btheta)\int_{-1}^{1} \dif (\sin\theta)
+\ \sum_{\btheta^{\prime}=\pm \btheta} \ \sum_{\theta^{\prime}=\pm \theta}
+\ \sum_{s(\btheta,\theta)} \ 
+\sum_{u(\btheta^{\prime},\theta^{\prime})}\!{^{^{\prime}}} 
+ \tilde{A}_s \tilde{A}_u
+\exp{\left[i \frac{\dlB}{\Phi_0} (\Theta_s - \Theta_u) \right]} \ .
+\label{eq:CdB1}
+\ee
+
+\begin{itemize}
+
+\item $\Phi_{0}=hc/e$ is the flux quantum.  
+
+\end{itemize}
+
+\nin The Fourier power spectrum of the diagonal component verifies
+
+\be
+\widehat{C}_B^D (\eta) \propto 
+\int_{-\infty}^{\infty}\! d\Theta \:N(\Theta+\eta) N(\Theta) \ .
+\label{eq:CdB3}
+\ee
+
+\begin{itemize}
+
+\item $N(\Theta)$ is the effective area distribution. 
+
+\end{itemize}
+
+\nin Using the exponential form (\ref{eq:efardis}) of the distribution of 
+effective areas $N(\Theta)$, for all values of $\Theta$ yields \cite{Jal90}
+
+\be
+\widehat{C}_B^D (\eta) \propto e^{-\alc |\eta|} \left(1+ \alc |\eta|\right)
+\qquad , \qquad C_B^D (\dlB) = \frac{C_B^D(0)}{[1 + (\dlB/ \alpha_{cl} \Phi_0 )^2 ]^2} \ .
+\label{eq:CdB4}
+\ee
+
+\nin The magnetic field correlation length $\dlB_c=\alpha_{cl} \Phi_0$ is $k$-independent, implying that the $B$-dependent conductance fluctuations  persist (and remain invariant) in the large-$k$ limit.
+
+\subsubsection{Quantum numerical calculations of conductance fluctuations in classically chaotic cavities}
+\label{subsubsec:spvqnc}
+
+The regime of validity of th semiclassical predictions can be tested by 
+quantum numerical calculations. The conductance through a cavity within a one-particle description can be obtained, as a function of the Fermi energy $\varepsilon_{\rm F}$ of the reservoirs or a perpendicular magnetic field $B$. The study of fluctuations requires a definition of the average values, inducing some degree of arbitrariness when dealing with finite data. The use of the power spectra $\widehat{C}_k(x)$ and $\widehat{C}_B(\eta)$, directly obtainable from the Fourier power of the raw data was proposed to circumvent this problem \cite{Jal90}. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{powsp}}
+\caption{
+Power spectrum of $T(k)$ for the chaotic structure shown for two electron
+fillings corresponding to $N\!=\!21$ (squares) and $N\!=\!1$ (triangles) open channels. In the former case, there is a very good agreement with Eq.~\protect\eqref{eq:Chatchaos2}, while in the extreme quantum limit
+when only one mode is propagating in the leads, the agreement with the semiclassical theory is restricted to a small interval of $x$.  
+(From Ref. \protect\cite{Chaost}, copyright 1993, American Institute of Physics.)
+}
+\label{fig:powsp}
+\end{figure}
+
+\nin Fig.~\ref{fig:powsp} shows the smoothed power spectra $\widehat{C}_k(x)$ for an asymmetric cavity for the cases where the number of propagating modes in the leads is $N=1$ (triangles) and $N=21$ (squares). The later case is  well represented by Eq.~(\ref{eq:Chatchaos2}) over a wide range of $x$. There are, nevertheless, deviations for small lengths ($x \simeq \LD$) and for large $x$. The deviations for small lengths are understandable since the chaotic nature of the dynamics (and the statistical treatment of the trajectories) cannot give an appropriate description for short trajectory lengths. The deviations for large lengths arise from the limitations of semiclassics and the diagonal approximations, and they become more important upon reducing $k$. The data for $N=1$ has important departures from the semiclassical prediction (\ref{eq:Chatchaos2}), but the slope obtained by fitting data up to $x/\LD \approx 20$ is remarkably accurate. The quantum correlation lengths $\gamma_{qm}$ obtained by the linear fitting of $\widehat{C}_k(x)$ are in very good agreement with the classical escape rate $\gcl$ for a different geometries encompassing a large span of values of $\gcl$ (see Fig.~\ref{fig:pow3}.a).  
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{pow3}}
+\caption{
+(a) Ratio of the wave-vector correlation length to the classical escape rate $\gcl$ as a function of $\gcl$ for both types of structures shown as insets; four-disc structure (triangles) with $R/W=1,2,4$, and stadium (squares) with $R/W = 0.5,1,2,4,6,8$. (b) Ratio of magnetic field correlation length to the exponent of the distribution of effective areas $\alc$ as a function of $\alc$ for the four-disc structure with $R/W=1,2,4$, and the open stadium with $R/W = 1,2,4,6$. (Adapted from Ref. \protect\cite{Jal90}, copyright 1990, American Physical Society.)
+}
+\label{fig:pow3}
+\end{figure}
+
+\nin The analysis in terms of the power spectra is useful because it allows to distinguish the fluctuations according to their length scales. This distinction is not only of technical nature when comparing with numerical simulations, but also important on physical grounds. As stressed in \ref{subsub:QCaMS}, in experimentally relevant mesoscopic systems there are various cut-off lengths beyond which the simple disorder-free, one-particle models are not applicable, and the connection with Quantum Chaos looses its meaning. 
+
+\nin For the conductance fluctuations as a function of magnetic field, the numerically obtained $\widehat{C}_B(\eta)$ shows good agreement with the semiclassical prediction (\ref{eq:CdB4}) for an intermediate range of values of $\eta$ (see Fig.~\ref{fig:CF_MF}). The analysis in terms of the power spectrum is necessary since the correlation function $C(\Delta B)$ follows the semiclassical prediction for a restricted interval of 
+$\Delta B$ leaving aside the contributions from very short and very long trajectories \cite{Jal90}. The good agreement between $\alpha_{qm}$ (obtained by the fitting to the  quantum calculations) and $\alc$ (obtained from the simulation of the classical dynamics) is presented in 
+Fig.~\ref{fig:pow3}.b, where $\alc$ is varied over roughly two orders of magnitude by changing the size of the structures considered. For the 
+four-probe structure, fluctuations studied are those of the Hall resistance (which can be expressed as a function of the transmission coefficient between leads \cite {Butt86,BvH88,Bar91}). 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{CF_MF}}
+\caption{
+Magnetic-field correlation function obtained from a magnetoconductance curve of a stadium (see panel (c) in Fig.~\ref{fig:preview}). The dashed line is the semiclassical prediction for the correlation function. Inset: the smoothed power spectrum (solid) and best fit to the form \ref{eq:CdB4} of $\widehat{C}_B(\eta)$ (dashed). (From Ref. \protect\cite{Jal90}, copyright 1990, American Physical Society.)
+}
+\label{fig:CF_MF}
+\end{figure}
+
+\nin The $k$-independence of $\gamma_{qm}$, $C_k(0)$, $\alpha_{qm}$ and
+$C_B(0)$ is approximately respected in the numerical simulations
+away of the quantum limit of small $N$. The numerical quantum calculation validate the conjecture that the correlation functions in a chaotic cavity have a unique characteristic length, determined by the underlying classical dynamics, and therefore extracting these lengths from the diagonal part of the correlations is appropriate. The $k$-independence obtained for the size of the conductance oscillations arising from quantum calculations, as well as for the magnitude of the diagonal part of the correlation functions, points towards the universal character of the conductance fluctuations in chaotic ballistic systems. 
+
+\nin Multiple-connected structures, like an open Sinai billiard, have been studied numerically and with the semiclassical approximations of Secs.~\ref{subsub:sta} and \ref{subsub:sra}, resulting in an Aharonov-Bohm periodicity induced by the central scatterer \cite{Kawabata97}. 
+
+\subsection{Weak-localization in the ballistic regime}
+\label{subsec:wl}
+
+As indicated in \ref{subsubsec:tsaf} and in the discussion of  Fig.~\ref{fig:preview}, the shift $\langle \dlT \rangle$  is sensitive
+to a perpendicular magnetic field. The presence of a small field increases
+the average conductance. This effect is called the ballistic weak-localization \cite{Bar93}, by analogy with the disordered case.
+It is important to realize that it is an average effect. Only after removing the (large) conductance fluctuations by the $k$-average, the (small) difference between the secular behaviors with and without magnetic field is visible. The two-probe conductance is an even function of the magnetic field, therefore in a given sample, $g(B)$ may have a {\em maximum or a minimum} at $B\!=\!0$. The two possible cases are observed on individual samples, experimentally \cite{Kel94} and in the numerical simulations. 
+
+\subsubsection{Semiclassical calculation of the coherent backscattering}
+\label{subsubsec:sccb}
+
+The expression (\ref{eq:classT}) of the transmission probability ${\cal T}$ is obtained in the diagonal approximation of pairing each trajectory with itself, thus neglecting the possibility that different paths may have the same effective action. Ignoring degeneracies among actions is correct in the absence of symmetries, but time-reversal or spatial symmetries result in non-vanishing non-diagonal terms. Achieving exact geometrical symmetries of the confining potential in actual microstructures is quite difficult, due to the limitations in the fabrication procedure. But the time-reversal symmetry is exactly fulfilled by simply turning off the external magnetic field.
+
+\nin At zero magnetic field, the interference of time-revered trajectories does not appear in the transmission coefficients $T_{ba}$, nor in the non-diagonal (in modes) refection coefficients $R_{ba}$ having $b \ne a$, but only in the diagonal refection coefficients $R_{aa}$. The refection coefficients $R_{ba}$ and the reflection probability ${\cal R}$ are given, respectively, by expressions analogous to \eqref{eq:scT} and \eqref{eq:classT}, where the contributing trajectories start and exit at the entrance lead. Three kinds of pairs contribute to $R_{aa}$: those of identical trajectories (giving rise to ${\cal R}$), those of time-revered trajectories (contributing to 
+$\langle \dlR \rangle = \left\langle \left(R - \left(kW/\pi\right) 
+{\cal R} \right) \right\rangle$, and those with different actions. As in the case of conductance fluctuations, the off-diagonal terms are difficult to evaluate. In Sec.~\ref{subsubsec:loopcon} it is discussed an approximate way of incorporating  their contribution. 
+
+\nin For magnetic fields $B$ weak enough not to modify appreciably the geometry of the classical trajectories, the action difference between two time-reversed paths $s$ and $u$ is $S_s-S_u = 2\hbar\Theta_sB/\Phi_0$, and  after changing the sum over modes by an integral over initial angles, the diagonal correction to the reflection coefficient writes 
+
+\be
+\langle \delta R^D(B) \rangle = \frac{1}{2} \int_{-1}^{1} \dif(\sin\btheta)
+\sum_{s( \btheta,\pm \btheta)} \tilde{A}_s \exp{\left[i \frac{2 B}{\Phi_0} \Theta_s \right]} \ ,
+\label{eq:rd1}
+\ee
+
+\nin which yields an order unity ($k$-independent) contribution containing only classical parameters (and $\Phi_0$). Assuming that in a chaotic system  there is a uniform distribution of exiting angles and the distribution
+(\ref{eq:efardis}) of effective areas is valid  even when the
+initial and final angles of the trajectories are constrained \cite{Bar93}
+
+\be
+\langle \delta R^D(B) \rangle = \frac{{\cal R}}{1 + (2B/ \alpha_{cl} \Phi_0 )^2} \ .
+\label{eq:wlfr}
+\ee
+
+\nin The Lorentzian line-shape is governed by the same parameter
+$\alc$ of the conductance fluctuations (up to a factor of 2). The diagonal reflection coefficients $R_{aa}$ are on average twice as large as the typical off diagonal terms (of the order of ${\cal R}/N$). This factor of 2 enhancement, known as {\it coherent backscattering} in disordered systems, is called {\it elastic enhancement} in in the context of Nuclear Physics \cite{Iid90,Wei91}. 
+
+\nin The coherent backscattering 
+$\langle \delta R^D(0) \rangle - \langle \delta R^D(B) \rangle$ is one of the contributions to the weak-localization 
+$\langle \delta R(0) \rangle - \langle \delta R(B) \rangle =
+\langle \delta T(B) \rangle - \langle \delta T(0) \rangle$. The last equality is a consequence of unitarity, and shows that the non-diagonal terms (in mode and trajectory) are relevant to evaluate the magnitude of the weak-localization effect since time-reversed trajectories do not contribute to $\langle \delta T(0) \rangle$. Similarly as in the case of conductance fluctuations, a chaotic cavity is expected to be characterized by a single the field scale. Thus, the weak-localization is conjectured to have the same Lorentzian line-shape \eqref{eq:wlfr}, with
+the width given by the classical parameter $\alc$.
+
+\subsubsection{Quantum numerical calculations of weak-localization and coherent backscattering}
+\label{subsubsec:qncwlcb}
+
+Fig~\ref{fig:wl1} shows the numerically obtained quantum transmission of a
+chaotic cavity at $B=0$ (solid) and its smoothed trace (dashed) as a function of $k$ for the cavity of at the lower-right. The application of a small field results in another rugged transmission (not shown), than when smoothed (dotted) lies above the corresponding $B=0$ result. This is the ballistic weak-localization effect. The behavior of the smoothed traces close to $B=0$ is well represented by a Lorentzian (inset) line-shape, with
+the width given by the classical parameter $\alc$, in agreement with the conjecture that the weak-localization and coherent 
+backscattering have the same line-shape. The non-chaotic cavity of the upper right presents an approximately linear line-shape close to $B=0$ (dashed in the inset). 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{wl1}}
+\caption{
+Transmission coefficient as a function of wave-vector for the
+half-stadium structure shown in the bottom right.
+The zero-temperature fluctuations (solid) are eliminated through the
+smoothing induced a temperature corresponding to $20$ correlation lengths. The offset resulting from changing the magnetic field from $B=0$ (dashed) to $B= 2 \Phi_{0} /A$ (dotted) corresponds to the average magnetoconductance effect. $A$ is the area of the structures.
+Inset: smoothed transmission coefficient as
+a function of the flux through the cavity ($kW/\pi = 9.5$) showing the
+difference between the chaotic structure in the bottom right (solid) and
+the regular structure in the top right (dashed).
+(From Ref. {\protect{\cite{Bar93}}}, copyright 1993, American Institute of Physics.)
+}
+\label{fig:wl1}
+\end{figure}
+
+\nin The numerical quantum calculations allow to separately evaluate the weak-localization and the coherent backscattering effects. For the two structures of Fig.~\ref{fig:wl2} the field-dependent part of
+the (smoothed) total reflection coefficient 
+$\langle R(0) \rangle - \langle R(B) \rangle$
+(solid) is  split in its diagonal (dashed) and off-diagonal (dotted)
+parts. For the structure with the stopper $\langle \delta
+R^D \rangle$ is approximately independent of $k$, its 
+magnitude is within  $30 \% $ of ${\cal R}$, and the elastic
+enhancement factor goes approximately from 2 to 1 when the field is
+turned on, in good agreement with the semiclassical prediction. An important off-diagonal contribution of opposite sign, not accessible by the diagonal approximation used in \ref{subsubsec:sccb}, reduces the weak-localization effect with respect to the coherent backscattering. 
+The structure without stoppers exhibits similar features,
+but has a reduced weak-localization effect. Also,
+the magnitude of the coherent backscattering differs
+considerably from ${\cal R}$ and there is an important
+net variation as a function of $k$. These discrepancies with the semiclassical diagonal approximation are due to the presence of short 
+paths and the approximate nature of the uniformity assumption used to
+obtain Eq.~(\ref{eq:wlfr}). As discussed in \ref{sub:avwlcf}, eliminating the effect of the short paths is necessary in order to approach the universal regime.
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{wl2}}
+\caption{
+Change in the total (smoothed) reflection coefficient (solid), as well as  the diagonal
+(dashed) and off-diagonal (dotted) parts, upon changing $B$ from $0$
+to $2 \alpha_{cl} \Phi_{0}$. The dashed ticks on the right mark the classical value of ${\cal R}$. The weak-localization (total) correction has  a positive coherent backscattering component (diagonal) and another contribution with opposite sign (off-diagonal). Blocking the short trajectories allows to approach the universal results of the semiclassical theory. (From Ref. {\protect{\cite{Bar93}}}, copyright 1993, American Institute of Physics.)
+}
+\label{fig:wl2}
+\end{figure}
+
+\subsection{Beyond the diagonal approximation: loop and Ehrenfest-time corrections}
+\label{subsec:bda}
+
+\subsubsection{Off-diagonal terms}
+\label{subsubsec:odt}
+
+The diagonal semiclassical approximations used in \ref{subsubsec:cf}, \ref{subsubsec:cfmfc}, and \ref{subsubsec:sccb} in the study of the conductance fluctuations and weak-localization only considered the contribution of terms pairing equal or time-reversed trajectories. While this approach is expected to yield the correct line-widths of the conductance fluctuations and the weak-localization, it does not respect unitarity, and it cannot provide the magnitude of these effects. 
+
+\nin The simplistic view that terms with pairs of trajectories with actions that are not exactly equal cancel upon energy averaging has two shortcomings. On one side, due to the exponential proliferation of trajectories with length, there are pairs with a very small action difference \cite{Argaman} (as compared to $\hbar$). On the other hand, the $N$ diagonal reflection coefficients $R_{aa}$ are less numerous than the $N(N-1)/2$ off-diagonal coefficients. Since the diagonal approximation yields the former to order $(1/N)^0$, the latter should be obtained to order $(1/N)$ in order to keep the consistency of a $(1/N)$ expansion. 
+
+\subsubsection{Loop contributions}
+\label{subsubsec:loopcon}
+
+Based in analogous cases of disordered \cite{AkkerMonta} and closed chaotic \cite{Sieber2001,Sieber2002} systems, Richter and Sieber \cite{Richter2002} proposed that the terms surviving the energy averages are given by pairs of trajectories which remain close (in configuration space) and only differ in whether they undergo or avoid a self-intersection with a small crossing angle $\varphi$ (dotted-black and solid-red trajectories sketched in Fig.~\ref{fig:loop}). The action difference of this so-called Richter-Sieber pair can be obtained by linearizing the dynamics in the vicinity of the encounter \cite{Sieber2002}
+
+\be
+\Delta S(\varphi)= \frac{p^2 \varphi^2}{2\Me \lambda} \ .
+\label{deltaSRSp}
+\ee
+
+\begin{itemize}
+
+\item $\varphi$ is the crossing angle.  
+
+\item $p$ is the momentum.
+
+\item $\lambda$ is the Lyapunov exponent.  
+
+\end{itemize} 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=0.8\linewidth]{loop}}
+\caption{
+Schematic picture of a pair of interfering trajectories characterized by a crossing and an avoided crossing with a small angle $\varphi$. Such a pair gives rise to the loop contribution of the weak-localization correction.
+}
+\label{fig:loop}
+\end{figure}
+
+\nin In addition to the action difference \eqref{deltaSRSp}, the calculation of the off-diagonal scattering coefficients necessitates the knowledge of the number of self-crossings $P(\varphi,\tau)\dif \varphi$ in the range between $\varphi$ and $\varphi+\dif \varphi$ for orbits with time $\tau$. This is a complicated problem depending on the nature of the classical dynamics. The assumption of ergodicity leads to \cite{Richter2002}
+
+\be
+P(\varphi,\tau) = \frac{\Me c^2}{\Sigma(\varepsilon)} (\tau-\tau_{\rm min}(\varphi))^2 \ \sin{\varphi} \ .
+\label{eq:peT}
+\ee
+
+\begin{itemize}
+
+\item $\Sigma(\varepsilon)$ denotes the phase-space volume of the system at energy $\varepsilon$ \ .
+
+\item $\tau_{\rm min}$ is the minimal time to form a closed loop, $\tau_{\rm min}=(2/\lambda) \ln{(c/\varphi)}$ for a uniform hyperbolic dynamics (with $c$ of order unity).  
+
+\nin From \eqref{deltaSRSp} and \eqref{eq:peT}, the {\it loop contributions} to the scattering coefficients are \cite{Richter2002}
+
+\end{itemize} 
+
+\be
+T_{ba}^{\rm loop}(k) = R_{ba}^{\rm loop}(k) =
+\frac{4\pi \hbar}{\Sigma(\varepsilon)} \int_{0}^{\pi} \dif \varphi
+\int_{2 \tau_{\rm min}}^{\infty} \dif \tau \ e^{-\gamma(\tau-\tau_{\rm min})} P(\varphi,\tau) \ \cos{\left(\frac{p^2 \varphi^2}{2\Me \lambda}\right)} = 
+- \frac{1}{4N^2}  \ .
+\label{eq:loopT} 
+\ee
+
+\nin These predictions restore the unitarity condition that the diagonal approximation of \ref{subsubsec:sccb} failed to fulfill, and agree with the random-matrix theory results of Sec.~\ref{sub:avwlcf}. The agreement with random-matrix theory results for all the observables considered is not surprising, since the ergodic hypothesis used in the semiclassical loop calculations is equivalent to the assumptions upon which the use of 
+random-matrix theory is justified. In both cases there is no system parameter other that the number of modes $N$, and therefore all the system specific information of the original system has been washed out by the ergodic hypothesis.  
+
+\nin Since the loops formed by off-diagonal orbit pairs are traversed in opposite directions, these orbits acquire an additional phase difference in the presence of a weak magnetic field. Since the flux enclosed in the loops is governed by the area distribution \eqref{eq:efardis}, the magnetic field dependence of the off-diagonal terms is the same that of the diagonal ones, confirming the conjecture that coherent backscattering and weak-localization have the same line-shape in chaotic cavities.
+
+\nin More refined arguments take into account the interplay between encounters and the proximity of the leads, as well as the possibility of pairs of trajectories with multiple encounters \cite{Haacke_2006}. Diagrammatic rules have been developed \cite{Haacke_2007} towards a systematic expansion in orders of $1/N$ for weak-localization, conductance fluctuations and shot noise. While in the first case only pairs of trajectories are relevant, the calculations for the other two observables require considering quadruples of trajectories. The correct handling of multiple encounters becomes then crucial, and lead to full agreement with random-matrix theory. 
+
+\subsubsection{Ehrenfest-time corrections}
+\label{subsubsec:etc}
+
+The semiclassical approach of the previous sections based on the diagonal and loop approximations make extensive use of the ergodic hypothesis for predicting the magnitude of the coherent backscattering, the weak-localization and the conductance fluctuations. In an open system such idealization amounts to neglect the contribution from terms related with direct, lead connecting trajectories (see discussion in \ref{subsubsec:qncwlcb}) and with trajectories staying short times in the cavity. The average staying time is quantified by the inverse of the escape rate $\gamma$ presented in \ref{subsub:er}. Such a scale should be compared with the Ehrenfest time, defined by the time it takes to a minimal wave-packet to spread and cover the entire cavity. In a chaotic cavity the stretching in phase-space is exponential and 
+
+\be
+\ET = \frac{1}{\lambda} \
+\ln{\left(\frac{p a}{\hbar}\right)} \ .
+\label{eq:ET}
+\ee
+
+\begin{itemize}
+
+\item $\ET$ is the Ehrenfest time.
+
+\item $a$ is typical size of the structure.
+
+\item $\lambda$ is the Lyapunov exponent.  
+
+\item $p/\hbar$ is the initial spread of a minimal wave-packet.
+
+\end{itemize} 
+
+\nin The Ehrenfest time separates times where the evolution of a particle follows essentially the classical dynamics from times when it is dominated by wave interference. The interference phenomena are then restricted to trajectories larger than $\ET$. Imposing this cutoff in the semiclassical sums over pairs of trajectories, the result \eqref{eq:loopT} takes the form \cite{Adagi03}
+
+\be
+T_{ba}^{\rm loop}(k,\ET) = - \frac{1}{4N^2} \ e^{-\gamma \ET} \ .
+\label{eq:loopTwET} 
+\ee
+
+\nin This result has been originally derived from field theoretical methods \cite{Alei96} invoking a small amount of disorder in an otherwise clean, extended, two-dimensional structure (i.e. a Lorentz gas of hard disks with a superimposed smooth disorder). Taking as $a$ the typical size of the disks, the separation of the dynamics in scales shorter and longer than the Ehrenfest time allows to treat correlations of the disorder potential for short times and use the diffusion equation for long times.
+
+\nin The Ehrenfest-time corrections are difficult to detect in ballistic cavities like the one simulated in Fig.~\ref{fig:preview}, since they require achieving very large wave-vectors $k$. This is why most of the numerical checks, like that of the weak-localization correction \eqref{eq:loopTwET}, have been done through simulations in the open quantum kicked rotator \cite{Rahav05}.
+
+\nin Coherent backscattering is not affected by Ehrenfest-time corrections.
+\cite{Rahav06}. Contrary to the weak-localization, the variance of the conductance is found to be independent of the Ehrenfest time \cite{Twor04,Jacq04,Brou06}. In the semiclassical limit quantum corrections are shown to have a universal parametric dependence which is not described by random-matrix theory \cite{Brou07}. Shot noise \cite{Brou07b} and counting statistics \cite{Walt11} have been shown to be affected by Ehrenfest-time corrections.
+
+\subsection{Integrable and mixed dynamics}
+
+\subsubsection{Direct trajectories} 
+
+As stressed in \ref{subsub:cgse}, the semiclassical form \eqref{eq:semiclass} of the transmission amplitude is not valid when the contributing trajectories are not isolated but belong to {\it families}. For geometries with the two leads facing each other, the diagonal transmission amplitude is given by \cite{Chaost}
+
+\be
+t^{\rm d}_{aa}= - \exp{\left[i k L\right)} \left\{\left(1-\rho\tan{\theta}\right] \exp{\left(-i \pi a \rho \right)} + \frac{1}{\pi a} \sin{\left(\pi a \rho \right)}\right\} \ .
+\label{tdjj2}
+\ee
+
+\begin{itemize}
+
+\item $\sin{\theta} = a\pi/ kW$ \ .
+
+\item $\rho=(\LD/W)\tan{\theta}$ \ .
+
+\end{itemize}
+
+\nin The off-diagonal terms ($a \neq b$) vanish if $a$ and $b$ have different parity. For modes with the same parity the off-diagonal terms are not zero, but they are significant only for $b \simeq a$. In Ref.~\cite{LinJen}, Lin generalized these results to the case in which the leads are not collinear.
+
+\nin The contribution from the family of direct trajectories has a different dependence on $\hbar$ (or $k$) than that of the isolated trajectories. The number of modes that support direct trajectories is $N(W/\LD)$, and therefore the effect of direct trajectories does not disappear in the semiclassical limit. The existence of direct trajectories difficults
+the comparison between the semiclassical theory with numerical calculations or experimental data. Thus, many of the numerical simulations incorporate ``stoppers'' in the billiards which eliminate this effect. At the experimental level various approaches has been used: displacing the leads \cite{Kel94}, having an angle smaller than $\pi$ between the two leads \cite{Mar92,marcusgroup3}, or using stoppers inside the cavity \cite{Kel94,lee97}. 
+
+\subsubsection{Scattering through a rectangular cavity}
+\label{subsubsec:starc}
+
+\nin The case of the square is rather special among integrable
+systems since the conserved quantities of the cavity are the same as in 
+the leads. For the scattering through a rectangular billiard, a continuous
+fraction approach \cite{paul} allows to calculate the semiclassical transmission amplitudes. The resulting conductance fluctuations are not universal, but increase with $k$. 
+
+\nin The quantum mechanical calculations of Wirtz {\em et al.} \cite{Wirtz} for a square cavity allowed to identify the peaks of the Fourier transform of the transmission amplitude with the families (or bundles)
+of classical trajectories contributing in the semiclassical expansion.
+
+\subsubsection{Circular billiards}
+\label{subsubsec:cb}
+
+\nin The circular billiard is particularly interesting because it has been
+realized experimentally 
+\cite{Mar92,Chaos,chang94,persson,lee97}, and it is an integrable geometry where the semiclassical transmission amplitude (\ref{eq:semiclass}) is applicable since the contributing trajectories are isolated. Also, the proliferation of trajectories with the number of bounces is much weaker than for the chaotic case, allowing for the explicit summation of Eq.~(\ref{eq:semiclass}). 
+
+\nin Lin and Jensen \cite{LinJen} undertook such a calculation considering trajectories up to 100 bounces. Going into the semiclassical limit, by increasing the number of modes $N$ or the width of the leads, results in a better fulfillment of the unitarity condition $T\!+\!R=N$ (only a 1\% deviation is obtained for $N\!=\!20$). The direct semiclassical sum yielded a coherent backscattering that is significantly reduced by off-diagonal contributions to the total reflection.
+
+\nin The signature of classical trajectories in the numerically obtained
+quantum transmission amplitudes has been established for circular 
+billiards \cite{ishio95,schwi96,ingold}. In particular,
+the Fourier transform of the transmission amplitudes shows strong
+peaks for lengths corresponding to the classical trajectories
+contributing in the semiclassical expansion (\ref{eq:semiclass}).
+Since the injection angle depends on $k$, a given trajectory contributes to (\ref{eq:semiclass}) only over a limited energy range. This is why in geometries with stable
+trajectories, like the circle, the Fourier peaks are more pronounced than
+for the stadium billiard. It has also been shown in Ref.~\cite{ishio95} 
+that $\langle(\dlT)^2\rangle$ increases with $k$, consistently with the behavior found for another integrable case (the square discussed in \ref{subsubsec:starc}).
+
+\subsubsection{Mixed dynamics}
+\label{subsubsec:md}
+
+\nin Cavities with hyperbolic and regular classical dynamics are the most commonly studied cases of ballistic transport. However, the behavior with a mixed phase space, containing both chaotic and regular regions, is the most generic situation for a dynamical system. It is also experimentally
+relevant since the microstructures do not have perfect hard-wall confining potentials and are not disorder free.
+
+\nin Ketzmerick considered the problem of a dynamical system with mixed phase space \cite{roland}, where the trapping generated by the infinite hierarchy of cantori leads to a power-law for the escape rate of the cavity $P(\tau) \propto t^{-\beta}$, with the exponent $\beta > 1$. From a semiclassical diagonal approximation to the conductance, Ketzmerick proposed that the graph of $g$ {\em vs.} $E$ has (in the case $\beta < 2$) the statistical properties of fractional Brownian motion with fractal dimension $d=2-\beta/2$.
+
+\nin Numerical simulations by Huckestein and collaborators \cite{bodo}
+in cavities with mixed dynamics connected to leads yielded the power-law distribution of the classical escape rate, but the quantum curve $g(E)$ failed to exhibit fractal behavior. The effect of isolated resonances 
+\cite{Hufnagel01} has been invoked to explain these numerical results, adding subtle issues to the description of quantum transport through cavities with generic mixed classical dynamics. 
+
+\subsection{Semiclassical approach to bulk conductivity}
+\label{subsec:satbc}
+
+{\bf Refs.~\cite{Klaus}}
+
+\nin As mentioned in \ref{subsub:cit}, the Kubo formalism for the conductivity, when applied to the geometry of a cavity coupled to leads, 
+results in the Landauer-B\"uttiker form \eqref{eq:Lan} of the conductance. In a geometry which is not spatially restricted, as for instance, an anti-dot lattice defined in a two-dimensional electron gas \cite{Weiss93}, the Kubo formula, in terms of matrix elements of the current operator, provides the way of obtaining the "bulk" conductivity. 
+
+\nin The semiclassical approximation for matrix elements \cite{Wilk} and the consistent use of stationary-phase integrations allows to express the longitudinal conductivity as
+
+\be
+\sigma_{xx} = \sigma_{xx}^{0} + \sigma_{xx}^{\rm osc} \ .
+\ee
+
+\nin The smooth classical (Drude) conductivity is given by \cite{Fleisch}
+
+\be
+\sigma_{xx}^{0} = \frac{2e^2}{h} \ \frac{\Me}{\hbar} \int_{0}^{\infty} 
+\dif \tau \left\langle v_{x}(\tau)v_{x}(0) \right\rangle \
+\exp{[-\tau/\tau_{\rm e}]} \ .
+\ee
+
+\begin{itemize}
+
+\item The angular brackets represent the average over phase space of the correlator of the $x$-component of the velocity.
+
+\item $\tau_{\rm e}$ is the elastic relaxation time induced by a residual disorder. 
+
+\end{itemize}
+
+\nin The quantum correction is given by the oscillatory 
+component \cite{Greg,KlausEPL}
+
+\be
+\sigma_{xx}^{\rm osc} = \frac{4e^2}{hA} 
+\sum_{\rm po} \tau_{\rm po} \ {\cal C}_{xx}^{\rm po}
+\sum_{j=1}^{\infty} \frac{R(j\tau_{\rm po}/\tau_{T})
+\exp{(-j\tau_{\rm po}/\tau_{\rm e})}}
+{|{\rm det({\bf M}_{\rm po}^{j}-{\bf 1})}|^{1/2}} \
+\cos{\left[j\left(\frac{S_{\rm po}}{\hbar} - \eta_{\rm po} \frac{\pi}{2}\right)\right]}
+\label{eq:conductivity_osc}
+\ee
+
+\begin{itemize}
+
+\item The sum is over the periodic orbits po and their repetitions $j$.
+
+\item $\tau_{\rm po}$, ${\bf M}_{\rm po}$, $S_{\rm po}$, and $\eta_{\rm po}$ are, respectively, the period, the monodromic matrix, the classical action and the number of conjugate points of the trajectory po.  
+
+\item ${\cal C}_{xx}^{\rm po} = \frac{1}{\tau_{\rm po}} 
+\int_{0}^{\infty} \dif \tau \ e^{-\tau/\tau_{\rm e}} 
+\int_{0}^{\tau_{\rm po}} \dif \tau_0 \ v_{x}(\tau_0)v_{x}(\tau_0+\tau)$ \ .
+
+\item The temperature $T$ enters through the function $R(x) = x/\sinh{(x)}$ \ .
+
+\item $\tau_T=\frac{\hbar}{\pi k_B T}$ \ , with $k_B$ the Botzmann constant. 
+
+\end{itemize}
+
+\nin An analogous expression is obtained for the transverse (Hall) conductivity. The semiclassical for of the conductivity has the structure of a trace formula where the coefficients associated to the periodic orbits are affected by the classical correlator of the longitudinal component of the velocity along the trajectory. 
+
+\nin This formulation has been helpful to understand the classical and quantum oscillations of the magnetoconductivity in antidot lattices \cite{Weiss93}. 
+
+\nin Similarly to the diagonal approximation of \eqref{subsubsec:sccb}, 
+Eq.~\eqref{eq:conductivity_osc} fails to yield the weak-localization correction of the conductivity, but when the loop contributions are incorporated this shortcoming is solved \cite{Richter2002}.
+
+\section{Random-matrix theory for ballistic cavities}
+\label{sec:RMT}
+
+{\bf Refs.~\cite{BeenRMP,AlhassidRMP,mello00,mello04}}
+
+\subsection{random-matrix ensembles}
+
+{\bf Refs.~\cite{Bohigas,WeiPR,Haak_01,Fyodorov}}
+
+\nin Random-matrix approaches have been applied to study the statistical properties in a variety of physical problems, ranging from Nuclear Physics to spectral distribution in small quantum systems and conductance fluctuations in disordered mesoscopic conductors. The basic assumption of these approaches is that the matrix relevant for the problem at hand is the most random one among those verifying the required symmetries and constraints of the system under study. The Hamiltonian matrix is the relevant one for analyzing spectral statistics of complex systems (disordered or classically chaotic). The mean-level spacing appears as the sole constraint in this case, and different ensembles are obtained according to the additional symmetries that may exist in addition to the Hermiticity of the matrices. The transfer matrix, incorporating the constraint of the elastic mean-free-path, is the appropriate tool to study the conductance fluctuations in quasi-one dimensional disordered systems.  
+
+\nin Systems where all scattering processes are equally probable characterized by Dyson circular scattering ensembles of unitary matrices $S$, that in the case of quantum transport take the form \eqref{eq:scatt_mat}. There exist three symmetry classes of scattering matrices according to the possible additional symmetries beyond the condition $S S^{\dagger}=I$, which are usually characterized by the value of a parameter $\beta$:
+
+\begin{itemize}
+
+\item $\beta=1$ - Circular Orthogonal Ensemble (COE) - absence of magnetic field and spin-orbit scattering  ($S){\rm T} = S$).
+
+\item $\beta=2$ - Circular Unitary Ensemble (CUE) - non-zero magnetic field.
+
+\item $\beta=4$ - Circular Symplectic Ensemble (CSE) - spin-orbit scattering and no magnetic field ($S$ is a self-dual quaternion matrix). 
+
+\end{itemize} 
+
+\nin In the same way that the Bohigas-Giannoni-Schmit conjecture \cite{BGS84} identifies the statistical properties of the spectrum of Hermitian matrices with those of classically chaotic systems, B\"umel and Smilansky proposed that chaotic scattering is represented by COE and CUE scattering matrices, and furthermore, they derived statistical properties of eigenphase distribution from a semiclassical analysis \cite{Blu90}. 
+
+\subsection{Invariant measures in the circular ensembles}
+
+The basic assumption of equal probability of all possible scattering process translates into a uniform distribution over the ensemble. The probability $P_{\beta}(S_0,dS)$ of obtaining a matrix $S$ in a neighborhood $dS$ of some given $S_0$ is independent on $S_0$,
+
+\begin{equation}
+P_{\beta}(S_0,dS)=\frac{1}{V_{\beta}} \ \mu_{\beta}(dS) \ .
+\end{equation}
+
+\begin{itemize}
+
+\item $\mu_{\beta}(dS)$ is the $\beta$-dependent measure in the neighborhood $dS$ of $S_0$ obtained from the condition of invariance under unitarity transformations that preserve the symmetries of $S_0$ \ . 
+
+\item $V_{\beta}=\int \mu_{\beta}(dS)$ is the total volume of the matrix space.
+
+\end{itemize} 
+
+\nin In Dyson's original approach \cite{Dy}, $\mu_{\beta}(dS)$ was expressed in eigenvalue-eigenvector coordinates. This is a suitable representation to obtain the distribution of the scattering phase shifts, but it is not appropriate for the study of transport through the quantum dot. A transport property $A$ can generally be expressed as a {\it linear statistic}, that is, a sum $A=\sum_{n=1}^{N} a(\lambda_{n})$ over the $\lambda_{n}$ parameters of the polar decomposition (or the transmission eigenvalues $\tau_{n}$). These parameters are not simply related to the eigenvalues of the scattering matrix. Expressed in the coordinates of the polar decomposition \eqref{eq:Spol}, the invariant measure of the COE ensemble reads \cite{JP}
+
+\begin{equation}
+\mu_1(dS) = \prod_{n=1}^N \frac{1}{(1+ \lambda_n)^{3/2}} \
+\prod_{nm}^N {\left| \frac{1}{1+ \lambda_n} -
+\frac{1}{1+\lambda_m} \right |} \
+\prod_{m=1}^{N} d\lambda_{n} \ \prod_{l=1}^2 \mu(du_{l}) \ .
+\label{eq:mudSf}
+\end{equation}
+
+\begin{itemize}
+
+\item $\mu(du_{l})$ is the invariant (Haar) measure of the unitary matrices $u_{l}$ \ .
+
+\end{itemize} 
+
+\subsection{Joint distribution and density of the $\lambda$-parameters}
+
+\nin The measure \eqref{eq:mudSf}, together with its generalization to the other circular ensembles \cite{JP,KF} allow to write the join distribution of the $\lambda$-parameters as a Gibbs distribution,
+\begin{equation}
+P(\{\lambda_{n}\}) = \frac{1}{Z}\exp[- \beta {\cal H}(\{\lambda_{n}\})] \ .
+\label{eq:Gibbs}
+\end{equation}
+\begin{itemize}
+
+\item $Z$ is a normalization constant.
+
+\item $\beta\in\{1, 2, 4\}$ plays the role of an inverse temperature.
+
+\item ${\cal H}(\{\lambda_{n}\}) = - \sum_{i<j} \ln{\left|\lambda_{i} -
+\lambda_{j} \right|} + \sum_{i} V_{\beta} (\lambda_{i})$ is an effective Hamiltonian characterized by a logarithmic pairwise interaction and a one-body potential.
+
+\item $V_{\beta}(\lambda) = \left( N + \frac{2-\beta}{2\beta} \right) \ \ln{(1+\lambda)}$ \ .
+
+\end{itemize} 
+
+\nin The confining potential is $\beta$-independent to order $N$, but not to order $N^{0}$, leading to a density   
+$\rho(\lambda)=\rho_{N}(\lambda)+\delta\rho(\lambda)$. The first  contribution, of order $N$ yields the ``Boltzmann conductance'', while the symmetry-dependent correction $\delta \rho$, of order $N^0$, is responsible for the weak-localization effect. Working Eq.\ (\ref{eq:Gibbs}) order by order in $N$ in the limit $N \gg 1$ leads to 
+
+\begin{subequations}
+\label{eqs:lambda_density} 
+\begin{equation}
+\rho_N(\lambda) = \frac{N}{\pi (1+\lambda) \sqrt{\lambda}} \ ,
+\end{equation}
+\begin{equation}
+\delta \rho (\lambda)=\left(\frac{\beta-2}{4\beta}\right) \delta_{+}(\lambda) \ .
+\end{equation}
+\end{subequations}
+
+\begin{itemize}
+
+\item $\delta_{+}$ is the one-sided delta-function satisfying $\int_0^{\infty} \dif \lambda \ \delta_{+}(\lambda)\,=1$ \ .
+\end{itemize}
+
+\nin The transmission eigenvalue density $\rho_{N}(T)=\rho_N(\lambda)|d\lambda/dT|$ (with $T=(1+\lambda)^{-1}$) has a
+{\em bimodal\/} distribution with peaks near unit and
+near zero transmission.
+
+\subsection{Average values, weak-localization, and conductance fluctuations for $N \gg 1$}
+\label{sub:avwlcf}
+
+Taking the transmission coefficient as the linear statistics, $a(\lambda)=(1+\lambda)^{-1}$, leads in the case $N \gg 1$ to
+\cite{BarMel,JPB}
+
+\be
+\label{eq:RMT}
+\langle T \rangle = \frac{1}{2} N + \langle \delta T \rangle \ .
+\ee
+
+\begin{itemize}
+
+\item $\langle \delta T \rangle = \frac{\beta-2}{4\beta}$ \ .
+
+\item $\langle(\dlT)^2\rangle = \frac{1}{8\beta}$ \ .
+
+\end{itemize} 
+
+\nin In the presence of a magnetic field $\beta=2$ and then
+$\langle T\rangle=\langle R\rangle=N/2$. This equality between transmission and reflection coefficients is the quantum analog of what is expected from the ``ergodic'' exploration of the dot boundaries by the classical trajectories, and it is broken by quantum interference once the magnetic field is eliminated. Taking the difference between the values of $\langle \delta T \rangle $ corresponding to $\beta =1$ and $\beta=2$ results in the universal ballistic the weak-localization  correction of $-1/4$. Analogously, the difference between the values of $\langle \delta T \rangle $ corresponding to $\beta =4$ and $\beta=2$ results in an anti-localization correction of $1/8$. The magnitude of the conductance fluctuations is thus universal, and only depending of the parameter $\beta$. A reduction factor of 2 is obtained for the variance of the conductance when a magnetic field is applied inducing the transition form the COE to the CUE. 
+
+\nin Fig.~\ref{fig:BM1} shows the weak-localization and the conductance fluctuations obtained from quantum numerical calculations for a particular structure (the "stomach") where direct paths and whispering gallery trajectories have been blocked. After performing extensive averaging over the Fermi energy, the magnetic field, and the position of the stopper, the universal values predicted by random-matrix theory are obtained for $N \ge 4$.
+
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{BM1}}
+\caption{
+The magnitude of the (a) weak-localization correction and (b) conductance fluctuations as s function of the number of modes in the leads, 1 The numerical results for $B = 0$ (squares) agree with the prediction of the COE (dotted line), while those for $B \ne 0$ (triangles) agree with the CUE (dsshed line). The inset shows a typical cavity. The numerical results involve averaging over (1) energy (at fixed $N$), 6 different cavities (obtained by changing the stoppers), and 2 magnetic fields ($BA/\phi_0 = 2, 4$ in the case with $B \ne 0$). $A$ ls the area of the cavity. (From Ref. \protect\cite{BarMel}, copyright 1994, American Physical Society.)
+}
+\label{fig:BM1}
+\end{figure}
+
+\subsection{Conductance distributions for small $N$}
+
+The case $N=1$ corresponds to a quantum dot which is coupled to the reservoirs by two quantum point contacts with a quantized conductance $G_0=2e^{2}/h$. The probability distribution (\ref{eq:Gibbs}) reduces in this case to
+$P(\lambda)=(1/2)\beta(1+\lambda)^{-1-\beta/2}$, yielding a transmission  distribution \cite{BarMel,JPB}
+\begin{equation}
+w(T)=\frac{1}{2} \ \beta \ T^{-1+\beta/2}, \;\;0\leq T\leq 1 \ .
+\label{Pofg}
+\end{equation}
+This is a remarkable result: In the presence of magnetic field
+($\beta=2$), any value of the transmission between $0$ and $1$ is
+equally probable. In non-zero field it is more probable to find a small
+than a large transmission, provided that the boundary scattering
+preserves spin-rotation symmetry ($\beta=1$). In the presence of
+spin-orbit scattering at the boundary ($\beta=4$), however, a large
+conductance is more probable than a small one. 
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\linewidth]{BM2}}
+\caption{
+The transmission distribution at fixed $N = 1, 2, 3$ in both, the absence (first column) and presence (second column) of a magnetic field. The numerical results (pusses with statistical error bars) are in good agreement with the predictions of the circular ensembles (dashed lines) 
+For $N = 3$ the distribution approaches a Gaussian (dotted lines). 
+(From Ref. \protect\cite{BarMel}, copyright 1994, American Physical Society.)
+}
+\label{fig:BM2}
+\end{figure}
+
+\nin Numerical quantum simulations of the transmission distribution in the $N=1$ case for the structure shown in the inset of Fig.~\ref{fig:BM1}, without and with magnetic field, show a very good agreement with Eq.~\eqref{Pofg}. This highly non-Gaussian behavior disappears when increasing $N$, and for $N=3$ the transmission distribution is well approximated by a Gaussian in the cases without and with magnetic field. 
+
+
+\subsection{Shot-noise}
+
+The shot-noise power $P$, described by Eq.~\eqref{eq:shotnoise}, is associated with the linear statistics $a(\lambda)=P_{0}\lambda(1+\lambda)^{-2}$, leading to \cite{JPB}
+
+\be
+\langle P\rangle =\frac{1}{8} N P_{0} = \frac{1}{4} \ P_{\rm Poisson} \ .
+\ee
+
+\nin The $1/4$ reduction factor with respect to the uncorrelated case in a chaotic dot is to be compared with the $1/3$ reduction of shot noise in a diffusive conductor \cite{CarloMarkus}. Since $\langle P\rangle$ is $\beta$-independent, there is {\em no\/} weak-localization correction in the shot noise of a chaotic dot, in contrast to the case of a diffusive conductor \cite{Jong}. 
+
+\subsection{Universality in random-matrix theory and semiclassics} 
+
+\nin By imposing $S^{\dagger}=S$, the random-matrix theory of circular ensembles is free from the problems with the unitarity condition that the diagonal semiclassical approximation faces in the description of quantum transport. Random-matrix theory yields universal results, equivalent to those of loop-corrected semiclassical approximation, but in a considerable simpler fashion. The universal values for the weak-localization correction and the conductance fluctuations obtained within random-matrix theory, or the loop-corrected semiclassical approximation, rely on the ergodicity of the underlying classical dynamics, and therefore apply to a very restricted set of structures. For instance,  the numerical simulations of Figs.~\ref{fig:BM1} and \ref{fig:BM2} are performed in cavities where the role of short trajectories is negligible. As discussed in Sec.~\ref{subsubsec:etc}, the universal regime requires  
+$\gamma \ET \ll 1$ (where $\gamma$ is the escape rate and $\ET$ the Ehrenfest time given by Eq.~\eqref{eq:ET}), which is a condition difficult to fulfill for realistic quantum dots or in numerical simulations.
+
+\nin The effect of the short-time dynamics ({\it direct process}) can be incorporated in an information-theory approach through the Poisson's kernel \cite{DoroSm,MeBa}. However, the simplicity and the usefulness of the random-matrix approach is diminished in this case. Obviously, random-matrix theory is not of any help when dealing with cavities with integrable or mixed dynamics, and semiclassics remains the preferred tool in these cases.
+
+
+\nin The random-matrix hypothesis for the Hamiltonian of a chaotic dot (or the zero-dimensional non-linear sigma model) coupled to leads yields equivalent results to those of Eq.~(\ref{eq:RMT}) \cite{Iid90,Wei91}, and 
+allows to calculate the crossover $\beta=1$ to $\beta=2$ as a function of magnetic field \cite{Weid94}.
+
+\subsection{Spatial symmetries and effective channels}
+\label{subsec:ssec}
+
+\nin Geometrical symmetries of the ballistic cavities translate into a block structure of $S$ \cite{BaMe96}. The weak-localization correction and the conductance fluctuations are different from those of Sec.~\ref{sub:avwlcf}, as they depend on the additional symmetries of $S$.
+
+\nin Random-matrix theory can be helpful for the study of decoherence process. A phenomenological way of introducing decoherence is by attaching a virtual lead that draws no current but provides a channel for phase breaking \cite{Butt86b}. This additional lead can be incorporated in a random-matrix theory \cite{BaMeFL,BrBeFL}. Confronting the experimental results with the random-matrix theory predictions allows to determine the number of effective channels in the virtual lead, leading to a useful estimation of $L_{\Phi}$.
+
+\section{Experiments in open ballistic quantum dots}
+{\bf Refs.~\cite{Westervelt}}
+
+\subsection{Conductance fluctuations in ballistic microstructures}
+\label{subsec:cfibm}
+
+\subsubsection{Early experiments of conductance fluctuations}
+\label{subsec:eecf}
+
+\nin The statistical analysis of the low-temperature magnetoconductance in 
+ballistic quantum dots defined in $GaAs/AlGaAs$ heterostructures was first performed by Marcus and collaborators \cite{Mar92,Chaos}. Two geometrical shapes (stadium and circle) were lithographically designed (each in two different samples) in order to achieve a steep-walled electrostatic confinement. The leads were oriented at right angles of each other in order to reduce transmission via direct trajectories (see insets in Fig.~\ref{fig:marcus92a}). The transport mean free path was estimated to be several times the size of the structures ($a \simeq 0.5 \mu m$) indicating that the ballistic regime was achieved. The number of conducting channels in the contacts was between $N\!=\!1$ and $N\!=\!3$, which is not quite in the semiclassical limit of the theory. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{marcus92a}}
+\caption{ 
+Resistance as a function of perpendicular magnetic field B for (a) stadium (b) circle, both with $N=1$ fully transmitted modes in leads. Insets: Zero-field peaks at 20 mK (solid) and 0.6 K (dashed), and electron micrographs of devices.
+(From Ref. \protect\cite{Mar92}, copyright 1992, American Physical Society.)}
+\label{fig:marcus92a}
+\end{figure}
+
+\nin The magnetoconductances corresponding to the stadium and the circle (Fig.~\ref{fig:marcus92a}) differed only in the detail of the fluctuations. Such a difference could be quantified by following the analysis of the power spectrum of Sec.~\ref{subsec:cf}. The stadium cavities showed a good agreement with Eq.~(\ref{eq:CdB4}) over three orders of magnitude. A deviation for large areas was observed (see Fig.~\ref{fig:marcus92} and the inset in Fig.~\ref{fig:charly}.b). The conductance fluctuations in the circular billiard appeared to be more structured (more weight in the  high harmonics of the power spectrum) compared with the case of the stadium. The measurable difference in the transport through the two structures then appeared in the larger weight of the high harmonics of the magnetoconductance of the circle. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{marcus92}}
+\caption{ 
+Averaged power spectra of conductance fluctuations for stadium (solid diamonds) and circle (open circles) with $N=3$ transverse modes in leads. Solid curves are fits of semiclassical theory, Eq.~(\ref{eq:CdB4}, to stadium data. Insets: Autocorrelation of stadium (solid) and circle (dashed) for $0.0l T < B < 0.29 T$.
+(From Ref. \protect\cite{Mar92}, copyright 1992, American Physical Society.)}
+\label{fig:marcus92}
+\end{figure}
+
+\nin The magnetic field scale of the fluctuations was found to be consistent with the semiclassical prediction, and increasing with the mean
+conductance through the dot \cite{marcusgroup1}. Such a behavior was in line with the expectation that a larger mean conductance is related with wider openings, and thus with larger escape rates and $\alpha$-parameters. 
+
+\subsubsection{Conductance fluctuations with different control parameters}
+\label{subsec:cfdcp}
+
+\nin The systematic study of conductance fluctuations requires a considerable amount of averaging. A given magnetoconductance curve offers only a limited interval for averaging since once the cyclotron radius becomes comparable to the size of the structure the nature of the classical dynamics may change. In order to cope with this problem, alternative types of averages have been developed: by tuning the Fermi energy \cite{Kel94,zozou97}, by thermal cycling the sample \cite{berry94,bird}, and by small distortions in the shape of the cavity \cite{marcusgroup2}.
+
+\nin The fact that thermal cycling produced effectively different samples, by re-accommodation of impurities, demonstrated that the experimental billiards were ballistic, but not clean. That is, the small amount of small-angle scattering affected the very long trajectories without altering the statistical signature of chaotic trajectories. 
+
+\nin Keller {\em et al.} \cite{Kel94} fabricated microstructures where the electron density (and hence $\kf$) was tunable while maintaining the geometry approximately fixed. Different shapes were considered: a stadium where the leads were not aligned, the ``stomach" (see inset in Fig.~\ref{fig:BM1}), and a polygonal shape with stoppers (see the upper-right structure of Fig.~\ref{fig:wl1}). In the chaotic cavities a good quantitative agreement with the semiclassical theories is obtained, with the scale of the fluctuations depending on the cavity size. However, the polygonal geometry did not show qualitative differences with the fully chaotic case. 
+
+\subsubsection{Conductance fluctuations and inelastic scattering}
+\label{subsec:cfis}
+
+In the completely coherent picture of Sec.~\ref{sec:sdqttbc} the parameter $\alc$ governing the area distribution in a chaotic cavity is given by
+the geometry and the escape rate. When decoherence process in the dot are 
+taken into account, a virtual lead \cite{Butt86b} allows to mimic the finite value of $L_{\Phi}$. In the random-matrix theory approach of Sec.~ref{subsec:ssec}, the number of effective channels of the virtual lead is related with $L_{\Phi}$. In a similar fashion, using a semiclassical approach and invoking a virtual lead results in an increase of the escape rate $\gamma$ and the parameter $\alc$, which are both related with $L_{\Phi}$.
+
+\nin The measurement of the conductance fluctuations determining $\alc$ allowed to follow the temperature dependence of $L_{\Phi}$ \cite{marcusgroup3}, thus providing an example where the theoretical ideas of Quantum Chaos were used to test fundamental properties of condensed matter systems.
+
+\subsection{Weak-localization in ballistic microstructures}
+\label{subsec:wlibm}
+
+\subsubsection{Early experiments of weak-localization}
+\label{subsec:ee}
+
+\nin The energy averaged magnetoconductance traces performed by Keller and collaborators \cite{Kel94} yielded a conductance minimum at $B=0$, i.e. the so called weak-localization peak. However, the conductance of a given sample did not always show a minimum at $B\!=\!0$, consistent with the lack of self-averaging of ballistic cavities. 
+
+\nin The use of sub-micron stadium-shaped quantum dots (with $N$ up to 7) cycled at room temperature allowed Berry and collaborators \cite{berry94} to obtain average values and separate the weak-localization peak from the conductance fluctuations. The line-shape of the peak was found to be Lorentzian, in agreement with the semiclassical prediction \ref{eq:wlfr}. Moreover, the field scales of the weak-localization and conductance fluctuations were found to be related by the factor of 2 that discussed in
+Sec.~\ref{subsec:wl}.
+
+\subsubsection{Weak-localization in arrays of microstructures}
+\label{subsec:wlam}
+
+\nin Chang and collaborators \cite{chang94} fabricated arrays of microstructures connected in parallel and considered three different  shapes: stadium, circle, and rectangle. In each case, the 48 cavities were nominally identical, but actually slightly different, due to uncontrollable shape distortions and residual disorder. Thus, the conductance fluctuations  were averaged out by the ensemble average. The resulting weak-localization peak was found to be Lorentzian for the stadium cavities and triangular for the circular ones (see Fig.~\ref{fig:chang94}, in agreement with the semiclassical prediction and detailed numerical calculations \cite{revha}. Rectangular cavities, however, failed to yield a cusp of the  magnetoresistance at $B\!=\!0$ expected for this integrable geometry.
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{chang94}}
+\caption{ 
+.
+(From Ref. \protect\cite{chang94}, copyright 1994, American Physical Society.)}
+\label{fig:chang94}
+\end{figure}
+
+\subsubsection{Weak-localization and conductance fluctuations resulting from ensemble averages}
+\label{subsec:wlae}
+
+\nin Microstructures admitting small shape distortions (less than 5 \% in the area) by tuning the voltage of lateral gates (inset of Fig.~\ref{fig:charly}.a) were developed by Chan, Marcus, and collaborators \cite{marcusgroup2,marcusgroup2b}. The lithographic shape of the cavity was clearly non-chaotic, however it was expected that dot-specific features could be averaged away by the effect of the shape distortions. Also, these were relatively large structures, where disorder definitely affected the long trajectories. The number $N$ of open channels was not in the semiclassical regime, as it was tuned to a value of 2. Conductance was studied as a function of magnetic field and electrostatic shape distortion, allowing to gather very good statistics. The fluctuations as a function of magnetic field showed very good agreement with Eq.~(\ref{eq:CdB4}) (inset of Fig.~\ref{fig:charly}.b). 
+
+\nin The shape distortion fluctuations yielded an exponential power spectrum, in agreement with the calculations of Bruus and Stone \cite{Bruus94} showing that the semiclassical formalism of Sec.~\ref{sec:sdqttbc} can be extended to this case. A Lorentzian shape for the weak-localization peak was obtained, with a width related to the characteristic field of the conductance fluctuations, as predicted by semiclassical theory. The magnitude of the shape fluctuations at non-zero field had a factor of 2 reduction with respect to the zero-field value, and the line shape of $\langle(\dlT)^2\rangle$ was found to be a squaredLorentzian , in agreement with theory \cite{efetov}. The rich statistics that this type of structures allowed to gather was used to extract the moments of the conductance, as well as the whole conductance distribution in order to compare with the random-matrix theory predictions of Sec.~\ref{sec:RMT}. 
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{charly}}
+\caption{
+(a) Shape-averaged conductance showing a weak-localization peak fitted
+to a Lorentzian (dashed). Inset: electron micrograph of device (the gate
+voltage $V_g$ is
+used to produce shape distortion. (b) Variance of shape-distortion
+conductance fluctuations (in units of $(e^2/h)^2$) Inset: power spectral
+density in magnetic field fitted by Eq.(\protect\ref{eq:CdB4}). 
+(Adapted from Ref. \protect\cite{marcusgroup2}, copyright 1995, American Physical Society.)}
+\label{fig:charly}
+\end{figure}
+
+\subsubsection{Weak-localization in different geometries}
+\label{subsec:wlde}
+
+\nin Bird and collaborators \cite{bird} used thermal cycling on rectangular
+cavities to measure a weak-localization peak that changes its
+shape from Lorentzian to triangular as the quantum
+point contacts at the entrance of the cavity are closed. The
+transition occurs for $N \simeq 2$ and demonstrates the
+non-trivial role played by the contacts. Measurements and numerical analysis by Zozoulenko {\em et al.} \cite{zozou97} on square cavities suggested that, depending on the geometry of the contacts, transport through the cavity is effectively mediated by just a few resonant levels, illustrating the importance of the injection conditions in the integrable case.
+
+\nin Lee, Faini and Mailly used shape and energy averages to
+extract the weak-localization peak of chaotic (stadia and
+stomach) and integrable (circles and rectanges) cavities \cite{lee97}.
+The former exhibited a Lorenztian line-shape, consistently
+with the theoretical predictions \eqref{eq:wlfr}. However, among the integrable cavities, only the rectangle showed the expected triangular
+shape, while the circle yielded a Lorentzian. Chang has proposed
+\cite{chang97} that this apparent discrepancy with his results was
+due to the shorter physical cut-offs that were present in the experiment of Ref. \cite{lee97} and hindered the long trajectories of exhibiting the signatures of the integrable dynamics.
+
+\nin Square-shaped ballistic cavities filled with antidot arrays resulted in a cusp-like weak-localization peak, while the empty cavities of equal geometry showed a Lorentzian peak \cite{lutj}. These experimental results, that seem to contradict the theoretical predictions for classically chaotic and integrable systems, were explained by invoking a mixed-dynamics in the case of the filled cavity and by the imperfections (boundary roughness and small-angle scattering) for the nominally regular system.  
+
+\subsection{Fractal conductance fluctuations}
+\label{subsec:fcf}
+
+\subsubsection{Soft-wall effects}
+\label{subsubsec:swe}
+
+Sachrajda and collaborators \cite{Taylor97,Sachrajda98} fabricated specifically designed devices for the observation of fractal conductance fluctuations. A stadium and a Sinai billiard, which are paradigms of  chaotic dynamics, become mixed systems when fabricated by lithographic methods that result in a soft-wall confinement. In addition, these experiments used very wide leads (0.7 $\mu m$) allowing most of the trajectories to rapidly exit the structures. The resulting conductance fluctuations were claimed to have a fractal nature over two
+orders of magnitude in magnetic field \cite{Sachrajda98,Micolich98}. 
+
+\subsubsection{Soft-angle effects}
+\label{subsubsec:sae}
+
+\nin Marlow and collaborators \cite{Marlow06} performed a comprehensive comparison of magnetoconductance fluctuations in 30 devices spanning the ballistic, quasi-ballistic, and diffusive regimes, concluding that all of them exhibit identical fractal behavior. Billiards made in GaAs/AlGaAs heterostructures, associated with relatively "soft" confinement potentials were compared with billiards made in GaInAs/InP heterostructures exhibiting "hard" confinement (according to the simulations reproduced in Fig.~\ref{fig:potprof}). The similar behavior of both kinds of confinement is at odds with the claims that the fractal conductance fluctuations are associated with the mixed dynamics resulting from a soft confinement \cite{Sachrajda98}.
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\centerline{\includegraphics[width=\linewidth]{potprof}}
+\caption{
+Cross section of the calculated potential energy $E$ vs. spatial location $x$ across the billiard central region created by square-shaped top gates. The dashed and solid lines are for structures made in GaAs/AlGaAs and GaInAs/InP heterostructures, respectively. The potential energy profile in the plane of the 2DEG and the top views of the resulting geometries are, respectively,  shown in (c) and (e) for GaAs/AlGaAs and in (d) and (f) for GaInAs/InP (gray indicates the depletion region in the 2DEG). 
+(Adapted from Ref. \protect\cite{Marlow06}, copyright 2006, American Physical Society.)}
+\label{fig:potprof}
+\end{figure}
+
+\nin Marlow and collaborators proposed that the origin of the fractal conductance fluctuations found in all devices is the small-angle scattering that deflects electron trajectories away from straight paths \cite{Marlow06}. Such a claim is in line with the interpretation of scanning gate microscopy (SGM) studies in 2DEG \cite{topinka01a} and quantum dots \cite{crook03} in terms of the drifting of electron trajectories due to small angle scattering. 
+
+\subsubsection{Discussion}
+\label{subsubsec:d}
+
+\nin However, there are a few observations that should be taken into account in connection with such a viewpoint. Firstly, the interpretation of SGM measurements as traces of the classical electron paths has been questioned for nanostructures surrounded by a 2DEG
+\cite{JSTW_2010,gorini2013} and quantum dots \cite{AlexDiet}. Secondly, the scale over which the bending of the SGM traces is appreciable corresponds to several $\mu m$ in high mobility samples. That is, considerably larger than the size of the quantum dots typically studied in quantum chaos studies. Thirdly, the effect of smooth disorder in quantum dots has been analyzed in the context of orbital magnetism \cite{RapComm}, and the small extra phase that an electron trajectory picks up was found not to be important in high mobility samples. The same conclusion was reached when disorder was introduced in the quantum calculations performed in order to describe the weak-localization experiments \cite{chang94}. The global stability of a chaotic system is not altered by the small perturbation of a smooth disorder, and the short trajectories that dominate transport in integrable systems are little affected. Lastly, even if it is unclear at present how to reconcile the earlier results of Ref.~\cite{Mar92} with the proposal of Ref.~\cite{Marlow06}, it should be kept in mind that the former based its analysis in the power spectrum as originally proposed in Ref.~\cite{Jal90}. The semiclassical prediction \eqref{eq:CdB4} might be difficult to distinguish, in a reduced $\eta$-range, from the power-law ${C}_B (\eta) \propto \eta^{-(\beta+1)}$ expected for the fractal conductance fluctuations. (The exponent $\beta$ is introduced in Sec.~{subsubsec:md}.) As emphasized in Sec.~{subsubsec:spvqnc}, the applicability of Eq.~\eqref{eq:CdB4} is restricted to $\eta$-intervals that leave aside the short non-universal trajectories, as well as the very long ones that are sensitive to cutoffs from physical effects like disorder and decoherence.  
+
+\subsubsection{Recent experiments}
+\label{subsubsec:re}
+
+\nin The relevance of small-angle scattering for ballistic transport in quantum dots has been again emphasized by comparing measurements of the conductance fluctuations of two nominally identical geometries, one on an undoped, and the other on a modulation-doped, heterostructure \cite{See12}. The modulation-doped sample exhibited magnetoconductance fingerprints that changed under thermal cycling, while in the undoped one the magnetoconductance was reproducible. The   statistical analysis of the magnetoconductance has similar features in both cases, with quantitative differences that can be attributed to the different electron density achieved with and without doping.
+
+
+\section{Conclusions and open problems}
+
+Some of the more important open questions in the field are:
+
+\begin{itemize}
+
+\item 
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\refname}{References (mainly research articles)}
+\begin{thebibliography}{Cucc~02b}
+
+\bibitem[a-Adagideli~03]{Adagi03} 
+İ. Adagideli, Phys. Rev. B {\bf 68}, 233308 (2003).
+
+\bibitem[a-Aleiner~96]{Alei96} 
+I.L. Aleiner and A.I. Larkin, Phys. Rev. B {\bf 54}, 14423 (1996).
+
+\bibitem[a-Argaman~95]{Argaman} 
+N. Argaman, Phys. Rev.~Lett.~{\bf 75}, 2750 (1995); Phys.\ Rev.\ B {\bf 53}, 7035 (1996).
+
+\bibitem[a-Baranger~89]{BarSto89} 
+H.U.~Baranger and A.D.~Stone, Phys. Rev. Lett. {\bf 63}, 414 (1989).
+
+\bibitem[a-Baranger~89b]{BarSto89b} 
+H.U.~Baranger and A.D.~Stone, Phys. Rev. B {\bf 40}, 8169 (1989).
+
+\bibitem[a-Baranger~91]{Bar91}
+H.U.~Baranger, D.P.~DiVincenzo, R.A.~Jalabert, and A.D.~Stone,
+Phys. Rev. B {\bf 44}, 10637 (1991).
+
+\bibitem[a-Baranger~93]{Bar93} 
+H.U.~Baranger, R.A.~Jalabert, and A.D.~Stone,
+Phys. Rev. Lett. {\bf 70}, 3876 (1993).
+
+\bibitem[a-Baranger~94]{BarMel} 
+H.U.~Baranger and  P.A.~Mello,
+Phys. Rev.~Lett.~{\bf 73}, 142 (1994).
+
+\bibitem[a-Baranger~95]{BaMeFL} H.U.~Baranger and P.A.~Mello,
+Phys. Rev. B {\bf 51}, 4703 (1995).
+
+\bibitem[a-Baranger~96]{BaMe96} 
+H.U.~Baranger and P.A.~Mello,
+Phys. Rev. B {\bf 54}, R14297 (1996).
+
+\bibitem[a-Bauer~90]{Bau91}
+W. Bauer and G. F. Bertsch, Phys. Rev. Lett. {\bf 65}, 2213 (1990).
+
+\bibitem[a-Beenakker~88]{BvH88}
+C.W.J.~Beenakker and H.~van~Houten, Phys. Rev. B {\bf 37}, 6544 (1988).
+
+\bibitem[a-Beenakker~92]{CarloMarkus}
+C.W.J.~Beenakker and M. B\"{u}ttiker,
+Phys.\ Rev.\ B {\bf 46}, 1889 (1992).
+
+\bibitem[a-Berry~76]{ber76} 
+M.V. Berry and M. Tabor, Proc. R. Soc. Lond. A.~{\bf 349}, 101 (1976).
+
+\bibitem[a-Berry~86]{Ber86}
+M.V. Berry and M. Robnik, J. Phys. A {\bf 19}, 649 (1986).
+
+\bibitem[a-Berry~94]{berry94} 
+M.J.~Berry, J.H.~Baskey, R.M.~Westervelt, and
+A.C.~Gossard, Phys. Rev. B {\bf 50}, 8857 (1994); M.J.~Berry, 
+J.A.~Katine, R.M.~Westervelt, and A.C.~Gossard, Phys. Rev. B 
+{\bf 50}, 17721 (1994).
+
+\bibitem[a-Bird~95]{bird} 
+J.P.~Bird {\em et al.},  Phys.\ Rev.\ B {\bf 52}, 
+R14336 (1995); and in Ref.~\cite{csf}, p.~1299.
+
+\bibitem[a-Bl\"umel~88]{Blu88}
+R. Bl\"umel and U. Smilansky, Phys. Rev. Lett.  {\bf 60}, 477 (1988);
+Physica D {\bf 36}, 111 (1989).
+
+\bibitem[a-Bl\"umel~90]{Blu90} 
+R. Bl\"umel and U. Smilansky, Phys. Rev. Lett.  {\bf 64},
+241 (1990).
+
+\bibitem[a-Bohigas~84]{BGS84} 
+O.~Bohigas, M.-J.~Giannoni, and C.~Schmit, Phys. Rev. Lett. {\bf 52}, 1 
+(1984)
+
+\bibitem[a-Borgonovi~92]{borguar} 
+F.~Borgonovi and I.~Guarneri, J.~Phys. A {\bf 25}, 
+3239 (1992); Phys. Rev. E {\bf 48}, R2347 (1993).
+
+\bibitem[a-Brouwer~95]{BrBeFL} 
+P.W.~Brouwer and C.W.J.~Beenakker, 
+Phys. Rev. B {\bf 51}, 7739 (1995); {\bf 55}, 4695 (1997).
+
+\bibitem[a-Brouwer~06]{Brou06} 
+P.W. Brouwer and S. Rahav, Phys. Rev. B {\bf 74}, 075322 (2006)
+
+\bibitem[a-Brouwer~07]{Brou07} P.W. Brouwer and S. Rahav, Phys. Rev. B {\bf 75}, 201303(R) (2007).
+
+\bibitem[A-Brouwer~07b]{Brou07b} P.W. Brouwer, Phys. Rev. B {\bf 76}, 165313 (2007).
+
+\bibitem[a-Bruus~94]{Bruus94}
+H.~Bruus  and A.D.~Stone Phys.\ Rev.\ B {\bf 50}, 18275 (1994).
+
+\bibitem[a-B\"uttiker~86]{Butt86}
+M. B\"uttiker, Phys. Rev. Lett. {\bf 57}, 1761 (1986).
+
+\bibitem[a-B\"uttiker~86b]{Butt86b}
+M. B\"uttiker, Phys. Rev. B {\bf 33}, 3020 (1986).
+
+\bibitem[a-B\"uttiker~90]{Buttiker}
+M. B\"{u}ttiker, Phys.\ Rev.\ Lett.\ {\bf 65}, 2901 (1990).
+
+\bibitem[a-Chan~95]{marcusgroup2} 
+I.H.~Chan, R.M.~Clarke,
+C.M.~Marcus, K.~Campman, and A.C.~Gossard, Phys. Rev. Lett. {\bf 74},
+3876 (1995). 
+
+\bibitem[a-Chang~94]{chang94} A.M.~Chang, H.U.~Baranger, L.N.~Pfeiffer, and
+K.W.~West, Phys. Rev. Lett. {\bf 73}, 2111 (1994).
+
+\bibitem[a-Christen~96]{christen1996a}
+T. Christen and M. B\"uttiker, Europhys. Lett. 35, 523 (1996).
+
+\bibitem[a-Crook~03]{crook03}
+R. Crook, C. G. Smith, A. C. Graham, I. Farrer, H. E. Beere, and
+D. A. Ritchie, Phys. Rev. Lett. 91, 246803 (2003).
+
+\bibitem[a-Doron~91]{Dor91} E.~Doron, U.~Smilansky, and A.~Frenkel,
+ Physica D {\bf 50}, 367 (1991).
+ 
+\bibitem[a-Doron~92]{DoroSm} 
+E.~Doron and U. Smilansky, Nucl. Phys. A {\bf 545}, 455c (1992). 
+ 
+\bibitem[a-Dyson~62]{Dy}F.~J.~Dyson, J.~Math. Phys. {\bf 3}, 140 (1962).
+
+\bibitem[a-Efetov~95]{efetov} 
+K.B.Efetov, Phys. Rev.~Lett.~{\bf 74}, 2299 (1995).
+ 
+\bibitem[a-Ericson~60]{Eric60}
+T. Ericson, Phys. Rev. Lett. {\bf 5}, 430 (1960).
+
+\bibitem[a-Fisher~81]{FishLee} 
+D.S.~Fisher and P.A.~Lee, Phys. Rev. B {\bf 23}, 6851 (1981).
+
+\bibitem[a-Fleischmann~92]{Fleisch} 
+R.~Fleischmann, T.~Geisel and R. Ketzmerick, 
+Phys. Rev.~Lett.~{\bf 68}, 1367 (1992).
+
+\bibitem[a-Ford~88]{Ford88} C.J.B.~Ford {\em et al.}, J. Phys. C {\bf 21},
+L325 (1988).
+
+\bibitem[a-Ford~89]{Ford89} 
+C.J.B.~Ford, S.~Washburn, M. B\"uttiker, C.M.~Knoedler, 
+and J.M.~Hong, Phys. Rev. Lett. {\bf 62}, 2724 (1989).
+
+\bibitem[a-Frahm~95]{KF} 
+K.~Frahm and J.-L. Pichard, 
+%{\it Brownian Motion Ensembles and Parametric Correlations of the Transmission Eigenvalues: Application to Coupled Quantum Billiards and to Disordered Wires},
+J. Phys. I France {\bf 5}, 877 (1995).
+
+\bibitem[a-Gaspard~89]{Gas89} 
+P.~Gaspard and S.A.~Rice, J. Chem. Phys. {\bf 90}, 2225; 2242; 2255 (1989).
+
+\bibitem[a-Gorini~13]{gorini2013}
+C. Gorini, R. A. Jalabert, W. Szewc, S. Tomsovic, and D. Weinmann,
+%{\it Theory of scanning gate microscopy},
+Phys. Rev. B, {\bf 88}, 035406 (2013).
+
+\bibitem[a-Gutzwiller~71]{gutz_tracefor}
+M.C.~Gutzwiller, {\it Periodic Orbits and Classical Quantization Conditions}, J. Math. Phys. {\bf 12}, 343 (1971).
+
+\bibitem[a-Gutzwiller~83]{Gutz83}
+M. C. Gutzwiller, Physica D {\bf 7}, 341 (1983).
+
+\bibitem[a-Hackenbroich~95]{Greg} 
+G.~Hackenbroich and F.~von~Oppen, Europhys.~Lett.~{\bf 29}, 151 (1995);
+Z.~Phys. B {\bf 97} 157 (1995).
+
+\bibitem[a-Heusler~06]{Haacke_2006} S. Heusler, S. Mu\"uller, P. Braun, and F. Haake, Phys. Rev.~Lett.~{\bf 96}, 066804 (2006). 
+
+\bibitem[a-Huckestein~00]{bodo} 
+B. Huckestein, R. Ketzmerick, and C.H.~Lewenkopf
+%{\it Quantum transport through ballistic cavities: soft vs. hard quantum chaos}, 
+Phys. Rev. Lett. {\bf 84}, 5504 (2000); erratum: Phys. Rev. Lett. 
+{\bf 87}, 119901 (2001).
+
+\bibitem[a-Huibers~98]{marcusgroup3} 
+A.G.~Huibers {\em et al.}, Phys. Rev. Lett. {\bf 81}, 1917 (1998);
+Huibers, A. G. and Folk, J. A. and Patel, S. R. and Marcus, C. M. and Duru\"oz, C. I. and Harris, J. S., 
+%{\it Low-Temperature Saturation of the Dephasing Time and Effects of Microwave Radiation on Open Quantum Dots},
+Phys. Rev. Lett. {\bf 83}, 5090 (1999).
+
+\bibitem[a-Hufnagel~01]{Hufnagel01}
+L. Hufnagel, R. Ketzmerick, and M. Weiss, 
+{\it Conductance fluctuations of generic billiards: Fractal or isolated?}
+Europhys. Lett. {\bf 54}, 703 (2001). 
+
+\bibitem[a-Iida~90]{Iid90}
+S.~Iida, H.A.~Weidenm\"uller, and J.A.~Zuk, Annals of Phys. {\bf 200}, 219 (1990).
+
+\bibitem[a-Ishio~95]{ishio95} 
+H.\ Ishio and J.\ Burgd\"orfer, Phys.\ Rev.\ B {\bf 51}, 2013 (1995).
+
+\bibitem[a-Jacquod~04]{Jacq04} 
+P. Jacquod and E.V. Sukhorukov, Phys. Rev. Lett. {\bf 92}, 116801 (2004).
+  
+\bibitem[a-Jalabert~90]{Jal90} 
+R.A.~Jalabert, H.U.~Baranger and A.D.~Stone,
+Phys. Rev. Lett. {\bf 65}, 2442 (1990).
+
+\bibitem[a-Jalabert~94]{JPB} 
+R.A.~Jalabert, J.-L.~Pichard, and C.W.J.~Beenakker,
+Europhys.~Lett.~{\bf 27}, 255 (1994).
+
+\bibitem[a-Jalabert~95]{JP} 
+R. A. Jalabert and J.-L. Pichard, 
+{\it Quantum Mesoscopic Scattering: Disordered Systems and Dyson Circular Ensembles}
+J. Phys. I France, {\bf 5}, 287 (1995). 
+
+\bibitem[a-Jalabert~10]{JSTW_2010}
+R.A.\ Jalabert, W.\ Szewc, S.\ Tomsovic, D.\ Weinmann,
+Phys.\ Rev.\ Lett.\ \textbf{105}, 166802 (2010).
+
+\bibitem[a-Jensen~91]{Jen91} 
+R.V.~Jensen, Chaos {\bf 1}, 101 (1991).
+
+\bibitem[a-Jensen~94]{Jen94} 
+J.H.~Jensen, Phys. Rev. Lett. {\bf 73}, 244 (1994).
+
+\bibitem[a-de~Jong~92]{Jong}
+M.J.M. de Jong and C.W.J.~Beenakker,
+Phys.\ Rev.\ B {\bf 46}, 13400 (1992).
+
+\bibitem[a-Kawabata~97]{Kawabata97}
+S. Kawabata and K. Nakamura,
+%{\it Ballistic conductance fluctuations and quantum chaos in Sinai billiards},
+J. Phys. Soc. Jpn. {\bf 65}, 712 (1997); and in Ref.~\cite{csf}, p. 1085.
+
+\bibitem[a-Keller~94]{Kel94}
+M.W.~Keller, O. Millo, A. Mittal, D.E.~Prober, and R. N. Sacks,
+Surf. Sci., {\bf 305}, 501 (1994); M.W.~Keller {\em et al.}, 
+Phys.\ Rev.\ B {\bf 53}, R1693 (1996).
+
+\bibitem[a-Ketzmerick~96]{roland} R. Ketzmerick, Phys.\ Rev.\ B {\bf 54}, 10841 (1996).
+
+\bibitem[a-Kozikov~13]{trameanfreepath}
+A.A. Kozikov, C. R\"ossler, T. Ihn, K. Ensslin, C. Reichl, and W. Wegscheider. 
+%{\it Interference of electrons in backscattering through a quantum point contact}, 
+New. J. Phys., {\bf 15}, 013056 (2013). 
+
+\bibitem[a-Kozikov~13b]{AlexDiet}
+A. A. Kozikov, D. Weinmann, C. R\"ossler, T. Ihn, K. Ensslin, C. Reichl, and W. Wegscheider
+%{\it Imaging magnetoelectric subbands in ballistic constrictions},
+New J. Phys., {\bf 15}, 083005 (2013).
+
+\bibitem[a-Lai~92]{Lai92} 
+Y.-C. Lai, R. Bl\"umel, E. Ott, and C. Grebogi,
+Phys. Rev. Lett. {\bf 68}, 3491 (1992).
+
+\bibitem[a-Landauer~70]{Land70} 
+R. Landauer, Phil. Mag. {\bf 21}, 863 (1970).
+
+\bibitem[a-Lecheminant~93]{RamLech} 
+P.~Lecheminant, J. Phys. I France {\bf 3}, 299 (1993). 
+
+\bibitem[a-Lee~97]{lee97} Y.\ Lee, G.\ Faini, and D.\ Mailly, Phys.\ Rev.\ B {\bf 56}, 9805 (1997); and in Ref.~\cite{csf}, p.~1325.
+
+\bibitem[a-Lee~81]{LeeFish} 
+P.A.~Lee and D.S.~Fisher, Phys. Rev. Lett. {\bf 47}, 882 (1981). 
+
+\bibitem[a-Legrand~90]{Leg90} 
+O. Legrand and D. Sornette, Physica D {\bf 44}, 229 (1990);
+Phys. Rev. Lett. {\bf 66}, 2172 (1991).
+
+\bibitem[a-Lewenkopf~91]{Wei91}
+C.H.~Lewenkopf and H.A.~Weidenm\"uller, Annals of Phys. {\bf 212}, 53 (1991).
+
+\bibitem[a-Lin~93]{Lin93} 
+W.A.~Lin, J.B.~Delos and R.V.~Jensen, Chaos {\bf 3}, 665 (1993).
+
+\bibitem[a-Lin~96]{LinJen} 
+W.A.~Lin and R.V.~Jensen, Phys.\ Rev.\ B 
+{\bf 53}, 3638 (1996).
+
+\bibitem[a-L\"utjering~96]{lutj} 
+G.~L\"utjering {\em et al.} Surf. Sci. {\bf 361/362}, 709 (1996).
+
+\bibitem[a-Madroñero~05]{Madr05}
+J. Madroñero and A. Buchleitner,
+%{\it Ericson Fluctuations in an Open Deterministic Quantum System: Theory Meets Experiment},
+Phys. Rev. Lett. {\bf 95}, 263601 (2005).
+
+\bibitem[a-Marlow~06]{Marlow06}
+C.A. Marlow {\it et al}, Phys.\ Rev.\ B  {\bf 73}, 195318 (2006).
+
+\bibitem[a-Marcus~92]{Mar92} C.M.~Marcus, A.J.~Rimberg, R.M.~Westervelt, P.F.~Hopkins and A.C.~Gossard, Phys. Rev. Lett. {\bf 69}, 506 (1992).
+
+\bibitem[a-Marcus~93]{marcusgroup1} C.M.~Marcus, R.M.~Westervelt, P.F.~Hopkins
+and A.C.~Gossard, Phys. Rev. B {\bf 48}, 2460 (1993); R.M.~Clarke
+{\em et al.}, Phys. Rev. B {\bf 52}, 2656 (1995).
+
+\bibitem[a-Mello~91]{mellopichard} 
+P.~A.~Mello and J.-L. Pichard, J. Phys. (France)
+{\bf 1}, 493, (1991).
+
+\bibitem[a-Mello~96]{MeBa} 
+P.A.~Mello and  H.U.~Baranger, Europhys.~Lett.~{\bf 33}, 465 (1996).
+
+\bibitem[a-Micolich~98]{Micolich98}
+A.P. Micolich {\it et al}, J. Phys.: Condens. Matter {\bf 10}, 1339, (1998).
+
+\bibitem[a-Miller~74]{Mil74} 
+W.H.~Miller, Adv. Chem. Phys. {\bf 25}, 69 (1974).
+
+\bibitem[a-M\"uller~07]{Haacke_2007} S. M\"uller, S. Heusler,  P. Braun, and F. Haake, New J. Phys. {\bf 9}, 12 (2007).
+
+\bibitem[a-Nixon~90]{Nixon90} 
+J.A.~Nixon and J.H.~Davies, Phys. Rev. B {\bf 41},
+7929 (1990).
+
+\bibitem[a-N\"ockel~93]{NSB} 
+J.U.~N\"ockel, A.D.~Stone, and H.U.~Baranger, 
+Phys. Rev. B {\bf 48}, 17569 (1993).
+
+\bibitem[a-Oakeshott~92]{Mac92}
+R.B.S. Oakeshott and A. MacKinnon,
+Superlat. and Microstruc. {\bf 11}, 145 (1992).
+
+\bibitem[a-Persson~95]{persson} 
+M.~Persson {\em et al.},  Phys.\ Rev.\ B {\bf 52}, 8921 (1995).
+
+\bibitem[a-Pichaureau~99]{paul} 
+P.~Pichaureau and R.A.~Jalabert,
+Eur. Phys. J. B {\bf 9}, 299 (1999).
+
+\bibitem[a-Pluha\u{r}~94]{Weid94} 
+Z.~Pluha\u{r}, H.A.~Weidenm\"uller, J.A.~Zuk, and
+C.H.~Lewenkopf, Phys. Rev.~Lett.~{\bf 73}, 2115 (1994).
+
+\bibitem[a-Rahav~05]{Rahav05} S. Rahav and P.W. Brouwer, Phys. Rev.~Lett.~{\bf 95}, 056806 (2005).
+
+\bibitem[a-Rahav~06]{Rahav06} S. Rahav and P.W. Brouwer, Phys. Rev.~Lett.~{\bf 96}, 196804 (2006).
+
+\bibitem[a-Richter~95]{KlausEPL} 
+K.~Richter, Europhys.~Lett.~{\bf 29}, 7 (1995).
+
+\bibitem[a-Richter~96]{RapComm} K.~Richter, D.~Ullmo, and R.A.~Jalabert,
+Phys.~Rev.~B {\bf 56}, R5619 (1996); and J.~Math.~Phys. {\bf 37}, 5087 (1996).
+
+\bibitem[a-Richter02]{Richter2002} K. Richter and M. Sieber, Phys. Rev.~Lett.~{\bf 89}, 206801 (2002).
+
+\bibitem[a-Roukes~87]{Rouk} 
+M.L.~Roukes {\em et al.}, Phys. Rev. Lett. {\bf 59}, 3011 (1987).
+
+\bibitem[a-Sachrajda~98]{Sachrajda98}
+ A.S.~Sachrajda {\em at al.}, Phys. Rev. Lett. {\bf 80}, 
+1948 (1998).
+
+\bibitem[a-Schreier~98]{ingold} 
+M.~Schreier, K.~Richter, G.-L.~Ingold, and R.A.~Jalabert,
+Eur. Phys. J. B {\bf 3}, 387 (1998).
+
+\bibitem[a-Schwieters~96]{schwi96} 
+C.\ D.\ Schwieters, J.\ A.\ Alford, and J.\ B.\ Delos,
+Phys.\ Rev.\ B {\bf 54}, 10652 (1996).
+
+\bibitem[a-See12]{See12}
+A.M. See {\em et al}, Phys. Rev. Lett. {\bf 108}, 
+196807 (2012).
+
+\bibitem[a-Shepard~91]{Shepard} 
+K.~Shepard, Phys. Rev. B {\bf 43}, 11623 (1991).
+
+\bibitem[a-Sieber~01]{Sieber2001} M. Sieber and K. Richter, Physica Scripta {\bf T90}, 128 (2001)
+
+\bibitem[a-Sieber~02]{Sieber2002} M. Sieber, J. Phys. A: Math. Gen. {\bf 35} L613 (2002).
+
+\bibitem[a-Stopa~96]{Stopa} 
+M.~Stopa, Phys. Rev. B {\bf 53}, 9595 (1996).
+
+\bibitem[a-Szafer~88]{Szafer}
+A.D. Stone and A. Szafer, IBM J. Res. Dev. {\bf 32}, 384 (1988).
+
+\bibitem[a-Taylor~97]{Taylor97} R.P.~Taylor {\em at al.}, Phys. Rev. Lett. {\bf 78}, 1952 (1997).
+
+\bibitem[a-Topinka~01]{topinka01a}
+%M.\ A.\ Topinka \etal, 
+M.\ A.\ Topinka, B.\ J.\ LeRoy, R.\ M.\ Westervelt, S.\ E.\ J.\ Shaw, R.\ Fleischmann, 
+E.\ J.\ Heller, K.\ D.\ Maranowski, and A.\ C.\ Gossard,
+Nature \textbf{410}, 183 (2001).
+
+\bibitem[a-Tworzydlo~04]{Twor04} 
+J. Tworzydlo et al., Phys. Rev. B {\bf 69}, 165318 (2004).
+
+\bibitem[a-Waltner~11]{Walt11} 
+D. Waltner, J. Kuipers, and K. Richter, Phys. Rev. B {\bf 83}, 195315 (2011).
+
+\bibitem[a-Weiss~93]{Weiss93} 
+D. Weiss {\em et al.}, Phys. Rev. Lett., {\bf 70}, 4118 (1993).
+
+\bibitem[a-Wilkinson~87]{Wilk} 
+M.~Wilkinson, J. Phys. A {\bf 20} 2415 (1987).
+
+\bibitem[a-Wirtz~97]{Wirtz} 
+L.~Wirtz, J.-Z.~Tang, and J.~Burgd\"orfer, 
+Phys.\ Rev.\ B {\bf 56}, 7589 (1997).
+
+\bibitem[a-Zozoulenko~97]{zozou97} 
+I.V.~Zozoulenko, R.~Schuster, K.-F.~Berggren, and 
+K.~Ensslin, Phys. Rev. B {\bf 55}, R10209 (1997).
+
+\end{thebibliography}
+
+%\end{document}
+
+\renewcommand{\refname}{Recommended reading (mainly review articles)}
+\begin{thebibliography}{Cucc~02b}
+
+\bibitem[r-Alhassid~00]{AlhassidRMP} 
+Y. Alhassid, {\it The statistical theory of quantum dots}
+Rev. Mod. Phys. {\bf 72}, 895 (2000).
+
+\bibitem[r-Baranger~93b]{Chaost} 
+H.U.~Baranger, R.A.~Jalabert, and A.D.~Stone,
+Chaos, {\bf 3}, 665 (1993).
+
+\bibitem[r-Baranger~95]{revha} 
+H.U.~Baranger,
+{\it Chaos in Ballistic Nanostructures, Part I: Theory}, 
+in Ref.~\cite{timp95}, p~537.
+
+\bibitem[r-Beenakker~91]{BvHra} 
+C.W.J.~Beenakker and H.~van~Houten in
+{\it Solid State Physics}, Vol. 44, edited by H. Ehrenreich and D.
+Turnbull (Academic Press, New York, 1991). 
+
+\bibitem[r-Beenakker~97]{BeenRMP} 
+C.W.J.~Beenakker, Rev. Mod. Phys. {\bf 69}, 731 (1997).
+
+\bibitem[r-Blanter~00]{Blanter00}
+Y.M. Blanter and M. B\"uttiker,
+{\it Shot Noise in Mesoscopic Conductors}
+Phys. Rep. {\bf 336}, 1 (2000).
+
+\bibitem[r-Bohigas~89]{Bohigas} 
+O. Bohigas, in Ref. \cite{LesHou89}, p.~87.
+
+\bibitem[r-B\"uttiker~88]{buttiker88}
+M.\ B\"uttiker, IBM J.\ Res.\ Dev.\ \textbf{32}, 317 (1988).
+
+\bibitem[r-B\"uttiker~93]{buttiker93}
+M. B\"uttiker, 
+J. Phys.: Condens. Matter {\bf 5}, 9361 (1993).
+
+\bibitem[r-Chakravarty~86]{ChSm} 
+S.~Chakravarty and A.~Schmid, Phys.~Rep. {\bf 140}, 195 (1986).
+
+\bibitem[r-Chang~97]{chang97} A.M.~Chang,
+in Ref.~\cite{csf}, p.~1281.
+
+\bibitem[r-Guhr~98]{WeiPR} 
+T.~Guhr, A.M.~M\"uller-Groeling, and H.~A.~Weidenm\"uller,
+Phys. Rep. {\bf 283}, 37 (1998).
+
+\bibitem[r-Gutzwiller~89]{gutz_ra} 
+M.C.~Gutzwiller, in Ref. \cite{LesHou89}, p.~201.
+
+\bibitem[r-Imry~86]{Imry86}
+Y. Imry, in {\it Directions in Condensed Matter Physics}, edited by G. Grinstein and G. Mazenko 
+(World Scientific, Singapore, 1986).
+
+\bibitem[r-Jalabert~00]{jalabert00} 
+R.\ A.\ Jalabert, 
+{\it The semiclassical tool in mesoscopic physics}, 
+in Ref.~\cite{Fer00}, p~145. 
+
+\bibitem[r-Kastner~92]{CBrev} 
+M.~Kastner, Rev. Mod. Phys. {\bf 64}, 849 (1992).
+
+\bibitem[r-Landauer~87]{landauer87}
+R. Landauer, 
+{\it Electrical Transport in Open and Closed Systems},
+Z. Phys. B {\bf 68}, 217 (1987).
+
+\bibitem[r-Lee~85]{LeeRam} P.A.~Lee and T.V.~Ramakrishnan, Rev. Mod. Phys. 
+{\bf 57}, 287 (1985).
+
+\bibitem[r-Lin~97]{Lin97}
+W.A.~Lin, in Ref.~\cite{csf}, p.~995.
+
+\bibitem[r-Marcus~93b]{Chaos} 
+C.M.~Marcus, R.M~Westervelt, P.F.~Hopkings,
+and A.C.~Gossard, Chaos, {\bf 3}, 643 (1993).
+
+\bibitem[r-Marcus~97]{marcusgroup2b}
+C.M.~Marcus {\em et al.}, in Ref.~\cite{csf}, p.~1261.
+
+\bibitem[r-Mello~00]{mello00}
+P.\ A. Mello and H. \ U. Baranger, 
+{\it Interference phenomena in electronic transport through chaotic cavities: an information-theoretic approach}, 
+Waves In Random Media, {\bf 10}, 337 (2000).
+
+\bibitem[r-Smilansky~89]{LesHouSm}
+U.~Smilansky in Ref. \cite{LesHou89}, p.~371.
+
+\bibitem[r-Stone~91]{St} 
+A.~D.~Stone, P.~A.~Mello, K.~A.~Muttalib, and J.-L.~Pichard,
+in Ref. \cite{ALWrev}.
+
+\bibitem[r-Stone~95]{LesHouSt} 
+A.D.~Stone, in Ref. \cite{LesHou94}, p.~325.
+
+\bibitem[r-T\'el~90]{tel} 
+T.~T\'el in {\it Direction in Chaos, Vol. 3,} edited by Hao 
+Bai Lin (World Scientific, Singapore, 1990) p.~149.
+
+\bibitem[r-Vattay~97]{vattay} 
+G.~Vattay, J.~Cserti, G.~Palla, and G.~Sz\'alka,
+in Ref.~\cite{csf}, p.~1031.
+
+\bibitem[r-Washburn~92]{WashWebb} 
+S.~Washburn and R.A.~Webb, Rep. Prog. Phys. {\bf 55}, 1311 (1992).
+
+\bibitem[r-Westervelt~95]{Westervelt} R.M.~Westervelt,
+{\it Chaos in Ballistic Nanostructures, Part II: Experiment}, in Ref.~\cite{timp95}, p.~589.
+
+\end{thebibliography}
+
+\renewcommand{\refname}{Recommended reading (mainly books and special issues)}
+\begin{thebibliography}{Cucc~02b}
+
+%\begin{itemize}
+
+\bibitem[b-Altshuler~91]{ALWrev} 
+{\it Mesoscopic Phenomena in Solids}, edited by 
+B.L.~Altshuler, P.A.~Lee, and R.A.~Webb, (North-Holland,
+Amsterdam, 1991).
+
+\bibitem[b-Akkermans~95]{LesHou94} 
+Proceedings of the 1994 Les Houches Summer School
+on {\it Mesoscopic Quantum Physics}, edited by E.~Akkermans, 
+G.~Montambaux, J.-L.~Pichard, and J.~Zinn-Justin (North-Holland, 
+Amsterdam, 1995).
+
+\bibitem[b-Akkermans~07]{AkkerMonta}
+E.~Akkermans and G.~Montambaux 
+{\it Mesoscopic Physics of Electrons and Photons},
+(Cambridge University Press, Cambridge, UK, 2007).
+
+\bibitem[b-Bird~03]{Bird03} 
+J. P. Bird, 
+{\it Electron Transport in Quantum Dots}
+(Kluwer Academic, New York, 2003).
+
+\bibitem[b-Brack~97]{brack_book} 
+M.~Brack and R.K.~Bhaduri, {\it Semiclassical Physics}
+(Addison-Wesley, Reading, 1997).
+
+\bibitem[b-Casati~91]{Fer91} 
+Proceedings of the 1991 Enrico Fermi International
+School of Physics "Enrico Fermi" on {\em Quantum Chaos}, Course CXIX, edited by G.~Casati, I.~Guarneri
+and U.~Smilansky (North-Holland, Amsterdam, 1993).
+
+\bibitem[b-Casati~00]{Fer00} Proceedings of the 1999 International School of Physics "Enrico Fermi" on
+{\it New Directions in Quantum Chaos}, Course CXLIII, edited by G. Casati, 
+I. Guarneri and U. Smilansky (IOS Press, Amsterdam, 2000).
+
+\bibitem[b-Datta~95]{Datta} 
+S.~Datta, {\it Electronic Transport in Mesoscopic Systems}
+(Cambridge University Press, Cambridge, 1995).
+
+\bibitem[b-Davies~98]{Davies98} 
+J.H. Davies, 
+{\it The Physics of Low Dimensional Structures: An Introduction} 
+(Cambridge University Press, New York, 1998). 
+
+\bibitem[b-Giannoni~89]{LesHou89} Proceedings of the 1989 Les Houches Summer School 
+on {\em Chaos and Quantum Physics}, edited  by M.-J.~Giannoni, A.~Voros, 
+and J.~Zinn-Justin (North-Holland, Amsterdam, 1991).
+
+\bibitem[b-Gutzwiller~90]{gutz_book} 
+M.C.~Gutzwiller, {\it Chaos in Classical and Quantum Mechanics} (Springer-Verlag, Berlin, 1990).
+
+\bibitem[b-Haake~01]{Haak_01} 
+F.~Haake,
+{\it Quantum Signatures of Chaos} 
+(Springer-Verlag, Berlin-Heidelberg, 2001).
+
+\bibitem[b-Imry~02]{Imry} 
+Y.~Imry, {\it Introduction to Mesoscopic Physics}, 2nd ed. 
+(Oxford University Press, Oxford, UK, 2002). 
+
+\bibitem[b-Mello~04]{mello04} 
+P.\ A.\ Mello and N.\ Kumar, \textit{Quantum Transport in Mesoscopic Systems} (Oxford University Press, Oxford, UK, 2004).
+
+\bibitem[b-Nakamura~97]{csf} 
+{\it Chaos and Quantum Transport in Mesoscopic Cosmos},
+special issue, Chaos, Solitons\&Fractals, edited by K.~Nakamura
+{\bf 8}, 971-1412 (1997).
+
+\bibitem[b-Ozorio~88]{Ozor-88} 
+A.~M.~Ozorio~de~Almeida,
+{\it Hamiltonian Systems, Chaos and  Quantization} 
+(Cambridge University Press, Cambridge, 1988).
+
+\bibitem[b-Richter~00]{Klaus} K.~Richter, 
+{\it Semiclassical Theory of Mesoscopic
+Quantum Systems}, Springer Tracts in Modern Physics; Vol. {\bf 161} (Springer-Verlag, Berlin, 2000).
+
+\bibitem[b-St\"ockmann~99]{Stoe_99} 
+H.-J.~St\"ockmann,
+{\it Quantum Chaos: An Introduction} 
+(Cambridge University Press, Cambridge, 1999).
+
+\bibitem[b-Timp~95]{timp95}  
+{\it Nanotechnology}, edited by G.~Timp (AIP Press, 1995).
+
+\end{thebibliography}
+
+
+\renewcommand{\refname}{Internal references}
+\begin{thebibliography}{Cucc~02b}
+
+\bibitem[i-Fyodorov~11]{Fyodorov} 
+Y.~Fyodorov, {\it Random Matrix Theory}, Scholarpedia
+  6(3):9886(2011).
+
+\bibitem[i-Gaspard~14]{Gaspard}  
+P. Gaspard, Scholarpedia, 9(6):9806(2014).
+
+\bibitem[i-Gutzwiller~07] M.~Gutzwiller, {\it Quantum chaos}, Scholarpedia
+  2(12):3146(2007).
+
+\bibitem[i-Raizen~11]{Raiz11}
+M. Raizen and D.A. Steck, {\it Cold atom experiments in quantum
+  chaos}, Scholarpedia 6(11):10468(2011).
+
+\bibitem[i-Shepelyansky~12]{Shep12}
+D. Shepelyansky, Scholarpedia, 7(1):9795 (2012).
+
+\bibitem[i-St{\"o}ckmann~10]{Stoc10}
+H.-J.~St{\"o}ckmann; {\it Microwave billiards and quantum chaos},
+  Scholarpedia 5(10):10243(2010).
+
+\bibitem[i-Ullmo~14]{Ullm14}
+D. Ullmo, 
+"Bohigas-Giannoni-Schmit conjecture",
+Scholarpedia, in press.
+
+%\end{itemize}
+
+\end{thebibliography}
+
+\renewcommand{\refname}{External links}
+\begin{thebibliography}{Cucc~02b}
+
+%\bibitem{lewp}  homepage
+
+\end{thebibliography}
+
+\end{document}

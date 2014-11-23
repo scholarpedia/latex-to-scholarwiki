@@ -1,0 +1,497 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Organic Superconductivity}
+\author{Denis Jerome}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\def\tc{$T_{c}$\,}
+\def\tm6{$\mathrm{(TMTSF)_{2}PF_{6}}$\,}
+\def\t6as{$\mathrm{(TMTSF)_{2}AsF_{6}}$}
+\def\tmx{$\mathrm{(TMTSF)_{2}(ClO_{4})_{(1-x)}ReO_{4x}}$}
+\def\tmc{$\mathrm{(TMTSF)_{2}ClO_{4}}$\,}
+\def\tms{$\mathrm{(TMTSF)_{2}AsF_{6(1-x)}SbF_{6x}}$}\,
+\def\tmps{$\mathrm{(TMTTF)_{2}PF_{6}}$\,}
+\def\tmttfsbf6{$\mathrm{(TMTTF)_{2}SbF_{6}}$\,}
+\def\tmttfasf6{$\mathrm{(TMTTF)_{2}AsF_{6}}$\,}
+\def\tmttfbf4{$\mathrm{(TMTTF)_{2}BF_{4}}$\,}
+\def\tmtsfreo4{$\mathrm{(TMTSF)_{2}ReO_{4}}$\,}
+\def\tm2x{$\mathrm{(TM)_{2}X}$\,}
+\def\tq{$\mathrm{TTF-TCNQ}$\,}
+\def\tsq{$\mathrm{TSeF-TCNQ}$}\,
+\def\qnq{$(Qn)TCNQ_{2}$}\,
+\def\R{$\mathrm{ReO_{4}^{-}}$}  
+\def\C{$\mathrm{ClO_{4}^{-}}$}
+\def\P{$\mathrm{PF_{6}^{-}}$}
+\def\tqr{$\mathrm{TCNQ^\frac{\cdot}{}}$\,}
+\def\nmpq{$\mathrm{NMP^{+}(TCNQ)^\frac{\cdot}{}}$\,}
+\def\q{$\mathrm{TCNQ}$\,}
+\def\nmp{$\mathrm{NMP^{+}}$\,}
+\def\f{$\mathrm{TTF}\,$}
+\def\tc{$T_{c}$\,}
+\def\pc{$P_{c}$\,}
+\def\hc2{$H_{c2}$\,}
+\def\nmq{$\mathrm{(NMP-TCNQ)}$\,}
+\def\ts{$\mathrm{TSF}$}
+\def\tsm{$\mathrm{TMTSF}$\,}
+\def\tst{$\mathrm{TMTTF}$\,}
+\def\tmp6{$\mathrm{(TMTSF)_{2}PF_{6}}$\,}
+\def\tms2x{$\mathrm{(TMTSF)_{2}X}$}
+\def\tm2x{$\mathrm{(TM)_{2}X}$\,}
+\def\as{$\mathrm{AsF_{6}}$}
+\def\sb{$\mathrm{SbF_{6}}$}
+\def\pf{$\mathrm{PF_{6}}$}
+\def\re{$\mathrm{ReO_{4}}$}
+\def\ta{$\mathrm{TaF_{6}}$}
+\def\cl{$\mathrm{ClO_{4}}$}
+\def\4fb{$\mathrm{BF_{4}}$}
+\def\ttdm{$\mathrm{(TTDM-TTF)_{2}Au(mnt)_{2}}$}
+\def\edt{$\mathrm{(EDT-TTF-CONMe_{2})_{2}AsF_{6}}$}
+\def\tfx{$\mathrm{(TMTTF)_{2}X}$\,}
+\def\tsx{$\mathrm{(TMTSF)_{2}X}$\,}
+%\def\tmx{$(TMTSF)_{2}(ClO_{4})_{(1-x)}(ReO_{4})_{x}$\,}
+\def\ttftcnq{$\mathrm{TTF-TCNQ}$\,}
+\def\ttf{$\mathrm{TTF}$\,}
+\def\tcnq{$\mathrm{TCNQ}$\,}
+\def\bedtttf{$\mathrm{BEDT-TTF}$\,}
+\def\reo4{$\mathrm{ReO_{4}}$}
+\def\bedtttfreo4{$\mathrm{(BEDT-TTF)_{2}ReO_{4}}$\,}
+\def\et2i3{$\mathrm{(ET)_{2}I_{3}}$\,}
+\def\et2x{$\mathrm{(ET)_{2}X}$\,}
+\def\ket2x{$\mathrm{\kappa-(ET)_{2}X}$\,}
+\def\cuncnbr{$\mathrm{Cu(N(CN)_{2})Br}$\,}
+\def\ket2x{$\mathrm{\kappa-(ET)_{2}X}$\,}
+\def\cuncncl{$\mathrm{Cu(N(CN)_{2})Cl}$\,}
+\def\cuncs{$\mathrm{Cu(NCS)_{2}}$\,}
+\def\betsfecl4{$\mathrm{(BETS)_{2}FeCl_{4}}$\,}
+\def\bets{$\mathrm{BETS}$\,}
+
+\def\et{$\mathrm{ET}$\,}
+\maketitle
+%\section{Abstract}
+%We  provide a brief account of the development of research on organic conductors since the seventies which has led to the discovery of organic superconductivity in the so called Bechgaard salt \tmp6. This research has been motivated from the very beginning  by the quest for new materials exhibiting superconductivity at high temperature. Besides the phenomenon of superconductivity discovered in organics in 1980,  numerous progresses in this  field  have highlighted  the wealth of  the remarkable properties of low dimensional physics of these quasi one dimensional organic superconductors which can now be considered as prototype low dimensional systems.
+\section{Organic superconductivity}
+Organic superconductivity refers to the regular phenomenon  of superconductivity as it is observed in some metals and metallic inorganic compounds. However, what makes organic superconductivity so distinctive is that  conduction in organic molecular conductors  is linked to the transport of free charges (electrons or holes) between $\pi$ -like molecular orbitals of neighbouring open shell molecules. In addition, these new materials reveal quasi one dimensional features of their  electronic transport properties due to their peculiar crystal structure. They are considered as textbook examples for  low dimensional physics. They have also been stimulating for the research on high \tc superconductors and pnictides. 
+\section{Some definitions}
+\subsection{Superconductivity}
+Superconductivity (a new state of matter) is one of the major discovery in physics for the twentieth century given its experimental and theoretical impact on science. From an experimental point of view the finding by G. Holst in the laboratory of H. Kamerlingh Onnes\cite{Onnes11} in 1911 of a current travelling   without resistance through a metal cooled at very low temperature paved the way to a very large number of industrial applications. This experimental discovery happended long before the proposal of a satisfactory theoretical framework by Bardeen, Cooper and Schrieffer (BCS)\cite{Bardeen57} in 1957 explaining the two basic   properties of the superconducting ground state of a metal namely, the zero resistance state and the magnetic flux expulsion.  
+
+Superconductivity requires low temperature conditions to be observed in metals and intermetallic compounds, typically the helium temperature range as can be seen on fig(\ref{Tcyear.pdf}). Until the years in the sixties, the critical temperature for superconductivity had been steadily rising as new intermetallic  compounds were synthesized according to the paradigm of the BCS theory predicting an isotope effect   namely, an electron-electron pairing in the superconducting ground state  mediated by the electron-phonon interaction with  the ionic mass dependence of the critical temperature, \tc $\alpha \,M^{-1/2}$\cite{Bardeen57}.
+\begin{figure}[h]	
+\centerline{\includegraphics[width=0.7\hsize]{Tcyear.pdf}}		
+\caption{The figure displays the evolution of \tc in materials according to the date of the discovery of their superconducting properties. It clearly shows a renewed effort in superconductivity at the beginning of the  eighties which triggered the research of novel materials with the discovery of  organic superconductors in 1980 and  high \tc cuprates in 1986.}
+\label{Tcyear.pdf}
+\end{figure}
+ 
+Searching for new materials exhibiting the highest possible values of superconducting \tc was already a  strong motivation in materials sciences in the early 70's,  and the term high temperature superconductor was already commonly used refering
+to the intermetallic compounds of the A15 structure, namely, ($\mathrm{Nb_{3}Sn}$ or $\mathrm{V_{3}Si}$)\cite{Hardy54}.
+ %The hidden 1D nature of the A15 structure provides an enhancement of the density of states at the Fermi level lying close to the van-Hove singularity of the density of states at the band edges of the 1D d-band. Within the BCS formalism  large \tc 's could in turn be expected. They have actually been attained  (17-23K) but an upper limit for the increase of \tc was expected since the  large value of N(E$_{\mathrm{F}}$) makes also the  structure unstable against a  cubic to tetragonal Jahn-Teller band  distortion\cite{Labbe66,Weger73}. The theory showed   that  \tc is maximized in the  compounds  $\mathrm{Nb_{3}Sn}$ and $\mathrm{V_{3}Si}$\cite{Labbe67} . In this context at the beginning of the 80's, some papers based on metallurgical considerations, regarded 25-30K  as the highest possible value for \tc\cite{Hulm80}. However, at that time, attempts to increase \tc were still based on the phonon mediated BCS theory with its  strong coupling extension\cite{Migdal58,Eliashberg60}.
+
+Expending the successful idea of the isotope effect of the BCS theory  other models were proposed in which excitations of the lattice responsible for the electron pairing had been replaced by higher energy excitations namely, electronic excitations, with the hope of  new  materials with  \tc higher than those explained by the BCS theory.
+Consequently, the small electronic mass
+$m_e$ of the polarizable medium would lead  to an enhancement of
+\tc of the order of  ($M/m_e)^{1/2}$ times the value which is observed  in a conventional superconductor, admittedly a huge factor. V.L.Ginzburg\cite{Ginzburg64a,Ginzburg64b} considered in 1964 the possibility for the pairing of electrons in
+metal layers sandwiched between polarizable dielectrics through virtual excitations at high energy. 
+
+An even more provocative suggestion came from W.A.Little
+\cite{Little64,Little65}namely,
+ a new mechanism  for superconductivity which could lead to a drastic enhancement of the superconducting \tc
+ to be observed in especially designed macromolecules. The idea of Little
+was still rooted in the extension of the isotope effect proposed by BCS replacing the  mediating phonon by an electronic excitation which especially designed macromolecules could reveal. However a prerequisite to the model of Little was the achievement of metallic conduction in organic molecular crystals, not a trivial problem in the sixties.
+%%%%%%%%%%%%%%%%%2
+ \begin{figure}[ht]			
+\centerline{\includegraphics[width=0.4\hsize]{Littlemole2.pdf}}
+\caption{Schematic picture for the  Little's suggestion.  Charge carriers \textit{a} and \textit{b} forming a Cooper pair in the conducting spine are bound
+\textit{via} a virtual electronic excitation of  the polarizable side groups. }
+\label{Littlemole2.pdf}
+\end{figure} 
+\subsection{Organic  conductors}
+ Electronic conduction proceeds in organic molecular conductors through the transport of free charges (electrons or holes) between $\pi$ -like molecular orbitals of neighbouring open shell molecules rather than between  atomic orbitals in regular metallic conductors.  One cannot find organic conductors in nature, unlike the metallic ones. The former must always  be  synthesized in a chemistry laboratory.  
+
+
+The first successful  attempt  to
+promote metal-like conduction between open shell molecular species came out in 1954 with the synthesis of the molecular salt of
+perylene oxidized with bromine \cite{Akamatsu54} although this salt was  unstable in air.
+\section{History}
+The idea of Little  was based on the use of a long conjugated polymer such as a
+polyene molecule grafted by polarizable side groups\cite{Little70}. Admittedly, this formidable
+task in synthetic chemistry did not reached its initial goal but the idea to link organic metallicity and one dimensionality  was
+launched and turned out to be a very strong stimulant for the development of organic superconductors. 
+
+%Bychkov \textit{et-al}\cite{Bychkov66}  criticized  the model of Little regarding its potentiality   to lead to high temperature superconductivity. Following Bychkov \textit{et-al}, the one-dimensional character of the model system proposed by Little makes it a unique problem in which there exists a  built-in coupling between superconducting and dielectric instabilities.  It follows that each of these instabilities cannot be considered separately in the mechanism proposed by Little in one dimension and last but not least, fluctuations should be  efficient in a 1D conductor to suppress any long range ordering down to  low temperature\cite{Mermin66}. These remarks proved to be very relevant for the development several decades later of the adequate theoretical framework needed to explain  organic superconductivity.
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A major step was accomplished in 1970 toward the discovery of new materials for superconductivity with the synthesis by F.Wudl\cite{Wudl70} of the new molecule tetrathiafulvalene, (\ttf).
+This molecule 
+containing four sulfur  heteroatoms in the fulvalene skeleton can easily donate electrons when it is combined to electron accepting species.
+
+\subsection{From the  charge transfer period to the first organic conductor}
+\label{sec:1.1}
+A short time later  the synthesis of the first stable organic metal, the charge transfer complex \ttftcnq came out. This compound is made up of two
+kinds of flat molecules each forming  segregated parallel conducting stacks. It fullfills the conditions for an organic conductor
+as the orbitals involved in the conduction ($\pi$-HOMO, highest occupied molecular orbital and $\pi$-LUMO, lowest unoccupied molecular orbitals for \ttf and
+\tcnq respectively) are associated with the molecule as a whole rather than with a particular atom. Free carriers within each stacks are given 
+ by an  interstack charge  transfer \textit{at variance} with other organic conductors such as the conducting polymers in which charges are provided by doping\cite{Shirakawa77}.
+
+
+The announcement of a large and metal-like conduction in \ttftcnq was made in 1973, simultaneously  by the Baltimore\cite{Ferraris73}
+and  Pennsylvania\cite{Coleman73} groups.  The Pennsylvania group made a provocating claim announcing  a giant conductivity peak of the
+order of
+$10^5$
+$(\Omega cm)^{-1}$ at 60 K arising just above a very sharp transition toward an insulating ground state at low temperature. This
+conductivity peak was attributed by their authors to precursor signs  of an incipient superconductor.  %Unfortunately, the  conductivity peak with such a giant amplitude could never be reproduced by other groups who anyway all agreed on  the metallic character of this novel molecular material\cite{Thomas76}. Quite importantly,  the Orsay group showed  from X-ray scattering studies that the metal insulator transition at 59 K was the consequence of the instability of a conducting chain predicted by Peierls\cite{Denoyer75}. The X-ray diffuse scattering study did reveal that the band filling of \tq is incommensurate with a charge transfer of $\rho=0.59$ electrons at 300 K between \f and \q species\cite{Denoyer75}. 
+
+%At this stage the use of  high pressure experiments  turned out to be crucial for the discovery of organic superconductivity.
+
+Thanks to  pressure studies it has been shown that the very large conductivity peak exhibited by \tq at 59K is actually  the contribution of collective  Fr\"ohlich fluctuations in a 1D regime adding to the conduction coming from  single particles\cite{Friend78}.
+ %The study of transport properties under pressure has settled the origin of the conductivity peak of the conducting phase  before the Peierls transition at 59K. 
+Driving the charge transfer through a commensurate value $\rho= 2/3$ under the pressure of $\approx$ 18 kbar provided in turn the proof for collective  Fr\"ohlich fluctuations existing in the 1D regime under ambient pressure, leading  to a large enhancement  of the  ordinary single particle conduction since the wave length of these $CDW$ fluctuations  is not commensurate with the underlying lattice, in particular under ambient pressure
+\cite{Friend78}, \textit{see} fig(\ref{TQphaseetfluctuations.pdf}). 
+\begin{figure}[h]	 \centerline{\includegraphics[width=0.7\hsize]{TQphaseetfluctuations.pdf}}\caption{Isothermal pressure dependence of the longitudinal conduction of \tq \,  showing a drop of the conduction in the commensurability (x3) domain  of the fluctuating Fr\"ohlich contribution due to pinning by the lattice\cite{Jerome82}.  The ratio $\sigma (80 K)/\sigma (290 K)$ is evolving from 18 to 3 from ambient pressure up to 18 kbar and rising again at higher pressures.   }\label{TQphaseetfluctuations.pdf} \end{figure}
+ Furthermore high  pressure experiments performed recently in Japan  managed to   partly suppress the onset  of the  Peierls instability in \ttftcnq\cite{Yasuzuka07} after an initial increase up to 30 kbar confirming the early Orsay work\cite{Friend78} but failed to reveal any sign of superconductivity  which had been anticipated by  Horovitz \textit{et-al}\cite{Horovitz75} when phonons become soft in the vicinity of the Peierls transition, hence enhancing \tc according to the traditional electron-phonon mechanism.
+
+
+Furthermore, the $4k_F$ signature in X-ray diffuse scattering experiments\cite{Pouget76}have pointed out that  1D electron-electron repulsive interactions cannot be ignored in these kinds of molecular compounds. %Since decreasing the size of the Coulombic repulsion is expected to boost the conductivity of metals,  other synthetic routes have then been followed. In the 1970's, the leading ideas governing the search for new materials likely to exhibit good metallicity and possibly superconductivity were driven by the possibility to minimize the role of electron-electron repulsions and at the same time to increase the electron-phonon interaction while keeping the overlap between stacks as large as possible. This led to the synthesis of new series of charge transfer compounds , for example changing the molecular properties while retaining the same crystal structure. It was recognized that the electron polarizability is important to reduce the screened on-site electron-electron repulsion and that the redox potential $(\Delta E)_{1/2}$ should be minimized, \cite{Garito74,Engler77} in order to fulfill this goal. 
+
+Hence, new charge transfer compounds with the acceptor \q  were synthesized using
+other heteroatoms for the donor molecule, 
+\textit{i.e.} substituting sulfur for selenium in the \f skeleton thus leading to the \ts \, molecule where S stands for selenium.
+Much attention was devoted to the
+tetramethylated derivative of the \ts \, molecule which, when combined to the dimethylated \q gave rise to TMTSF-DMTCNQ\cite{Andersen78}.The
+outcome of the high pressure study of this latter compound has been truly  decisive for the quest of organic superconductivity
+\cite{Andersen78,Jacobsen78,Tomkiewicz78}. First, the metal insulator transition located at 42 K has been identified by  X-ray diffuse scattering experiments\cite{Pouget81} as a Peierls transition driven by the TMTSF chain and a quarter filling of both donor and acceptor bands of this charge transfer compound has been derived   from the measurement of the wave vector $2k_F$ in the Peierls state. Second, for the first time the metallic state of an organic compound could be stabilized down to 1.2 K  under pressure    \textit{albeit} without superconductivity \cite{Andrieux79a}. Although the reason for the stability of a metallic state in  TMTSF-TCNQ  above the pressure of 9 kbar is not yet understood, emphasizing the role of the donor stack (TMTSF) for conduction  has been a strong motivation for the synthesis of new organic conductors with  structures even simpler than those of  the  two stacks charge transfer compounds. This is how \tmp6, the so-called Bechgaard salt\cite{Bechgaard79},  came out of the Copenhagen chemistry laboratory in 1979 inspired by a series of isomorphous radical cationic conductors based on TMTTF previously synthesized at Montpellier\cite{Galigne78}.
+
+\section{ Organic superconductors part of a generic phase diagram}
+The Copenhagen group led by Klaus Bechgaard and experienced with the chemistry of selenium  succeeded in the
+synthesis of a new series of conducting salts all based on the  TMTSF  molecule  namely, \tms2x   where X is an inorganic
+mono-anion with various possible symetry, spherical (\pf ,\as ,\sb ,\ta  ), tetrahedral (\4fb ,\cl ,\,\re )
+ or triangular $\mathrm{(NO_3}$)\cite{Bechgaard79}. All these compounds but the one with X= \cl \, did reveal an insulating ground state under ambient pressure. 
+
+What is  so special with \tmp6, the prototype of the so-called  Bechgaard salts, unlike previously investigated \tq ,  is the magnetic origin of the ambient pressure insulating state\cite{Andrieux81} contrasting with the Peierls-like ground states discovered previously in charge transfer compounds. The ground state of \tmp6 turned out to be a spin density wave state similar to the predictions made by  Lomer\cite{Lomer62} in 1962 and by Overhauser\cite{Overhauser60a} for metals.  
+\begin{figure}[h]	
+ \centerline{\includegraphics[width=1\hsize]{molecule,structure,supra}}
+\caption{Side view of the \tsm molecule (yellow and red dots are selenium and carbon  atoms respectively, hydrogens not shown) and \tmp6 quasi 1D structure along the $b$ axis, \textit{courtesy} of J.Ch. Ricquier, IMN, Nantes (left) . First observation of superconductivity in \tmp6 under a pressure of 9 kbar\cite{Jerome80}. The resistance of two samples is normalized to the 4.5 K value (right). }
+\label{PF6supra.pdf} 
+\end{figure}
+It is the onset of itinerant antiferromagnetism which opens a gap at Fermi level. Since the  Fermi surface is nearly planar, the exchange gap develops over the whole surface (although the $SDW$ phase still retains  small pockets of carriers, \textit{see} \cite{Ishiguro98} for references.  The magnetic origin of the insulating ground state of  \tmp6 was thus the first experimental hint for the prominent role played by correlations in these organic conductors,
+
+Superconductivity of \tmp6 occured at 1 K as shown by transport, fig(\ref{PF6supra.pdf}), once the $SDW$ insulating ground state could be suppressed increasing the transverse overlap between molecular stacks under a pressure of about 9 kbar\cite{Jerome80}. AC susceptibility measurements performed on the same material detected an anomaly at \tc indicative of a transition into a diamagnetic state\cite{Ribault80}. A confirmation of the bulk nature of organic superconductivity has been given subsequently by the observation of shielding and   Meissner signals in \tmp6\cite{Andres80}.
+
+The synthesis of the superconducting compound \tmp6 allowed to establish a link between this  compound and the isostructural  family  comprising the sulfur molecule with the same series of monoanions discovered earlier. Thanks to an intensive study  under pressure, it was realized that \tfx and  \tms2x salts both belong to a common class  of materials forming the generic \tm2x phase diagram\cite{Jerome91}, fig(\ref{generic3.pdf}).    
+
+In particular,   \tmps , although  the most insulating compound of the phase diagram can be made  superconducting at low temperatures under a pressure  of 45 kbar\cite{Wilhelm01,Adachi00}. The study of this generic phase diagram has in turn greatly contributed   to  the experimental exploration of 1D physics and to the comparison with the theory.
+\begin{figure}[h]	
+ \centerline{\includegraphics[width=0.7\hsize]{generic3.pdf}}
+\caption{Generic phase diagram for the  \tm2x family\cite{Jerome91} based on the sulfur compound \tmps under ambient pressure taken as the origin for the pressure scale. Phases in  yellow, green, light green and red colors are  long range ordered, Charge Order (CO), Spin Peierls (SP), Magnetic phases N\'eel antiferromagnet and Spin Density Wave phase and Superconductivity respectively. There exists a small pressure window around 45 kbar in this generic diagram where SC coexists with SDW according to reference\cite{Vuletic02,Kang10,Narayanan14}.  $T_\rho$  %and $T^\star$
+ marks the onset of 1D charge localization which ends around 15 kbar at the dashed double-dotted line.   The (TL)1D to 2D deconfinement occurs at $T^\star$. The dashed line between 2D and 3D regimes defines the upper limit for low temperature 3D coherent domain. }
+\label{generic3.pdf} 
+\end{figure}
+
+ 
+ %What 1D physics means in a nutshell, is the replacement of  Landau-Fermi quasiparticles  low lying excitations by decoupled spin and charge collective modes \cite{Schulz90,Voit95}.  The model for 1D conductors  starting from a linearized energy spectrum for excitations close to the Fermi level and adding the relevant Coulomb repulsions which are responsible for electron scattering with momentum transfer 0 and $2k_F$ is known as the  popular Tomonaga-Luttinger (TL)  model. In this model   the spatial variation of all correlation functions (spin  susceptibility at $2k_F$ or $4k_F$, $CDW$, Superconductivity) exhibit a power law decay at large distance, characterized by a non-universal exponent $K_{\rho}$ (which is a function of the microscopic coupling constants)\cite{Solyom79}. However an important peculiarity of \tm2x materials makes them different from the usual picture of TL conductors. Unlike two-stacks \tq materials, 
+
+$\mathrm{(TM)_{2}X}$ conductors exhibit a band filling  commensurate with the underlying 1D lattice due to  the 2:1 stoichiometry  imposing half a hole per TM molecule. %Consequently, given  a uniform spacing of the  molecules along the stacking axis the unit cell contains  1/2 carrier, \textit{i.e.} the conduction band is quarter-filled.  
+However,
+non-uniformity of the intermolecular spacing  had been noticed from the early structural studies of \tfx crystals\cite{Ducasse86} due to the periodicity of the anion packing being twice the periodicity of the molecular packing. This non-uniformity provides a dimerization of the intrastack overlap  quite significant  in the sulfur series (prominent 1/2-filling Umklapp scattering)  and  still present in the members of the  
+$\mathrm{(TMTSF)_{2}X}$ series. 
+An important  consequence of the commensurate situation for $\mathrm{(TM)_{2}X}$ materials is the existence of two localization channels either due to electron-electron Umklapp scattering with momentum transfer $4k_F$ (two particles scattering) or to $8k_F$ (four particles scattering) corresponding to half or quarter-filled bands respectively\cite{Emery82,Giamarchi97}. Consequently, both Umklapp mechanisms compete for the establishment of the 1D charge gap $\Delta_{\rho}$, 1/4  and 1/2 Umpklapp scatterings leading to charge ordered and Mott insulators respectively\cite{Tsuchiizu01}. %This localization is a typical outcome of 1D physics in the presence of repulsive interactions and leads to  a charge gap $\Delta_{\rho}$ in the quasiparticle spectrum although no ordering is expected at any finite temperature for a purely 1D system. 
+
+
+On  the  left side of the generic diagram on fig(\ref{generic3.pdf}) a phase transition toward a long range charge ordered (CO) insulating phase has been observed. This phase at low temperature has been  ascribed, according to NMR data, to the onset of a charge  disproportionation between molecules on the molecular chains\cite{Chow00a}.  %The stability of the CO state (often called a Wigner state) is a direct consequence of the long range nature of the Coulomb repulsion which, in terms of the extended Hubbard model, amounts to  finite on-site U and second-neighbours V repulsions. 
+Increasing pressure, spins localized on dimers of molecules couple to the lattice and give rise to a spin-Peierls ground state evolving  through a quantum critical point around 10 kbar\cite{Chow98}  into a N\'eel antiferromagnetic phase and subsequently a spin density wave state  under pressure which have been extensively studied by  transport\cite{Jerome04} and AFMR\cite{Coulon04}.
+
+Moving toward the right side of the diagram, the onset of charge localization below $T_{\rho}$  (\textit{i.e,} 1D confinement) decreases under pressure as a result of an interplay between the Mott localization and the interchain coupling (increasing under pressure) which tends to bypass the correlation-induced localization. Once the localization gap vanishes, 1D confinement ceases and the existence of a quasi-1D Fermi surface becomes meaningful\cite{Giamarchi97,Bourbonnais99,Biermann01}. In some respects the deconfinement observed under pressure around 15 kbar on fig(\ref{generic3.pdf}) is the signature for a crossover from strong to weak coupling in the generic phase diagram. The N\'eel phase turns into  an ordered  weak antiferromagnetic spin density wave phase ($SDW$)  above the deconfinement pressure of about 15 kbar.
+
+The temperature $T^{\star}$ where the $c^{\star}$-axis transport switches from an insulating
+to a metallic temperature dependence\cite{Auban04} corresponds to a cross-over between two regimes, \textit{see} fig(\ref{generic3.pdf}); a high temperature regime  in which the  finite QP
+weight at  Fermi energy is smaller than the regular metallic value (possibly a TL liquid in the 1D case described below). $T^{\star}$ is highly pressure dependent and can be as small as 20 K or so, a value much smaller than the one expected for the bare $t_{\perp}$ of order 200 K. $T^{\star}$ would recover the value of the bare coupling only under infinite pressure.
+
+ %The carriers are confined on individual stacks as long as $\Delta_{\rho}$ remains finite. The 1D confinement is affected by pressure due first to the weakening of the correlations and second by the interplay between the 1D localization and the single particle interchain hopping $t_b$. Once the bare interchain single particle hopping (increased by pressure) reaches the order of magnitude of the Mott gap, confinement ceases and the existence of a quasi-1D Fermi surface becomes meaningful\cite{Giamarchi97,Bourbonnais99,Biermann01}. In some respects the deconfinement observed under pressure around 15 kbar on fig(\ref{generic3.pdf}) is the signature for a crossover from strong to weak coupling in the generic phase diagram. The N\'eel phase turns into  an ordered  weak antiferromagnetic spin density wave phase ($SDW$)  above the deconfinement pressure of about 15 kbar.
+
+
+%Several regimes in the metallic domain ($d\rho/dT>0$) of the diagram fig(\ref{generic3.pdf}) can be identified according to the dimensionality.
+
+
+Regarding the upper part  of the diagram on  fig(\ref{generic3.pdf}) transport in \tm2x has been interpreted in terms of the Tomonoga-Luttinger liquid model for a commensurate conductor.   A metal-like behaviour of the  longitudinal resistance is still be oberved as long as $T$ is larger than  $\Delta_{\rho}$ leading to a  resistance displaying a power law $\rho (T) \approx T^{\theta}$  ($\theta >0$). Experimental studies  have revealed such a metallic behaviour for the  resistance either in \tfx under pressure\cite{Auban04,Degiorgi06} or  in \tsx even at ambient pressure\cite{Jerome82}. What has been found is a sublinear exponent, namely $\theta = 0.93$ for the constant volume temperature dependence  of  the \tmp6 resistance\cite{Auban04,Degiorgi06}. In the vicinity of $T^{\star}$, this power law evolves toward a constant value in line with a Fermi liquid picture.
+
+ 
+When quarter-filled Umklapp scattering prevails at high temperature $\theta = 16K_{\rho}-3$ and consequently  $K_{\rho} = 0.23$ according to the  data of \tmp6\cite{Degiorgi06}. 
+
+%As long as coherence is not established between 2D planes, transverse transport requires  tunneling of Fermions ({\it at variance}\, with the longitudinal transport which is related to  1D collective modes)  between neighbouring chains and therefore probes the amount of quasi particles (QP) existing close to Fermi level. The insulating character of the  transverse transport at high temperature is thus a confirmation   of the non Fermi-Landau behavior at high temperature in the TL regime \cite{Moser98}. %When  transport along the$c$-direction is incoherent, transverse conductivity probes the physics of the $a-b$ planes namely, the physics of the weakly interacting Luttinger chains in the $a-b$ planes. The resistivity along the least conducting direction depends on the one-electron spectral function of a single chain  and reads $\rho_{c}(T) \approx T^{1-2\alpha}$\cite{Georges00} where $\alpha$ is related to\, $K_{\rho}$,  ($\alpha =\frac{1}{4}(K_{\rho} + 1/K_{\rho}-2)$. It is again a $K_{\rho}$ of about 0.25-0.30 which is found experimentally in \tmp6\cite{Moser98}.
+
+ %This picture does not necessarily imply that the transport along the $c$-direction must also become coherent below the cross-over since the $c$-axis transport may  remain incoherent with a progressive establishment of a Fermi liquid   in  $a-b$ planes at temperatures below $T^\star$ towards and another regime with higher dimensionality.   
+
+A three dimensional anisotropic coherent picture  prevails  at low temperature in \tms2x compounds  according
+to  the Kohler's rule \cite{Cooper86} and  angular magnetoresistance oscillations observed in \tmc and \tmp6 under pressure\cite{Kang92,Osada91,Danner94,Sugawara06}. In addition, optical reflectance data of light polarised along $c^{\star}$ support the existence for \tmc of a weak Drude behaviour in the liquid helium temperature domain when $k_{B}T<t_{\perp c}$ \cite{Henderson99}.
+However, the upper limit for the temperature domain of 3D coherence has been established comparing the temperature dependence of the resistivity along $a$ and  $c^{\star}$. This  2D to 3D crossover domain is defined by the temperature above which the  temperature dependences of both components of transport are no longer identical\cite{Auban11a}. 
+The 3D coherence  regime is displayed on the generic diagram of  figure(\ref{generic3.pdf}). The low temperature limit of the metallic phase will be discussed in Sec(\ref{Antiferromagnetic fluctuations, spin and charge sectors}).
+
+ 
+\section{Organic Superconductivity}
+Although   superconductivity in organic conductors  has been first stabilized  under pressure, more detailed investigations of  this phenomenon have been conducted in \tmc, the only compound of the 1D-Bechgaard salts series exhibiting superconductivity at ambient pressure below 1.2 K .
+Evidences for superconductivity in \tmc came out from transport\cite{Bechgaard81}, specific heat measurements\cite{Garoche82} and Meissner flux expulsion\cite{Mailly82}.
+
+The electronic contribution to the specific heat of \tmc\ in a $C_e/T$ {\it vs} $T$ plot, fig(\ref{SpecificH.pdf}), dipslays a very large anomaly around $1.2$K\cite{Garoche82}.
+%%%%%Figure specific heat
+\begin{figure}[h]			
+\centerline{\includegraphics[width=0.5\hsize]{SpecificH.pdf}}
+\caption{Electronic contribution to the specific heat of \tmc, plotted as $C_e/T$ versus $T$, according to ref.  \cite{Garoche82}}
+\label{SpecificH.pdf}
+\end{figure}
+%%%%%%%%%%%%
+The total specific heat obeys the classical relation in metals $C/T	= \gamma + \beta T^2$,	where the Sommerfeld constant for electrons $\gamma$ = 10.5
+mJ mol$^{-1}$K$^{-2}$, corresponding to a density of states at the Fermi level $N(E_F)$ = 2.1 states eV$^{-1}$ mol$^{-1}$ for the two spin directions\cite{Garoche82}. The specific
+heat jump at the transition amounts then to $\Delta C_e /\gamma T_c = 1.67$, \textit{i.e.} only slightly larger than the BCS ratio for a {\it s}-wave superconductor. Therefore,  the  specific heat data and the comparison between  the value of the density of states derived  specific heat  Pauli susceptibility\cite{Miljak83} lend support to a weak coupling Fermi liquid picture (at least in the low temperature
+range)\cite{Bourbonnais99}.
+The first critical field $H_{c1}$ obtained from the Meissner magnetizaton curves at low temperature  read, 0.2,1 and 10 Oe along axes $a$, $b'$and $c^{\star}$ respectively. Following  the values for the second critical fields $H_{c2}$ derived either from the Meissner experiments and the knowledge of the thermodynamical field\cite{Mailly82} or from a direct measurements of transport, superconductivity has can considered to be in the extreme type II  limit. The Ginzburg-Landau parameter $\kappa$ can even overcome 1000 when the field is along $a$ due to the weak interchain coupling in these Q1D conductors making the field penetration very easy for the parallel configuration of the external field.
+\begin{figure}[htbp]			
+\centerline{\includegraphics[width=0.4\hsize]{MeissnerClO4.pdf}}
+\caption{Diamagnetic shielding of \tmc at T=0.05K  for magnetic fields oriented along the three crystallographic axes, from ref.\cite{Mailly82}.}
+\label{MeissnerClO4.pdf}
+\end{figure}
+%%%%%%%%%%%%%%%
+%Historically, the critical fields of Q-1-D superconductors have first led to the conclusion  of  dirty limit  type II superconductors. This approach  however led to a desagreement between  the band structure anisotropy and the anisotropy of $H_{c2}$\cite{Jerome82}. However, the dirty limit superconductivity has to be taken with a grain of salt as it will be discussed in Sec.\ref{Non magnetic defects}. 
+An interpretation for the critical fields assuming the pure limit of type II superconductors  has been suggested in 1985\cite{Gorkov85}. %\textit{see} also  Section\ref{Role of non-magnetic defects on SC}.
+ This proposal was based on the calculation of the microscopic expressions for the effective mass tensor in the Ginzburg-Landau equation near $T_c$\cite{Gorkov64}. %As we shall see, this interpretation provides a reasonable interpretation of the data.
+
+%With an orthorhombic  tight binding model  for \tmc taking into account the doubling of the $b$ parameter due to the anion ordering below 24K and also the  $k_{\bot} $ dependence of the gap over the Fermi surface   leading to $<|\Psi|^2>$=1/2  for a  cosine $k_{\bot}$ dependence over the Fermi surface which is expected for a singlet $d$-wave pairing, \textit{see} Section \ref{Non magnetic defects} critical fields can be written in a pratical way as, \begin{equation} H_{c2}^a = \frac{96.8 \times 10^3}{t_{b}t_{c}}T_c (T_c - T) \label{a-c} \end{equation} \begin{equation} H_{c2}^b = \frac{193.6 \times 10^3}{t_{a}t_{c}}T_c (T_c - T) \label{b} \end{equation} \begin{equation} H_{c2}^c = \frac{386 \times 10^3}{t_{a}t_{b}}T_c (T_c - T) \label{c} \end{equation} where the magnetic field is in kOe and $t_i$ in Kelvin. \\
+
+Given the experimental determination of the critical field derivatives near \tc of \tmc\cite{Yonezawa08,Yonezawa08a}, $dH_{c2}^a/dT$  = 67.5kOe/K, $dH_{c2}^{b\prime}/dT$ =36.3kOe/K, and $dH_{c2}^c/dT=1.39$\,kOe/K,  Eqs.(1-3) lead to band parameters $t_a : t_b : t_c$ = 1200, 300 and 6K respectively when critical fields derivatives  are determined from $T_{c,onset}$ for the three principal axes after \cite{Yonezawa08,Yonezawa08a}.
+% with an indication for the Pauli limit at low temperature (after 
+
+
+\begin{figure}[h]			
+\centerline{\includegraphics[width=0.5\hsize]{DPsousHClO4.pdf}}
+\caption{Critical fields of \tmc determined from $T_{c,onset}$ for the three principal axes with an indication for the Pauli limit at low temperature after \cite{Yonezawa08,Yonezawa08a}.}
+\label{DPsousHClO4.pdf}
+\end{figure}
+
+\section{Pairing mechanism in organic superconductivity}
+\label{Pairing mechanism}
+For several reasons one is entitled to believe that the pairing mechanism in organic superconductivity may differ from the regular electron-phonon driven pairing in traditional superconductors.  First, superconductivity of  quasi one dimensional Bechgaard salt shares a common border with magnetism as displayed on the generic diagram, see fig(\ref{generic3.pdf}). Second, strong antiferromagnetic  fluctuations  in the normal state above \tc in the vicinity of the $SDW$ phase provide the dominant contribution to the nuclear hyperfine relaxation   and are also controlling the linear temperature dependence of electronic transport. Some experimental results point to the existence of a non conventional pairing mechanism. They will be summarized below.
+\subsection{Non magnetic defects}
+\label{Non magnetic defects}
+A basic property of the BCS superconducting \textit{s}-wave function is the time reversal symmetry of the Cooper pairs.  
+Hence no pair breaking is
+expected from the scattering of electrons against spinless impurities \cite{Anderson59}. Experimentally,
+this property has been verified in non-magnetic dilute alloys of \textit{s}-wave superconductors and
+brought a strong support for the BCS model of conventional \textit{s}-wave superconductors. However,
+the condition for time reversal symmetry is no longer met for the case of \textit{p}-wave pairing. Consequently,   $T_c$ for these superconductors should be strongly affected by any non-magnetic scattering. It is actually the  extreme dependence of the critical temperature of
+$Sr_{2}RuO_4$
+\cite{Mackenzie03} on non-magnetic disorder which has provided a  strong support in favour of triplet
+superconductivity in this compound. 
+It is also the  remarkable sensisitivity  of organic
+superconductivity to irradiation detected in the early years\cite{Bouffard82,Choi82} which led Abrikosov to suggest the possibility of
+triplet pairing in these materials\cite{Abrikosov83}.
+
+A more recent investigation of the influence of non magnetic defects on organic superconductivity has been conducted following a procedure which rules out the addition of possible magnetic impurities as it can be the case for X-ray irradiated samples.
+Non magnetic defects can be introduced in a controlled way either by fast cooling preventing the complete ordering of the tetrahedral \cl\, anions or by slow cooling the solid solution \tmx.
+
+\begin{figure}[h]	
+\centerline{ \includegraphics[width=0.5\hsize]{TcvsRho0.pdf}}
+\caption{Phase diagram of \tmx \, governed by  non magnetic disorder acording to reference\cite{Joo05}. All  circles  refer to  very slowly cooled samples in the
+R-state (the so-called relaxed state) with different \R contents. The  sample with $\rho_0=0.27(\Omega cm)^{-1}$ is metallic down to the lowest temperature of the experiment. The continuous line  is a fit of the data with the Digamma function and $T_{c}{^0}=1.23K$.}
+\label{TcvsRho0.pdf} 
+\end{figure}
+As displayed on figure (\ref{TcvsRho0.pdf}), $T_c$ in the solid solution is  suppressed  and the suppression can be related to the enhancement of the elastic scattering in the normal state. The data on fig.\ref{TcvsRho0.pdf} show that the relation \tc versus $\rho_0$ follows  the theory proposed for the pair breaking by magnetic impurities in conventional superconductors, namely
+\begin{eqnarray}
+\ln\Big(\frac{T_{c}^0}{T_{c}}\Big)=\psi\Big(\frac{1}{2}+\frac{\alpha T_{c}^0}{2\pi T_{c}}\Big)-\psi\Big(\frac{1}{2}\Big),
+\end{eqnarray}
+with $\psi(x)$ being the Digamma function, $\alpha = \hbar /2 \tau k_{B}T_{c}^0$ the depairing parameter $\tau$
+.
+The experimental data follow the latter law with a good accuracy with 
+$T_{c}{^0}=1.23K$.
+
+The conventional pair breaking theory for magnetic impurities in usual superconductors has been generalized to
+the case of non-magnetic impurities in unconventional materials and the correction to $T_c$ obeys the above relation \cite{Maki04,Larkin65},
+Since the additional scattering cannot be ascribed to magnetic scattering according to the  EPR checks
+ showing no additional traces of localized spins in  the solid solution, the data in figure (\ref{TcvsRho0.pdf}) 
+ cannot be reconciled with the picture of a superconducting gap keeping a constant sign over the whole
+$(\pm k_F)$ Fermi surface. They require a picture of pair breaking in a superconductor with some unconventional gap
+symmetry. 
+
+  The influence of non magnetic impurities on the superconducting phase implies the existence of  positive as well as negative values for the $SC$  order parameter. It precludes the usual case of \textit{s}-symmetry but is still unable to 
+ discriminate between  two possible options namely,  singlet-\textit{d (g)} or triplet-\textit{p (f)}\cite{Nickel05},\textit{see} fig(\ref{Nodes.pdf}). 
+
+\subsection{Spin susceptibility in the superconducting phase}
+Regarding the spin part of the $SC$ wave function, a triplet pairing was first claimed in \tmp6 from a divergence of the critical field \hc2 exceeding the Pauli limiting value reported at low temperature in \tmp6 under pressure when $H$ is applied along the $b'$ or $a$ axes \cite{Lee97} and from the absence of any change in the $^{77}\mathrm{Se}$ Knight shift at \tc \cite{Lee01}. 
+
+However more recent experiments performed at fields lower than those used in reference\cite{Lee01} for the work on \tmp6 did reveal a  clear drop of the  $^{77}\mathrm{Se}$ Knight shift tbelow \tc in the compound \tmc \cite{Shinagawa07}. These new data  provided a conclusive evidence in favour of singlet pairing, fig(\ref{KnightshiftClO4.pdf}). In addition, a steep increase of the spin lattice relaxation rate versus magnetic field  for both field orientations $\parallel a$ and $b'$ provided  evidence for a sharp cross-over or even a phase transition  occuring at low temperature under magnetic field  between the low field \textit{d}-wave singlet phase and a high field regime exceeding the paramagnetic limit $H_p$ being either a triplet-paired state\cite{Shimahara00,Belmechri07} or an inhomogenous Fulde-Ferrell-Larkin-Ovchinnikov state\cite{Fulde64,Larkin65}.
+\begin{figure*}[htbp]	
+ \centerline{\includegraphics[width=0.6\hsize]{Nodes.pdf}}
+\caption{Possible gap symmetries agreeing with the different  experimental results. The \textit{d}-wave  (or \textit{g}-wave) symmetry  is the only symmetry agreeing with all experiments, (yellow column on line).}
+\label{Nodes.pdf} 
+\end{figure*}
+\begin{figure*}[htbp]	
+ \centerline{\includegraphics[width=0.5\hsize]{KnightshiftClO4.pdf}}
+\caption{ $^{77}Se$ Knight shift vs $T$ for \tmc, for $H// b'$ and $a$, according to reference \cite{Shinagawa07}. The sign of the variation  of  Knight shift at \tc depends on the sign of the hyperfine field. A variation   is observed only under low magnetic field. The difference of \tc for the two field orientations is related to the anitropy of \hc2.  The field of $ 4T$ is still lower than the critical field derived from the onset of the resistive transition (\hc2$\approx 5T)$.  }
+\label{KnightshiftClO4.pdf} 
+\end{figure*}
+
+\subsection{Magneto calorimetric studies}
+The  response of superconductivity to non magnetic impurities and the loss of spin susceptibility at \tc should be sufficient to qualify the $d$-wave  alternative as the likely one among the various possiblities displayed on fig(\ref{Nodes.pdf}). In such a case, nodes of the gap should exist  on the Fermi surface and could be located.
+\begin{figure*}[h]	
+ \centerline{\includegraphics[width=0.8\hsize]{volovik-effect_for_Review_ProfJerome_.pdf}}
+\caption{a-  Fermi suface of \tmc at low temperature in the presence of anion ordering\cite{Lepevelen01}. b- Angular dependence of $C(\phi)$ at 0.14 K and 0.3 T according to reference\cite{Yonezawa12}. c- First and second derivatives of the  data displayed on a. d- Sketch of the influence of a magnetic field on the quasi particle DOS. The contribution of Doppler-shifted quasi-particles  to the DOS is minimum when  the magnetic field is  parallel to $\textbf{v}_F$ at one of the nodes (left or right) . e and f- Simulations of the specific heat in the vicinity of the angle $\phi=0$ using the band structure on fig(\ref{volovik-effect_for_Review_ProfJerome_.pdf}a). Arrows correspond to the different orientations of the magnetic field as shown on fig(\ref{volovik-effect_for_Review_ProfJerome_.pdf}).
+} 
+\label{volovik-effect_for_Review_ProfJerome_.pdf} 
+\end{figure*}
+This has been made possible via a  measurement of the quasi particle density of states in the superconducting phase performed in an oriented magnetic field\cite{Yonezawa12}, \textit{see} figs (\ref{volovik-effect_for_Review_ProfJerome_.pdf}b and c). This experiment is based on a   Volovik's important remark\cite{Volovik93} that for superconductors with line nodes, most of the density of states in their mixed state under magnetic field comes from the superfluid density far outside the vortex cores. The energy of QP's in the superfluid density rotating around the vortex core with the velocity $\textbf{v}_s(\bot H)$ is Doppler-shifted by the magnetic field and reads,
+ \begin{equation}
+\delta\omega\propto \textbf{v}_s\cdot \textbf{v}_F(\textbf{k})
+\end{equation}
+\label{2}
+ where $ \textbf{v}_F(\textbf{k})$ is the Fermi velocity at the $\textbf{k}$ point on the Fermi surface.
+ The Doppler shift can contribute to the DOS in the superconducting state as long as  it remains smaller than the superconducting energy gap, \textit{i.e} only for those \textbf{k} states   located in the vicinity of gap nodes on   the Fermi surface. Hence,  the contribution of the Doppler shift is minimum when the Fermi velocity at a node and the magnetic field are parallel according to eq (2), \textit{see}  fig(\ref{volovik-effect_for_Review_ProfJerome_.pdf}d), and   should contribute to a kink in the rotation pattern of the electronic specific heat $C_v(\phi)$.
+
+The Doppler shift has already been used extensively in the case of 2D superconductors expected to reveal line nodes probing the thermal conduction or the specific heat while the magnetic field is rotated in the basal plane\cite{Yamashita11,Sakakibara07}. For such 2D conductors  $\textbf{v}_F(\textbf{k})$ is usually colinear with \textbf{k}. Therefore,  the  angular resolved specific heat (or thermal conductivity) enables to reveal the positions of the gap nodes according to the angles corresponding to  minima of  specific heat (thermal conductivity)\cite{Yamashita11}.
+
+The situation is somewhat peculiar for Q1D Fermi surface. There, anomalies in the rotation pattern of $C_v$ are expected at angles $\phi_n$ between $H$ and $\textbf{v}_F(\textbf{\textbf{k$_n$}})$
+where  \textbf{k$_n$} corresponds to a nodal position  on the Fermi surface.
+
+A simple model has been used to understand the  data of angular resolved $C_v$ of \tmc\cite{Yonezawa12}. The rotation pattern has been modeled  by,
+\begin{equation}
+N(\phi)\propto \sqrt{H/H_{c2}(\phi)}\Sigma_{n}A_{n}\mid sin(\phi - \phi_{n})\mid
+\end{equation}
+ where the first factor reproduces the anisotropic character of the critical field in the basal plane while  the weighted summation  over angles accounts for the existence of nodes at angles $\phi_n$ between the magnetic field and the special  \textbf{k$_n$} points where the Fermi velocity is parrallel to $H$.
+ The experimental observation of a rotation pattern at low field and low temperature which is non symmetrical with respect to the inversion of  $\phi$ and the  existence of kinks for  $C(\phi)$  at $\phi=\pm 10^o$ on  fig (\ref{volovik-effect_for_Review_ProfJerome_.pdf}b) have been taken as  the signature of line nodes\cite{Yonezawa12}. According to the band structure calculation the location of the nodes on the Fermi surface becomes $k_y\sim\pm0.25b^*$. As far as  the Pauli limitation is concerned, the superconducting phase diagram of \tmc established by thermodynamic experiments indicates a value for the thermodynamic \hc2 along $a$ of 2.5 T for $H\parallel a$ much smalller than the expected value of 7.7 T for the orbital limitation derived from the measurement of the temperature derivative of \hc2 close to \tc for a clean type II superconductor\cite{Gorkov85}. On the other hand, along the two transverse directions orbital limitation is at work\cite{Yonezawa12}. The domain of field above the paramagnetic limit up to \hc2 derived from resistivity data where the specific heat recovers its normal state value  requires further experimental investigations but it might be the signature of some $FFLO$ phase as suggested by A. Lebed recently \cite{Lebed10,Fuseya12,Croitoru13}.
+%normal phase behaviour
+%\section{The quantum critical neighborhood}
+\section{Antiferromagnetic fluctuations, spin and charge sectors}
+\label{Antiferromagnetic fluctuations, spin and charge sectors}
+
+\begin{figure*}[t]	
+\centerline{ \includegraphics[width=0.7\hsize]{T1TvsT_PF6ClO4}}
+\caption{Plot of the nuclear relaxation versus temperature according to the data of reference \cite{Creuzet87}. A Korringa regime, $T_{1}T$ = const is observed down to $25 K$. The 2D AF regime is observed below $\approx 15 K$ and the small Curie-Weiss temperature of the 9 kbar run is the signature of the contribution of  quantum critical fluctuations to the nuclear relaxation. The Curie-Weiss temperature becomes zero at the QCP. These data show that the QCP should be slightly below 9 kbar with the present pressure scale. The inset shows that the organic superconductor \tmc at ambient pressure is very close to fulfill  quantum critical conditions.}
+\label{T1TvsT_PF6ClO4} 
+\end{figure*}
+\begin{figure*}[htbp]	
+\centerline{ \includegraphics[width=0.5\hsize]{figureTandT2}}
+\caption{A log-log plot of the inelastic  longitudinal resistivity of \tmp6  below $20$ K, according to ref\cite{Doiron09}.}
+\label{figureTandT2}  
+\end{figure*}
+
+ The  metallic phase of \tmp6  in the 3D coherent regime when pressure is in the neighbourhood of the critical pressure \pc behaves in way far from what is expected  for a  Fermi liquid. 
+
+The canonical Korringa law , $1/T_{1}T \propto {\chi^{2} (q=0,T)} $, is well obeyed at high temperature say, above 25 K, but the low temperature behaviour deviates strongly from the standard relaxation in paramagnetic metals. As shown on fig (\ref{T1TvsT_PF6ClO4}) an additional contribution to the relaxation rate emerges in top of  the usual Korringa relaxation. This additional contribution  rising at low temperature  has been attributed to the onset of antiferromagnetic fluctuations in the vicinity of \pc\cite{Doiron09,Doiron10,Bourbonnais11}. On the other hand in the low temperature regime the relaxation rate follows a law such as $T_{1}T=C(T+\Theta)$ as shown  on fig(\ref{T1TvsT_PF6ClO4}). This is the Curie-Weiss behaviour for the relaxation which  is to be observed in a 2D fluctuating antiferromagnet\cite{Brown08,Wu05,Moriya00,Bourbonnais09}.
+%Second,  a non standard behaviour is observed  for the electron scattering in the same pressure and temperature domain where a deviation to the Korringa law is observed.
+The positive Curie-Weiss temperature $\Theta$ which provides the energy scale of the fluctuations is zero when pressure is equal to \pc (the quantum critical conditions).  When $\Theta$ becomes large comparable to $T$, the standard relaxation mechanism is recovered even at low temperature in agreement with the very high pressure results\cite{Wzietek93}. 
+
+%Second,  a non standard behaviour is observed  for the electron scattering in the same pressure and temperature domain where a deviation to the Korringa law is observed.
+
+The inelastic scattering in transport
+ reveals at once a strong  linear term  at low temperature evolving to quadratic in the high temperature regime with a general tendency to become quadratic at all temperatures when pressure is way above the critical pressure \pc\cite{Doiron09}, \textit{see} fig. (\ref{generic3.pdf}). 
+
+ The existence of a linear temperature dependence of the resistivity is \textit{at variance} with the sole $T^2$ dependence expected from the electron-electron scattering in a conventional Fermi liquid. This is clearly  seen on a log-log plot of the resistivity versus $T$, \textit{see} fig(\ref{figureTandT2}). 
+\begin{figure*}[htbp]	
+\centerline{ \includegraphics[width=0.5\hsize]{AvsTcPF6.pdf}}
+\caption{Coefficient $A$ of linear resistivity as a function of $T_c$ plotted versus $T_{c}/T_{c0}$  for \tmp6. $T_c$ is defined as the midpoint of the transition and the error bars come from the 10~\% and 90~\% points with  $T_{c0}=1.23K$ under the pressure of 8 kbar which provides the maximum \tc in the $SDW$/$SC$ coexistence regime.The dashed line is a linear fit to all data points except that at $T_c$~=~0.87~K, according to ref\cite{Doiron09}.}
+\label{AvsTcPF6.pdf} 
+\end{figure*}
+Furthermore, the investigation of both transport and superconductivity under pressure in \tmp6  has  established a  correlation between  the amplitude %of the prefactor $A$ of the low temperature
+of   the linear in temperature dependence of the resistivity  and the value of  \tc, as displayed on fig(\ref{AvsTcPF6.pdf}) suggesting  a common origin for  the inelastic scattering of the metallic phase and pairing in the $SC$ phase \tmp6\cite{Doiron09} as discussed in the next section . 
+
+\section{Discussions and perspectives}
+
+The close proximity between antiferromagnetism and superconducting ground states of \tm2x supercondutors and the deviation of the metallic phase from the traditional Fermi liquid behaviour   have been recognized as early as the beginning eighties. The possibility for a pairing mechanism involving carriers on neighbouring chains in these quasi 1D conductors avoiding  the Coulomb repulsion  has been  proposed  by V. Emery  in the context of the exchange phonon mechanism\cite{Emery83}. Shortly after, Emery and coworkers introduced the possibility that antiferromagnetic fluctuations play a role in the paring mechanism\cite{Emery86,Beal86} but concluded that superconductivity could not emerge from pairing on the same organic chain. The exchange of spin fluctuations between carriers on neighbouring chains was thus proposed\cite{Emery86} to provide the necessary glue for pairing in analogy with  the exchange of charge density waves proposed by Kohn and Luttinger\cite{Kohn65} in the context of  a new pairing mechanism in low dimensional conductors.
+
+%In the context of the  superconductivity in heavy fermions metals discovered the same year as  organic superconductivity\cite{Steglich79}, J. Hirsch  performed a Monte Carlo simulation of the Hubbard model showing an enhancement of anisotropic singlet pairing correlations due to the on site Coulomb repulsion leading eventually to an anisotropic singlet superconducting state\cite{Hirsch85}. One year later, 
+L. Caron and C. Bourbonnais\cite{Bourbonnais86,Caron86} extending their theory for the generic \tm2x phase diagram to the metallic domain   made the  proposal for a gap equation with singlet superconductivity based on an interchain magnetic coupling with an attraction   deriving from an interchain exchange interaction overcoming the on-stack Coulomb repulsion. Taking into account the interference between the diverging Cooper and Peierls channels the renormalization treatment of Q-1-D conductors  received more recently a significant improvement\cite{Duprat01}. 
+
+
+%It is now established that the weak-coupling limit   explains fairly well the properties of the $SDW$ phases in \tsx materials both the   suppression of the $SDW$ phase under pressure and the stabilization of magnetic field-induced $SDW$ phases. The non interacting part of the quasi-one-dimensional electron gas model is defined in terms of a strongly anisotropic  electron spectrum yielding  an orthorhombic variant of the open Fermi surface in the $a-b$ plane of   the Bechgaard salts.  The spectrum $E({\bf k}) = v_F(|k|-k_F) -2t_\perp\cos k_\perp - 2t_\perp'\cos 2k_\perp$  as a function of the momentum ${\bf k}=(k,k_\perp)$  is characterized by an intrachain or longitudinal Fermi energy $E_F=v_Fk_F$  which revolves around 3000~K in (TMTSF)$_2$X \cite{Ducasse86,Lepevelen01}; here  $v_F$ and $k_F$ are the longitudinal Fermi velocity and wave vector. This energy is much larger than the interchain hopping integral $t_\perp$ ($\approx 200$K),  in turn much bigger than the second-nearest neighbor transverse hopping amplitude $t_\perp'$. The latter stands as the antinesting parameter of the spectrum which simulates the main influence of pressure in the model. 
+%%%%%%%
+%The unnesting parameters of the band structure, $t^{'}_{b}$ and similarly $t^{'}_{c}$  for the $c^\star$ direction both play an important role  in the $T-P$ and $T-P-H$ phase diagrams of \tms2x. 
+
+%First, when $t^{'}_{b}$ exceeds a critical unnesting band integral of the order of   the $SDW$ transition temperature ($\approx 15-30K$ in case of complete nesting\cite{Montambaux86,Yamaji98}, the $SDW$ ground state is suppressed in favour of a metallic phase with the possibility of restoration of spin density phases under magnetic field along $c^{\star}$\cite{Ishiguro98}.
+
+
+%Second,  
+Within the framework of a weak-coupling limit  the problem of the interplay between antiferromagnetism and superconductivity in the Bechgaard salts has been worked out using the renormalization group (RG) approach \cite{Bourbonnais09,Nickel05} as summarized below taking into account only the 2D problem.  
+ The RG integration of high energy electronic degrees  of freedom was  carried out  down to the Fermi level, and leads to a  renormalization of the couplings at  the temperature $T$ \cite{Duprat01,Nickel06,Bourbonnais09}.  The RG flow   superimposes  the $2k_F$ electron-hole (density-wave) and Cooper pairing many-body processes which combine and interfere    at every  order of perturbation. As a function of the `pressure' parameter  $t_\perp'$ \textit{i.e} the unnesting  interstacks coupling, a   singularity  in the scattering amplitudes signals an instability of the metallic state  toward the formation of an ordered state at some characteristic temperature scale. At low $t_\perp'$, nesting is sufficiently strong to induce a $SDW$ instability in  the temperature range  of experimental  $T_{\rm SDW}\sim 10-20$~K. When the antinesting parameter approaches the threshold $t_\perp'^*$  from below  ($t_\perp'^* \approx 25.4~{\rm K}$, using the above  parameters), $T_{\rm SDW}$ sharply decreases and  as a result of interference, $SDW$ correlations ensure  Cooper pairing attraction in the superconducting $d$-wave ($SCd$) channel. This   gives rise to  an    instability  of the normal state   for the onset of  $SCd$ order at  the temperature $T_c$ with pairing   coming from antiferromagnetic spin fluctuations between carriers of neighbouring chains. Such a pairing model is actually supporting the conjecture of interchain pairing in order for the electrons to avoid the Coulomb repulsion made  by V. Emery in 1983 and 1986\cite{Emery83,Emery86}.
+  \begin{figure*}[htbp]	\centerline{ \includegraphics[width=0.6\hsize]{DiagrammetheoBoubornnais}}
+\caption{Calculated phase diagram of the quasi-onedimensionalelectron gas model from the renormalization group method at the one-loop level\cite{Bourbonnais09}.
+$\Theta$ and 
+the dash-dotted line defines the temperature region of the CW behavior for the inverse
+normalized SDW response function
+}
+\label{Diagtheo} 
+\end{figure*}
+
+ The calculated phase diagram fig(\ref{Diagtheo})with reasonable parameters taking   $g_1=g_2/2 \approx 0.32$ for  the backward and forward scattering amplitudes  respectively and $g_3\approx 0.02$ for the  longitudinal  Umklapp scattering  term captures the essential features of the experimentally-determined phase diagram of \tmp6~\cite{Bourbonnais09,Bourbonnais11}, fig(\ref{generic3.pdf}). 
+
+%Finally, 
+Sedeki \textit{et-al}\cite{Sedeki10} have proceeded to an  evaluation of the imaginary part of the one-particle self-energy.  In addition to the regular Fermi-liquid component which goes as $T^2$ low frequency spin fluctuations  yield $\tau^{-1} = aT\xi $, where $a$ is constant and the antiferromagnetic correlation length $\xi(T)$ increases according to $\xi = c(T + \Theta)^{-1/2}$ as $T \rightarrow T_c$, where $\Theta$ is the temperature scale for spin fluctuations \cite{Sedeki10}.  It is then natural to expect the Umklapp resistivity to contain  (in the limit $T \ll \Theta$) a linear term $AT$ besides the regular $BT^2$, whose magnitude would presumably be correlated with $T_c$, as both scattering and pairing are caused by the same antiferromagnetic correlations. The observation of a $T$-linear law for the resistivity up to 8 K  in \tmp6 under a pressure of 11.8 kbar as displayed on fig(\ref{figureTandT2})   is therefore  consistent with the value of $\Theta=8K$ determined from NMR relaxation at 11 kbar on fig(\ref{T1TvsT_PF6ClO4}).
+
+To conclude, both  experimental and  theoretical views point the contribution of  electron correlations to the superconducting pairing problem. The extensive experimental evidence  in favor of  the   emergence of superconductivity in the \tm2x family next to the  stability threshold for antiferromagnetism  has shown the need for a unified description of all electronic excitations that lies at the core of  both density-wave and superconducting correlations. In this matter, the  recent progresses achieved by the renormalization group method for the 1D-2D electron  gas model  have resulted  in  predictions about the possible symmetries of the superconducting order parameter when a purely electronic mechanism is involved,  predictions that often differ from  phenomenologically based   approaches to superconductivity but are in fair agreement with the recent experimental findings.  In this respect reexaminations of  of  the superconducting state, specific heat, thermal conductivity,etc,...are highly demanded.%Although one can never be hundred percent sure at the moment, as far as recent results on 1D organic superconductivity are concerned  magnetism and superconductivity cooperate.
+ 
+What is emerging from   the  work on these prototype 1D  organic superconductors is   their  very simple electronic nature  with only a single band at Fermi level, no prominent spin orbit coupling and extremely high chemical purity and stability. 
+
+They should be considered in several respects as model systems to inspire the physics of the more complex high \tc superconductors, especially for  pnictides and electron-doped cuprates. Most concepts discovered in these simple low dimensional conductors should be very useful for the study of other low dimensional systems such as carbon nanotubes or artificial 1D structures, etc,.....
+
+The pairing mechanism behind organic superconductivity is likely different from the proposal made by Little but it is nevertheless a phonon-less mechanism, at least in \tm2x \,superconductors.
+
+In conclusion %this  short overview of 
+organic superconductivity  has been discovered in the protoptype Bechgaard salt \tmp6 but  several  other facinating aspects of the physics of 1D conductors are worth mentionning namely, the  magnetic field
+confinement discovered in the 1D's leading to the phenomenon of field induced spin density wave phases\cite{Ribault83,Chaikin83,Gorkov84} and  the quantization of the Hall effect in these phases\cite{Cooper89,Hannahs89,Heritier84}. Furthermore, the  angular dependent magnetoresistance  closely related to these anisotropic conductors \cite{Osada91,Naughton91}, (see \cite{Osada06} for a recent survey), the so-called Lebed-Osada-Danner-Chaikin oscillations in \tms2x provide a nice illustration for the new features of the quasi-1D conductors\cite{Lebed86a}. 
+
+%\section{Acknowledgments} 
+%The search, discovery and study of organic superconductors has been a major research domain for the Solid State Physics Laboratory at Orsay over the last thirty years. We are all indebted to Professor Jacques Friedel who made this long study possible in the laboratory he has founded. I am particularly thankful to the colleagues of my own  generation with whom I have been working so  many years, the late H. Schulz, C. Bourbonnais, M. Ribault and K. Bechgaard.
+\bibliographystyle{unsrt}
+\bibliography{biblioFestschrift.bib}
+
+\end{document}
